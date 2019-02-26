@@ -39,7 +39,7 @@
             <column name="Street" type="VARCHAR(50)">
                 <constraints nullable="true" primaryKey="false" unique="false"/>
             </column>
-            <column name="number" type="INT">
+            <column name="Number" type="INT">
                 <constraints nullable="true" primaryKey="false" unique="false"/>
             </column>
             <column name="City" type="VARCHAR(50)">
@@ -83,11 +83,11 @@
     </changeSet>
 
     <changeSet author="Jay" id="fk1">
-    <addForeignKeyConstraint baseColumnNames="Id_Address"
-            baseTableName="User"
-            constraintName="fk_cd"
-            referencedColumnNames="Id"
-            referencedTableName="Address"/>
+    <addForeignKeyConstraint baseColumnNames="Id_Address" 
+            baseTableName="User"                          
+            constraintName="fk_cd"                         
+            referencedColumnNames="Id"                    
+            referencedTableName="Address"/>                
     </changeSet>
 
     <changeSet author="Jay" id="fk2">
@@ -106,6 +106,10 @@
             referencedTableName="Role"/>
     </changeSet>
 
-   
+   <changeSet author="Jay" id="CK">
+   <addPrimaryKey columnNames="Id_User, Id_Permissions"
+           constraintName="Pk_c"
+           tableName="Junction_Role_User"/>
+   </changeSet>
 
 </databaseChangeLog> 
