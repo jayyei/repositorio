@@ -35,3 +35,4 @@ Mas detalles en:
     liquibase --changeLogFile="changesets/db.changelog-#.#.#.#.xml" diffChangeLog
 
 ##cambio
+    Corregi mi error
