@@ -5,125 +5,107 @@
   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"> 
 
-    <changeSet author="Jay" id="Tabla_sitio">
-        <createTable tableName="sitio">
-            <column name="id" type="INT">
+    <changeSet author="Jay" id="Table_user">
+        <createTable tableName="User">
+            <column name="Id" type="INT">
                 <constraints nullable="true" primaryKey="true" unique="false"/>
             </column>
-            <column name="nombre" type="VARCHAR(50)">
+            <column name="Name" type="VARCHAR(50)">
                 <constraints nullable="true" primaryKey="false" unique="false"/>
             </column>
-            <column name="edad" type="INT">
+            <column name="Lastname" type="VARCHAR(50)">
                 <constraints nullable="true" primaryKey="false" unique="false"/>
             </column>
-            <column name="apellido" type="VARCHAR(50)">
+            <column name="Age" type="INT">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="Username" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="Password" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="Id_Address" type="INT">
                 <constraints nullable="true" primaryKey="false" unique="false"/>
             </column>
         </createTable>
     </changeSet>
 
-    <changeSet author="Jay" id="Tabla_direccion">
-        <createTable tableName="direccion">
-            <column name="calle" type="VARCHAR(50)">
+    <changeSet author="Jay" id="Table_Address">
+        <createTable tableName="Address">
+            <column name="Id" type="INT">
                 <constraints nullable="true" primaryKey="true" unique="false"/>
             </column>
-            <column name="cp" type="INT">
+            <column name="Street" type="VARCHAR(50)">
                 <constraints nullable="true" primaryKey="false" unique="false"/>
             </column>
-            <column name="id1" type="INT">
+            <column name="number" type="INT">
                 <constraints nullable="true" primaryKey="false" unique="false"/>
             </column>
-            <column name="Colonia" type="VARCHAR(50)">
+            <column name="City" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="State" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="Country" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="Zp" type="INT">
                 <constraints nullable="true" primaryKey="false" unique="false"/>
             </column>
         </createTable>
     </changeSet>
 
-    <changeSet author="Jay" id="Tabla_tipo">
-        <createTable tableName="Tipo">
-            <column name="cargo" type="VARCHAR(50)">
+    <changeSet author="Jay" id="Table_Role">
+        <createTable tableName="Role">
+            <column name="Id" type="INT">
                 <constraints nullable="true" primaryKey="true" unique="false"/>
             </column>
-            <column name="Horas" type="INT">
+            <column name="Type" type="VARCHAR(50)">
                 <constraints nullable="true" primaryKey="false" unique="false"/>
             </column>
-            <column name="Estado" type="VARCHAR(10)">
+            <column name="Permissions" type="VARCHAR(255)">
                 <constraints nullable="true" primaryKey="false" unique="false"/>
             </column>
         </createTable>
     </changeSet>
 
-    <changeSet author="Jay" id="Tabla_usuario">
-        <createTable tableName="usuario">
-            <column name="usuario" type="VARCHAR(20)">
-                <constraints nullable="true" primaryKey="true" unique="false"/>
+    <changeSet author="Jay" id="Table_Junction_Role_User">
+        <createTable tableName="Junction_Role_User">
+            <column name="Id_User" type="INT">
+                <constraints nullable="true" />
             </column>
-            <column name="id2" type="INT">
-                <constraints nullable="true" primaryKey="false" unique="false"/>
-            </column>
-            <column name="contraseña" type="VARCHAR(50)">
-                <constraints nullable="true" primaryKey="false" unique="false"/>
-            </column>
-            <column name="cargo1" type="VARCHAR(50)">
-                <constraints nullable="true" primaryKey="false" unique="false"/>
+            <column name="Id_Permissions" type="INT">
+                <constraints nullable="true" />
             </column>
         </createTable>
     </changeSet>
-
-    <!--<changeSet author="authorName" id="changelog-1.0">
-    <addPrimaryKey 
-            columnNames="id"
-            constraintName="pk_id"
-            tableName="sitio"
-            tablespace="A String"/>
-    </changeSet>
-
-    <changeSet author="authorName" id="changelog-1.0">
-    <addPrimaryKey 
-            columnNames="calle"
-            constraintName="pk_cd"
-            tableName="direccion"
-            tablespace="A String"/>
-    </changeSet>
-
-    <changeSet author="authorName" id="changelog-1.0">
-    <addPrimaryKey 
-            columnNames="cargo"
-            constraintName="pk_tp"
-            tableName="tipo"
-            tablespace="A String"/>
-    </changeSet>
-
-    <changeSet author="authorName" id="changelog-1.0">
-    <addPrimaryKey 
-            columnNames="usuario"
-            constraintName="pk_us"
-            tableName="usuario"
-            tablespace="A String"/>
-    </changeSet> -->
 
     <changeSet author="Jay" id="fk1">
-    <addForeignKeyConstraint baseColumnNames="id1"
-            baseTableName="direccion"
+    <addForeignKeyConstraint baseColumnNames="Id_Address"
+            baseTableName="User"
             constraintName="fk_cd"
-            referencedColumnNames="id"
-            referencedTableName="sitio"/>
+            referencedColumnNames="Id"
+            referencedTableName="Address"/>
     </changeSet>
 
     <changeSet author="Jay" id="fk2">
-    <addForeignKeyConstraint baseColumnNames="id2"
-            baseTableName="usuario"
-            constraintName="fk_us"
-            referencedColumnNames="id"
-            referencedTableName="sitio"/>
+    <addForeignKeyConstraint baseColumnNames="Id_User"
+            baseTableName="Junction_Role_User"
+            constraintName="fk_cd"
+            referencedColumnNames="Id"
+            referencedTableName="User"/>
+    </changeSet>
+    
+    <changeSet author="Jay" id="fk3">
+    <addForeignKeyConstraint baseColumnNames="Id_Permissions"
+            baseTableName="Junction_Role_User"
+            constraintName="fk_cd1"
+            referencedColumnNames="Id"
+            referencedTableName="Role"/>
     </changeSet>
 
-    <changeSet author="Jay" id="fk3">
-    <addForeignKeyConstraint baseColumnNames="cargo1"
-            baseTableName="usuario"
-            constraintName="fk_us2"
-            referencedColumnNames="cargo"
-            referencedTableName="Tipo"/>
-    </changeSet>
+   
 
 </databaseChangeLog> 
