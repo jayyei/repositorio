@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<databaseChangeLog 
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"> 
+
+    <changeSet author="Jay" id="Table_SONG">
+        <createTable tableName="SONG">
+            <column name="ID" type="INT">
+                <constraints nullable="true" primaryKey="true" unique="false"/>
+            </column>
+            <column name="TITLE" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="DURATION" type="INT">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="ARTIST_NAME" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="ALBUM_NAME" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="GENDER_TYPE" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="Jay" id="TABLE_GENDER">
+        <createTable tableName="GENDER">
+            <column name="TYPE" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="true" unique="false"/>
+            </column>
+            <column name="SUBTYPE" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="Jay" id="TABLE_ARTIST">
+        <createTable tableName="ARTIST">
+            <column name="NAME" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="true" unique="false"/>
+            </column>
+            <column name="LASTNAME" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="GENDER" type="VARCHAR(1)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="Jay" id="TABLE_ALBUM">
+        <createTable tableName="ALBUM">
+            <column name="NAME" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="true" unique="false"/>
+            </column>
+            <column name="LASTNAME" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="N_DISK" type="INT">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    
+
+    <changeSet author="Jay" id="FK_ARTIST_NAME">
+    <addForeignKeyConstraint baseColumnNames="ARTIST_NAME" 
+            baseTableName="SONG"                          
+            constraintName="fk_cd"                         
+            referencedColumnNames="NAME"                    
+            referencedTableName="ARTIST"/>                
+    </changeSet>
+
+    <changeSet author="Jay" id="FK_ALBUM_NAME">
+    <addForeignKeyConstraint baseColumnNames="ALBUM_NAME" 
+            baseTableName="SONG"                          
+            constraintName="fk_cd2"                         
+            referencedColumnNames="NAME"                    
+            referencedTableName="ALBUM"/>                
+    </changeSet>
+
+      <changeSet author="Jay" id="FK_GENDER_TYPE">
+    <addForeignKeyConstraint baseColumnNames="GENDER_TYPE" 
+            baseTableName="SONG"                          
+            constraintName="fk_cd3"                         
+            referencedColumnNames="TYPE"                    
+            referencedTableName="GENDER"/>                
+    </changeSet>
+
+    
+
+</databaseChangeLog> 
