@@ -40,4 +40,14 @@ public class becaFacade implements IbecaFacade {
        return result;
     }
 
+    @Override
+    public UserTO assigment(int id, String name, String lastName) {
+      UserTO user =  becaService.create();
+      user.setId(id);
+      user.setName(name);
+      user.setLastName(lastName);
+      return user;
+    }
 }
+
+

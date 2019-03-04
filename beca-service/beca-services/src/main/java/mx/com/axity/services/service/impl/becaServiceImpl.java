@@ -48,8 +48,12 @@ public class becaServiceImpl implements IbecaService {
 
     @Override
     public List<UserDO> getAllUsers() {
-       return (List<UserDO>) this.userDAO.findAll();
+        return (List<UserDO>) this.userDAO.findAll();
     }
 
-
+    @Override
+    public UserDO create() {
+        UserDO user = new UserTO();
+        return  user;
+    }
 }

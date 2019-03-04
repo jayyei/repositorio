@@ -10,5 +10,6 @@ public interface IbecaFacade {
     int operation(int num1, int num2);
 
     List<UserTO> getAllUsers();
+    UserTO assigment(int id, String name, String lastName);
 
 }

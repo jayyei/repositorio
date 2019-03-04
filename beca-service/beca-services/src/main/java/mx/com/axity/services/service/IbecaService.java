@@ -11,8 +11,5 @@ public interface IbecaService {
       int division(int sum2);
       int multiplication(int sum4);
      List<UserDO> getAllUsers();
-
-
-
-
+      UserDO create();
 }
