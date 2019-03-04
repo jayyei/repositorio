@@ -47,15 +47,9 @@ public class becaServiceImpl implements IbecaService {
     }
 
     @Override
-    public List<UserTO> getUsers() {
-
-        LOG.info("Consultando usuarios");
-        List<UserDO> usersDO = this.userDAO.findByLastName("Rodriguez");
-
-        Type userDAOType = new TypeToken<List<UserDO>>() {}.getType();
-        List<UserTO> usersTO = this.modelMapper.map(usersDO, userDAOType);
-        LOG.info("Se retornan {} elementos", usersTO.size());
-
-        return usersTO;
+    public List<UserDO> getAllUsers() {
+       return (List<UserDO>) this.userDAO.findAll();
     }
+
+
 }
