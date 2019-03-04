@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<databaseChangeLog 
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"> 
+
+    <changeSet author="Jay" id="Table_user">
+        <createTable tableName="User">
+            <column name="Id" type="INT">
+                <constraints nullable="true" primaryKey="true" unique="false"/>
+            </column>
+            <column name="Name" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="Lastname" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="Age" type="INT">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="Username" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="Password" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="Id_Address" type="INT">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="Jay" id="Table_Address">
+        <createTable tableName="Address">
+            <column name="Id" type="INT">
+                <constraints nullable="true" primaryKey="true" unique="false"/>
+            </column>
+            <column name="Street" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="Number" type="INT">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="City" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="State" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="Country" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="Zp" type="INT">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="Jay" id="Table_Role">
+        <createTable tableName="Role">
+            <column name="Id" type="INT">
+                <constraints nullable="true" primaryKey="true" unique="false"/>
+            </column>
+            <column name="Type" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="Permissions" type="VARCHAR(255)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="Jay" id="Table_Junction_Role_User">
+        <createTable tableName="Junction_Role_User">
+            <column name="Id_User" type="INT">
+                <constraints nullable="true" />
+            </column>
+            <column name="Id_Permissions" type="INT">
+                <constraints nullable="true" />
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="Jay" id="fk1">
+    <addForeignKeyConstraint baseColumnNames="Id_Address" 
+            baseTableName="User"                          
+            constraintName="fk_cd"                         
+            referencedColumnNames="Id"                    
+            referencedTableName="Address"/>                
+    </changeSet>
+
+    <changeSet author="Jay" id="fk2">
+    <addForeignKeyConstraint baseColumnNames="Id_User"
+            baseTableName="Junction_Role_User"
+            constraintName="fk_cd"
+            referencedColumnNames="Id"
+            referencedTableName="User"/>
+    </changeSet>
+    
+    <changeSet author="Jay" id="fk3">
+    <addForeignKeyConstraint baseColumnNames="Id_Permissions"
+            baseTableName="Junction_Role_User"
+            constraintName="fk_cd1"
+            referencedColumnNames="Id"
+            referencedTableName="Role"/>
+    </changeSet>
+
+   <changeSet author="Jay" id="CK">
+   <addPrimaryKey columnNames="Id_User, Id_Permissions"
+           constraintName="Pk_c"
+           tableName="Junction_Role_User"/>
+   </changeSet>
+
+</databaseChangeLog> 
