@@ -2,8 +2,6 @@ package mx.com.axity.services.facade;
 
 import mx.com.axity.commons.to.UserTO;
 import mx.com.axity.model.UserDO;
-import mx.com.axity.services.service.IbecaService;
-import mx.com.axity.services.service.impl.becaServiceImpl;
 
 import java.util.List;
 
@@ -12,4 +10,8 @@ public interface IbecaFacade {
 
     List<UserTO> getAllUsers();
     void create(UserTO user);
+    void delete(long id);
+    void update (UserTO user);
+    UserTO find (long id);
+
 }

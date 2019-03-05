@@ -1,17 +1,16 @@
 package mx.com.axity.services.service.impl;
 
-import mx.com.axity.commons.to.UserTO;
 import mx.com.axity.model.UserDO;
 import mx.com.axity.persistence.UserDAO;
 import mx.com.axity.services.service.IbecaService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.modelmapper.ModelMapper;
-import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import java.lang.reflect.Type;
+
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class becaServiceImpl implements IbecaService {
@@ -19,7 +18,8 @@ public class becaServiceImpl implements IbecaService {
     static final Logger LOG = LogManager.getLogger(becaServiceImpl.class);
 
     @Autowired
-    UserDAO userDAO;
+    UserDAO userDAO; //Inyeccion de dependencias, con el objeto userDAO podemos acceder
+                        //A los metodos de UserDao, que es hija de CrudRepository
 
     @Autowired
     ModelMapper modelMapper;
@@ -51,8 +51,24 @@ public class becaServiceImpl implements IbecaService {
     }
 
     @Override
-    public void storage(UserDO user) {
-        userDAO.save(user);
+    public void create(UserDO user) {
+        this.userDAO.save(user);
+    }
+
+    @Override
+    public void delete(long id) {
+        this.userDAO.deleteById(id);
+    }
+
+    @Override
+    public void update(UserDO user) {
+        this.userDAO.findById(user.getId()).get();
+    }
+
+    @Override
+    public UserDO find(long id) {
+      Optional <UserDO> user = userDAO.findById(id);
+      return user.get();
     }
 
 

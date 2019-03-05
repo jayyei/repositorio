@@ -1,13 +1,17 @@
 package mx.com.axity.commons.aspects;
 
 import mx.com.axity.commons.exceptions.BusinessException;
+import mx.com.axity.commons.to.ErrorTo;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+
+import java.util.NoSuchElementException;
 
 @Aspect
 @Configuration
@@ -24,10 +28,20 @@ public class RequestValidatorAspect {
             result = (ResponseEntity) joinPoint.proceed();
             return result;
         }catch (Throwable e) {
+            ErrorTo errorTo = new ErrorTo();
+            if (e instanceof NoSuchElementException){
+                errorTo.setErrorCode(1);
+                errorTo.setErrorMessage("Error uno prueba put update");
+            }
+            else {
+                errorTo.setErrorCode(2);
+                errorTo.setErrorMessage("Error dos prueba pud update");
+            }
             LOG.info("Exception Ocurred");
             LOG.info("Execution: {}", joinPoint.getSignature());
             LOG.info("Exception: {}", e.getMessage());
-            throw new BusinessException("Error", e);
+            return new ResponseEntity<>(errorTo, HttpStatus.NOT_FOUND);
+            //throw new BusinessException("Error", e);
         }
     }
 }

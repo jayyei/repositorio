@@ -8,17 +8,16 @@ import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import sun.swing.BakedArrayList;
 
 import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.List;
 
 @Component
 public class becaFacade implements IbecaFacade {
 
     @Autowired
-    private IbecaService becaService; //Inyeccion de dependencias
+    private IbecaService becaService; //Inyeccion de dependencias beca service es el objeto del cual podemos obtener
+                                        //Los metodos de becaServiceImpl
 
     @Autowired
     ModelMapper modelMapper; //Ya esta inyectada en el aplication de webb services
@@ -46,11 +45,26 @@ public class becaFacade implements IbecaFacade {
     public void create(UserTO user) {
         Type userDOType = new TypeToken<UserDO>() {}.getType();
         UserDO result = this.modelMapper.map(user, userDOType);
-        becaService.storage(result);
+        this.becaService.create(result);
+    }
+    public void delete(long id) {
+         this.becaService.delete(id);
     }
 
+    @Override
+    public void update(UserTO user) {
+        Type userDOType = new TypeToken<UserDO>() {}.getType();
+        UserDO result = this.modelMapper.map(user, userDOType);
+        this.becaService.update(result);
+    }
 
-
+    @Override
+    public UserTO find(long id) {
+       UserDO user = this.becaService.find(id);
+       Type userTOtype = new TypeToken<UserTO>() {}.getType();
+       UserTO result = this.modelMapper.map(user, userTOtype);
+       return result;
+    }
 
 
 }

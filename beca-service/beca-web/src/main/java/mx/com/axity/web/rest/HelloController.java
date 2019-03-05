@@ -44,7 +44,7 @@ public class HelloController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/user", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value = "/use", method = RequestMethod.GET, produces = "application/json")
     public ResponseEntity findUser(@RequestParam(value = "id") int id) {
         return new ResponseEntity<>(HttpStatus.OK);
     }
@@ -62,14 +62,33 @@ public class HelloController {
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/create", method = RequestMethod.POST, produces = "application/json")
-    public ResponseEntity save(@RequestBody UserTO userTO) {
+    @RequestMapping(value = "/user", method = RequestMethod.POST, produces = "application/json")
+    public ResponseEntity create(@RequestBody UserTO userTO) {
         LOG.info(userTO.getId());
         LOG.info(userTO.getName());
         LOG.info(userTO.getLastName());
         LOG.info(userTO.getAge());
-        IbecaFacade.create(userTO);
+        this.IbecaFacade.create(userTO);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
+    @RequestMapping(value = "/user", method = RequestMethod.DELETE, produces = "application/json")
+    public ResponseEntity delete(@RequestParam(value = "id")long id) {
+        this.IbecaFacade.delete(id);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/user", method = RequestMethod.PUT, produces = "application/json")
+    public ResponseEntity update(@RequestBody UserTO userTO) {
+        this.IbecaFacade.update(userTO);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/user", method = RequestMethod.GET, produces = "application/json")
+    public ResponseEntity read(@RequestParam(value = "id") long id) {
+        UserTO user = this.IbecaFacade.find(id);
+        return new ResponseEntity<>(user, HttpStatus.OK);
+    }
+
 
 }
