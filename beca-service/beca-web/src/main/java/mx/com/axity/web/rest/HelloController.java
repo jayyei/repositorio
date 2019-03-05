@@ -63,9 +63,13 @@ public class HelloController {
     }
 
     @RequestMapping(value = "/create", method = RequestMethod.POST, produces = "application/json")
-    public ResponseEntity assigment(){
-        LOG.info("Se invoca /create");
-
-        return new ResponseEntity<>(, HttpStatus.OK);
+    public ResponseEntity save(@RequestBody UserTO userTO) {
+        LOG.info(userTO.getId());
+        LOG.info(userTO.getName());
+        LOG.info(userTO.getLastName());
+        LOG.info(userTO.getAge());
+        IbecaFacade.create(userTO);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
+
 }

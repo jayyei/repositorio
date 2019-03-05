@@ -25,29 +25,34 @@ public class becaFacade implements IbecaFacade {
 
     @Override
     public int operation(int a, int b) {
-        int c = this.becaService.sum(a,b);
-        b = this.becaService.subtraction(c,a);
+        int c = this.becaService.sum(a, b);
+        b = this.becaService.subtraction(c, a);
         int d = this.becaService.multiplication(b);
         return becaService.division(d);
     }
 
     @Override
     public List<UserTO> getAllUsers() {
-       List<UserDO> userDOList = this.becaService.getAllUsers();
+        List<UserDO> userDOList = this.becaService.getAllUsers();
 
-       Type userTOType = new TypeToken<List<UserTO>>() {}.getType();
-       List<UserTO> result = this.modelMapper.map(userDOList, userTOType);
-       return result;
+        Type userTOType = new TypeToken<List<UserTO>>() {
+        }.getType();
+
+        List<UserTO> result = this.modelMapper.map(userDOList, userTOType);
+        return result;
     }
 
     @Override
-    public UserTO assigment(int id, String name, String lastName) {
-      UserTO user =  becaService.create();
-      user.setId(id);
-      user.setName(name);
-      user.setLastName(lastName);
-      return user;
+    public void create(UserTO user) {
+        Type userDOType = new TypeToken<UserDO>() {}.getType();
+        UserDO result = this.modelMapper.map(user, userDOType);
+        becaService.storage(result);
     }
+
+
+
+
+
 }
 
 

@@ -1,6 +1,7 @@
 package mx.com.axity.services.facade;
 
 import mx.com.axity.commons.to.UserTO;
+import mx.com.axity.model.UserDO;
 import mx.com.axity.services.service.IbecaService;
 import mx.com.axity.services.service.impl.becaServiceImpl;
 
@@ -10,6 +11,5 @@ public interface IbecaFacade {
     int operation(int num1, int num2);
 
     List<UserTO> getAllUsers();
-    UserTO assigment(int id, String name, String lastName);
-
+    void create(UserTO user);
 }

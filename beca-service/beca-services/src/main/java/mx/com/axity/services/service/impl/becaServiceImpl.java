@@ -25,7 +25,6 @@ public class becaServiceImpl implements IbecaService {
     ModelMapper modelMapper;
 
 
-
     @Override
     public int sum(int sum1, int sum2) {
         return sum1 + sum2;
@@ -52,8 +51,9 @@ public class becaServiceImpl implements IbecaService {
     }
 
     @Override
-    public UserDO create() {
-        UserDO user = new UserTO();
-        return  user;
+    public void storage(UserDO user) {
+        userDAO.save(user);
     }
+
+
 }
