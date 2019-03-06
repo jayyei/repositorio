@@ -1,10 +1,12 @@
 package mx.com.axity.services.service;
 
 import mx.com.axity.commons.to.UserTO;
+import mx.com.axity.model.UserDO;
 import mx.com.axity.services.BaseTest;
 import org.junit.Assert;
 import org.junit.Test;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class becaServiceTest extends BaseTest {
 
@@ -29,6 +31,24 @@ public class becaServiceTest extends BaseTest {
         int num1 = 10;
         int result = this.becaService.multiplication(num1);
         Assert.assertEquals(40,result);
+    }
+
+    @Test
+    public void updateExisteRegistro(){
+        UserDO userDO= becaService.find(7L);
+        Assert.assertTrue(userDO!=null);
+        Assert.assertTrue(new Long(7).equals(userDO.getId()));
+        Assert.assertTrue("Javier".equals(userDO.getName()));
+    }
+
+    @Test
+    public void updatSieExisteRegistro(){
+        try{
+            UserDO userDO= becaService.find(22L);
+            Assert.assertTrue(false);
+        }catch(NoSuchElementException e){
+            Assert.assertTrue(true);
+        }
     }
 
 
