@@ -44,10 +44,10 @@ public class becaServiceTest extends BaseTest {
     @Test
     public void updatSieExisteRegistro(){
         try{
-            UserDO userDO= becaService.find(22L);
-            Assert.assertTrue(false);
-        }catch(NoSuchElementException e){
+            UserDO userDO= becaService.find(2L);
             Assert.assertTrue(true);
+        }catch(NoSuchElementException e){
+            Assert.assertTrue(false);
         }
     }
 
