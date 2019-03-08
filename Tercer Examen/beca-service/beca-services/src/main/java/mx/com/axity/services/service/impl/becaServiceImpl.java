@@ -1,6 +1,8 @@
 package mx.com.axity.services.service.impl;
 
+import mx.com.axity.model.LoginDO;
 import mx.com.axity.model.UserDO;
+import mx.com.axity.persistence.LoginDAO;
 import mx.com.axity.persistence.UserDAO;
 import mx.com.axity.services.service.IbecaService;
 import org.apache.logging.log4j.LogManager;
@@ -21,10 +23,13 @@ public class becaServiceImpl implements IbecaService {
     @Autowired
     UserDAO userDAO; //Inyeccion de dependencias, con el objeto userDAO podemos acceder
                         //A los metodos de UserDao, que es hija de CrudRepository
+
+    @Autowired
+    LoginDAO loginDAO; //Inyeccion de dependencias, con el objeto userDAO podemos acceder
+    //A los metodos de UserDao, que es hija de CrudRepository
+
     @Autowired
     ModelMapper modelMapper;
-
-
     @Override
     public int sum(int sum1, int sum2) {
         return sum1 + sum2;
@@ -44,6 +49,7 @@ public class becaServiceImpl implements IbecaService {
     public int multiplication(int sum4) {
         return sum4*4;
     }
+
 
     @Override
     public List<UserDO> getAllUsers() {
@@ -71,5 +77,25 @@ public class becaServiceImpl implements IbecaService {
       return user.get();
     }
 
+    @Override
+    public LoginDO findLogin(long id) {
+        Optional <LoginDO> user = loginDAO.findById(id);
+        return user.get();
+    }
+
+    @Override
+    public void createLogin(LoginDO user) {
+        this.loginDAO.save(user);
+    }
+
+    @Override
+    public void updateLogin(LoginDO user) {
+        this.loginDAO.save(user);
+    }
+
+    @Override
+    public void deleteLogin(long id) {
+        this.loginDAO.deleteById(id);
+    }
 
 }
