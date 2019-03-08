@@ -8,6 +8,7 @@ import java.util.List;
 
 public interface IbecaFacade {
     int operation(int num1, int num2);
+
     List<UserTO> getAllUsers();
     void create(UserTO user);
     void delete(long id);

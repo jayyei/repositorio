@@ -49,7 +49,6 @@ public class becaFacade implements IbecaFacade {
         UserDO result = this.modelMapper.map(user, userDOType);
         this.becaService.create(result);
     }
-
     public void delete(long id) {
          this.becaService.delete(id);
     }
@@ -98,6 +97,8 @@ public class becaFacade implements IbecaFacade {
     public void deleteLogin(long id) {
         this.becaService.deleteLogin(id);
     }
+
+
 
 
 }

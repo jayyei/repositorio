@@ -45,7 +45,10 @@ public class HelloController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-
+    @RequestMapping(value = "/use", method = RequestMethod.GET, produces = "application/json")
+    public ResponseEntity findUser(@RequestParam(value = "id") int id) {
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 
     @RequestMapping(value = "/test", method = RequestMethod.GET, produces = "application/json")
     public ResponseEntity test() {
@@ -53,6 +56,12 @@ public class HelloController {
         return new ResponseEntity<>("Prueba Ok", HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/operation", method = RequestMethod.GET, produces = "application/json")
+    public ResponseEntity operation() {
+        LOG.info("Se invoca /operation");
+        int result = this.IbecaFacade.operation(5,10);
+        return new ResponseEntity<>(result, HttpStatus.OK);
+    }
 
     @RequestMapping(value = "/user", method = RequestMethod.POST, produces = "application/json")
     public ResponseEntity create(@RequestBody UserTO userTO) {
@@ -81,6 +90,7 @@ public class HelloController {
         UserTO user = this.IbecaFacade.find(id);
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
+
     //Comienzan los request para el login
     @RequestMapping(value = "/login", method = RequestMethod.GET, produces = "application/json")
     public ResponseEntity find(@RequestParam(value = "id") long id) {
@@ -108,7 +118,6 @@ public class HelloController {
         this.IbecaFacade.deleteLogin(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
-
 
 
 }

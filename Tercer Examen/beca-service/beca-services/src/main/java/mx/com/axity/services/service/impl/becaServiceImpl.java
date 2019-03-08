@@ -22,14 +22,15 @@ public class becaServiceImpl implements IbecaService {
 
     @Autowired
     UserDAO userDAO; //Inyeccion de dependencias, con el objeto userDAO podemos acceder
-                        //A los metodos de UserDao, que es hija de CrudRepository
+                    //A los metodos de UserDao, que es hija de CrudRepository
 
     @Autowired
-    LoginDAO loginDAO; //Inyeccion de dependencias, con el objeto userDAO podemos acceder
-    //A los metodos de UserDao, que es hija de CrudRepository
+    LoginDAO loginDAO;
 
     @Autowired
     ModelMapper modelMapper;
+
+
     @Override
     public int sum(int sum1, int sum2) {
         return sum1 + sum2;
@@ -49,7 +50,6 @@ public class becaServiceImpl implements IbecaService {
     public int multiplication(int sum4) {
         return sum4*4;
     }
-
 
     @Override
     public List<UserDO> getAllUsers() {
@@ -97,5 +97,7 @@ public class becaServiceImpl implements IbecaService {
     public void deleteLogin(long id) {
         this.loginDAO.deleteById(id);
     }
+
+
 
 }

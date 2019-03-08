@@ -1,4 +1,4 @@
-INSERT INTO login (id, user, password)
+INSERT INTO login (id, string, password)
 VALUES
 (1, 'Javier', 'Rodriguez'),
 (2, 'Javier', 'Rodriguez'),
@@ -10,4 +10,4 @@ VALUES
 
 commit ;
 select count(*) from login;
-alter sequence login_id_seq restart with 10;
+

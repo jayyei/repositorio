@@ -3,7 +3,7 @@ package mx.com.axity.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "user", schema = "public")
+@Table(name = "users", schema = "public")
 public class UserDO {
 
     @Id

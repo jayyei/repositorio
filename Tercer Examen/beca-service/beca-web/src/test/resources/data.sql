@@ -1,0 +1,1 @@
+INSERT INTO login (id, string, password) VALUES (1, 'Javier', 'Rodriguez');

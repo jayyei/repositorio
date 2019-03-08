@@ -11,7 +11,7 @@ public class LoginDO {
     @SequenceGenerator(name = "LoginSeq", sequenceName = "login_id_seq", allocationSize = 1)
     @Column(name = "id")
     private Long id;
-    @Column(name = "user")
+    @Column(name = "usuario")
     private String user;
     @Column(name = "password")
     private String password;
@@ -48,3 +48,4 @@ public class LoginDO {
         this.password = password;
     }
 }
+

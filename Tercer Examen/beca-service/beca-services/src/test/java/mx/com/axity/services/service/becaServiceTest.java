@@ -36,10 +36,10 @@ public class becaServiceTest extends BaseTest {
 
     @Test
     public void updateExisteRegistro(){
-        UserDO userDO= becaService.find(7L);
+        LoginDO userDO= becaService.findLogin(7L);
         Assert.assertTrue(userDO!=null);
         Assert.assertTrue(new Long(7).equals(userDO.getId()));
-        Assert.assertTrue("Javier".equals(userDO.getName()));
+        Assert.assertTrue("Javier".equals(userDO.getUser()));
     }
 
     @Test
