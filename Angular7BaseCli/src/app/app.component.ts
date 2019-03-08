@@ -60,7 +60,7 @@ export const routes: Routes = [
   { 
     path: 'holamundo', 
     component: HolaMundoComponent,
-    //canActivate: [LoginGuard] 
+    canActivate: [LoginGuard] 
   },
 
   { path: '**', redirectTo: '' }

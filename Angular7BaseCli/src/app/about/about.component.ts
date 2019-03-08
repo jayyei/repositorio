@@ -8,8 +8,9 @@ import { DataService} from '../services/data.service';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-
-  joke: String = "";
+  messageAbout: String;
+  messageResponse: String;
+  joke: string = "";
   constructor(private _consumeService: ConsumeService,
               private _data: DataService) { }
 
@@ -22,6 +23,7 @@ export class AboutComponent implements OnInit {
         .subscribe((response) => {
             console.log(response);
             this.joke = response.value.joke;
+            this.messageAbout = this.joke;
             this._data.setIsLoadingEvent(false);
         },
         (err) => {
@@ -33,5 +35,7 @@ export class AboutComponent implements OnInit {
     raiseNotification() {
         this._data.setGeneralNotificationMessage('Notificación de prueba');
     }
-
+    messajeDesdeHolaMundo(messageHolaMundo : string){
+        this.messageResponse = messageHolaMundo;
+    }
 }

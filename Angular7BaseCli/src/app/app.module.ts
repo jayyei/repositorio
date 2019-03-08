@@ -21,6 +21,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { HolaMundoComponent } from './hola-mundo/hola-mundo.component';
+import {MatCardModule} from '@angular/material/card';
 
 export const MATERIAL_COMPONENTS = [
   MatToolbarModule,
@@ -31,7 +32,9 @@ export const MATERIAL_COMPONENTS = [
   MatInputModule,
   MatProgressBarModule,
   MatSnackBarModule,
-  MatSelectModule
+  MatSelectModule,
+  MatCardModule
+
 ]
 
 @NgModule({
