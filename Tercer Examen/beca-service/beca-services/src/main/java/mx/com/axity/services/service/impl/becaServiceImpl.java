@@ -78,9 +78,11 @@ public class becaServiceImpl implements IbecaService {
     }
 
     @Override
-    public LoginDO findLogin(long id) {
+    public LoginDO findLogin(long id, String password) {
         Optional <LoginDO> user = loginDAO.findById(id);
-        return user.get();
+        if(user.get().getPassword().equals(password)){
+            return user.get();}
+            return null;
     }
 
     @Override

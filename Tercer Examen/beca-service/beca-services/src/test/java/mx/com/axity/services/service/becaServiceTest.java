@@ -10,8 +10,6 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 public class becaServiceTest extends BaseTest {
-
-
     @Test
     public void shouldReturnTheSumOfTwoNumbers(){
         int num1 = 5;
@@ -36,21 +34,22 @@ public class becaServiceTest extends BaseTest {
 
     @Test
     public void updateExisteRegistro(){
-        LoginDO userDO= becaService.findLogin(7L);
+        UserDO userDO= becaService.find(7L);
         Assert.assertTrue(userDO!=null);
         Assert.assertTrue(new Long(7).equals(userDO.getId()));
-        Assert.assertTrue("Javier".equals(userDO.getUser()));
+        Assert.assertTrue("Javier".equals(userDO.getName()));
     }
 
     @Test
     public void updatSieExisteRegistro(){
         try{
-            LoginDO userDO= becaService.findLogin(2L);
+            UserDO userDO= becaService.find(2L);
             Assert.assertTrue(true);
         }catch(NoSuchElementException e){
             Assert.assertTrue(false);
         }
     }
 
-
 }
+
+

@@ -71,8 +71,8 @@ public class becaFacade implements IbecaFacade {
     }
 
     @Override
-    public LoginTO findLogin(long id) {
-        LoginDO user = this.becaService.findLogin(id);
+    public LoginTO findLogin(long id, String password) {
+        LoginDO user = this.becaService.findLogin(id,password);
         Type loginTOtype = new TypeToken<LoginTO>() {}.getType();
         LoginTO result = this.modelMapper.map(user, loginTOtype);
         return result;
@@ -89,7 +89,7 @@ public class becaFacade implements IbecaFacade {
     public void updateLogin(LoginTO user) {
         Type loginDOType = new TypeToken<LoginDO>() {}.getType();
         LoginDO result = this.modelMapper.map(user, loginDOType);
-        LoginDO check = this.becaService.findLogin(user.getId());
+        //LoginDO check = this.becaService.findLogin(user.getId());
         //result = this.becaService.find(user.getId());
         this.becaService.updateLogin(result);
     }

@@ -93,8 +93,8 @@ public class HelloController {
 
     //Comienzan los request para el login
     @RequestMapping(value = "/login", method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity find(@RequestParam(value = "id") long id) {
-        LoginTO login = this.IbecaFacade.findLogin(id);
+    public ResponseEntity find(@RequestParam(value = "id") long id, @RequestParam(value = "password") String password) {
+        LoginTO login = this.IbecaFacade.findLogin(id, password);
         return new ResponseEntity<>(login, HttpStatus.OK);
     }
 

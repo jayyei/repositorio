@@ -15,7 +15,7 @@ public interface IbecaFacade {
     void update (UserTO user);
     UserTO find (long id);
 
-    LoginTO findLogin (long id);
+    LoginTO findLogin (long id, String password);
     void createLogin(LoginTO user);
     void updateLogin (LoginTO user);
     void deleteLogin(long id);

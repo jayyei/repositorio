@@ -1,13 +1,13 @@
-INSERT INTO login (id, string, password)
+INSERT INTO users (id, ds_name, ds_lastname, age)
 VALUES
-(1, 'Javier', 'Rodriguez'),
-(2, 'Javier', 'Rodriguez'),
-(3, 'Javier', 'Rodriguez'),
-(4, 'Javier', 'Rodriguez'),
-(5, 'Javier', 'Rodriguez'),
-(6, 'Javier', 'Rodriguez'),
-(7, 'Javier', 'Rodriguez');
+(1, 'Javier', 'Rodriguez', 20),
+(2, 'Javier', 'Rodriguez', 21),
+(3, 'Javier', 'Rodriguez', 22),
+(4, 'Javier', 'Rodriguez', 23),
+(5, 'Javier', 'Rodriguez', 24),
+(6, 'Javier', 'Rodriguez', 22),
+(7, 'Javier', 'Rodriguez', 23);
 
 commit ;
-select count(*) from login;
-
+select count(*) from users;
+alter sequence users_id_seq restart with 10;

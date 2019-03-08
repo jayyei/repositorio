@@ -1,1 +1,1 @@
-INSERT INTO login (id, string, password) VALUES (1, 'Javier', 'Rodriguez');
+INSERT INTO users (id, ds_name, ds_lastname, age) VALUES (1, 'Javier', 'Rodriguez', 4);
