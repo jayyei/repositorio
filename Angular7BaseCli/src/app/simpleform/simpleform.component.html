@@ -1,0 +1,41 @@
+<form [formGroup] ="RegistroForm" class="example-container" (submit)="submit()">
+  <mat-form-field>
+    <input matInput placeholder="Nombre" formControlName="name" type="text">
+    <mat-error>
+      <span *ngIf="RegistroForm?.controls?.name?.errors?.required">Valor Requerido</span>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea matInput placeholder="Apellido Paterno" formControlName="apellidoPaterno" type="text"></textarea>
+      <mat-error>
+        <span *ngIf="RegistroForm?.controls?.apellidoPaterno?.errors?.required">Valor Requerido</span>
+      </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea matInput placeholder="Apellido Materno" formControlName="apellidoMaterno" type="text"></textarea>
+      <mat-error>
+        <span *ngIf="RegistroForm?.controls?.apellidoMaterno?.errors?.required">Valor Requerido</span>
+      </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select placeholder="Topa tu nivel" formControlName ="idNivel">
+        <mat-error>
+            <span *ngIf="RegistroForm?.controls?.idNivel?.errors?.required">Valor Requerido</span>
+          </mat-error>
+          
+          <mat-option *ngFor="let nivel of niveles" [value]="nivel.id">{{nivel.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-icon-button style="color: blue;" type="submit" >
+      <mat-icon>cancel</mat-icon>
+    </button>
+
+    <button mat-icon-button>
+        <mat-icon>person_add</mat-icon>
+      </button>
+</form>

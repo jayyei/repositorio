@@ -1,0 +1,12 @@
+.example-container {
+    display: flex;
+    flex-direction: row; 
+    padding: 10px;
+    margin: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+ 

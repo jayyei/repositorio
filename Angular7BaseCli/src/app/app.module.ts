@@ -22,6 +22,7 @@ import { ContactComponent } from './contact/contact.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { HolaMundoComponent } from './hola-mundo/hola-mundo.component';
 import {MatCardModule} from '@angular/material/card';
+import { SimpleformComponent } from './simpleform/simpleform.component';
 
 export const MATERIAL_COMPONENTS = [
   MatToolbarModule,
@@ -44,7 +45,8 @@ export const MATERIAL_COMPONENTS = [
     AboutComponent,
     ContactComponent,
     FormularioComponent,
-    HolaMundoComponent
+    HolaMundoComponent,
+    SimpleformComponent
   ],
   imports: [
     BrowserModule,

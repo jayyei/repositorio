@@ -7,6 +7,7 @@ import { DataService } from './services/data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { LoginGuard } from './guards/login.guard';
 import { HolaMundoComponent } from './hola-mundo/hola-mundo.component';
+import { SimpleformComponent } from './simpleform/simpleform.component';
 
 @Component({
   selector: 'app-root',
@@ -60,6 +61,12 @@ export const routes: Routes = [
   { 
     path: 'holamundo', 
     component: HolaMundoComponent,
+    canActivate: [LoginGuard] 
+  },
+
+  { 
+    path: 'simpleform', 
+    component: SimpleformComponent,
     canActivate: [LoginGuard] 
   },
 
