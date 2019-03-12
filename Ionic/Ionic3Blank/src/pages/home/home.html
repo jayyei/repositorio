@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content  padding>
+    <h1 class="titulo" >Curso ionic 3</h1>
+  
+  <div class="wrapper">
+
+      <ion-item>
+          <ion-label fixed>Usuario</ion-label>
+          <ion-input [(ngModel)]="user"></ion-input>
+        </ion-item>
+    
+      <ion-item>
+            <ion-label fixed>Grupo</ion-label>
+            <ion-input [(ngModel)]="group" ></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label fixed>Dinero</ion-label>
+            <ion-input [(ngModel)]="money" ></ion-input>
+        </ion-item>
+        <br>
+    <button ion-button round color="curso" (click)="goAbout()">Mi primer boton</button>
+    <!-- <button ion-button color="light">Light</button>
+    <button ion-button>Default</button>
+    <button ion-button clear color="secondary">Secondary</button>
+    <button ion-button round color="danger">Danger</button>
+    <button ion-button block small color="dark">Dark</button>
+    <button ion-button color="curso">color curso</button>
+    <button ion-button icon-start>
+      <ion-icon name="home"></ion-icon>Hogar</button> -->
+  </div>
+  <h1>user =>{{user}}</h1>
+  <h1>group => {{group}}</h1>
+  
+</ion-content>

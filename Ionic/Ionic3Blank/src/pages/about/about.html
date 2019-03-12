@@ -1,0 +1,25 @@
+<!--
+  Generated template for the AboutPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{ user| mypipe}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1> {{data.date | date: "dd MMMM yyyy" }}</h1>
+    <button ion-button round color="curso" (click)="back()">Back</button>
+    <button ion-button round color="curso" (click)="next()">Next</button>
+    <button ion-button round (click)="logOut()">logOut</button>
+    <h1> El varo {{money | currency: 'USD' }}</h1>
+    <h1> El varo {{money | percent }}</h1>
+    <h1> El varo {{money | number: '3.5-5' }}</h1>
+</ion-content>
+
+<ion-footer>
+
+</ion-footer>

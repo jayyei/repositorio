@@ -1,0 +1,30 @@
+.square-green {
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    margin: 10px;
+}
+
+.square-yellow {
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    margin: 10px;
+}
+
+.square-red {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    margin: 10px;
+}
+
+.content {
+    background-color: rgba(0, 174, 255, 0.589);
+    padding: 20px;
+    /* Agregar codigo */
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: flex-end; */
+    /* flex-direction: flex; */
+}
