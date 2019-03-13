@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Home
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -9,24 +9,24 @@
 <ion-content  padding>
     <h1 class="titulo" >Curso ionic 3</h1>
   
-  <div class="wrapper">
+  <div class="wrapper" [formGroup]="loginForm">
 
       <ion-item>
           <ion-label fixed>Usuario</ion-label>
-          <ion-input [(ngModel)]="user"></ion-input>
+          <ion-input formControlName="user"></ion-input>
         </ion-item>
     
       <ion-item>
             <ion-label fixed>Grupo</ion-label>
-            <ion-input [(ngModel)]="group" ></ion-input>
+            <ion-input formControlName="pwd" ></ion-input>
         </ion-item>
 
-        <ion-item>
+        <!-- <ion-item>
             <ion-label fixed>Dinero</ion-label>
             <ion-input [(ngModel)]="money" ></ion-input>
-        </ion-item>
+        </ion-item> -->
         <br>
-    <button ion-button round color="curso" (click)="goAbout()">Mi primer boton</button>
+    <button ion-button round [color]="loginForm.valid ? 'primary': 'danger'" (click)="login()">Mi primer boton</button>
     <!-- <button ion-button color="light">Light</button>
     <button ion-button>Default</button>
     <button ion-button clear color="secondary">Secondary</button>

@@ -18,13 +18,16 @@ export class AboutPage {
 
   user:string;
   money:number;
+  cursos:string[];
   //group:string;
   data:any;
+  colorLabel: string ='secondary';
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
      this.data = this.navParams.data;
     this.user = this.navParams.get('user');
     this.money = this.navParams.get('money');
+    this.cursos = this.navParams.get('cursos');
     //this.group = this.navParams.get('group');
   }
 
@@ -32,6 +35,11 @@ export class AboutPage {
     console.log('ionViewDidLoad AboutPage');
   }
 
+  goCustomer() {
+    setTimeout(() =>{
+      this.colorLabel ='danger';
+    },3*1000)
+  }
   back(){
     this.navCtrl.pop();
   }
