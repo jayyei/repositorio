@@ -8,8 +8,8 @@
 
 <ion-content  padding>
     <h1 class="titulo" >Curso ionic 3</h1>
-  
-  <form class="wrapper" [formGroup]="loginForm">
+    <h1 class="titulo" >Inicio de Sesion</h1>
+  <div class="wrapper" [formGroup]="loginForm">
 
       <ion-item>
           <ion-label fixed>Usuario</ion-label>
@@ -26,7 +26,7 @@
             <ion-input [(ngModel)]="money" ></ion-input>
         </ion-item> -->
         <br>
-    <button ion-button round [color]="loginForm.valid ? 'primary': 'danger'" (click)="login()">Mi primer boton</button>
+    <button ion-button round [color]="loginForm.valid ? 'primary': 'danger'" (click)="login()">Mi primer login</button>
     <!-- <button ion-button color="light">Light</button>
     <button ion-button>Default</button>
     <button ion-button clear color="secondary">Secondary</button>
@@ -35,7 +35,8 @@
     <button ion-button color="curso">color curso</button>
     <button ion-button icon-start>
       <ion-icon name="home"></ion-icon>Hogar</button> -->
-    </form>
+      <button ion-button round [color]="loginForm.valid ? 'primary': 'curso'" (click)="createUser()">Mi primer usuario registrado</button>
+    </div>
   <h1>user =>{{user}}</h1>
   <h1>group => {{group}}</h1>
   

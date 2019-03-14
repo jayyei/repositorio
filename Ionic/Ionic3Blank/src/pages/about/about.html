@@ -30,15 +30,36 @@
 <ion-footer>
 
 </ion-footer> -->
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{data.name}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
 
 <ion-content padding>
-  <!-- <div class="wrapper"></div> -->
-  <div *ngFor="let course of data.cursos| slice:0:4;  let i = index;"
-  [ngClass]= "{one: i ==0, two: i ==1, three: i == 2, four: i ==3}">
-  <h1>Curso: {{course}}</h1>
-  <h1>Nombre: {{user}}</h1>
-  <h1>Cantidad: {{money}}</h1>
-  <h1>Fecha: {{data.date |date: "dd MMMM yyyy"}}</h1>
-</div>
+      <card *ngFor="let item of students" [student]="item" (click-card)="deleteCard($event)"></card>
+      <!-- <ion-card *ngFor="let student of students;" (click)="deleteCard(student.id)">
+          <ion-card-header>
+              {{student.email}}
+          </ion-card-header>
+          <ion-card-content>
+            <ion-card-title>
+              {{student.name}}-- {{student.app}}-- {{student.matricula}}
+            </ion-card-title>
+            <p>
+              The most popular industrial group ever, and largely
+              responsible for bringing the music to a mass audience.
+            </p>
+          </ion-card-content>
+        </ion-card> -->
+    
+      <!-- *ngFor="let course of data.cursos| slice:0:4;  let i = index;"
+      [ngClass]= "{one: i ==0, two: i ==1, three: i == 2, four: i ==3}"
+  <h1>Curso: {{course}}</h1> -->
+  <!-- <h1>Nombre: {{data.name}}</h1> -->
+  <!-- <h1>Cantidad: {{money}}</h1>
+  <h1>Fecha: {{data.date |date: "dd MMMM yyyy"}}</h1> -->
 
 </ion-content>
