@@ -52,6 +52,13 @@
             tableName="login"/>
     </changeSet>
 
+    <changeSet author="Jay" id="fk">
+    <addForeignKeyConstraint baseColumnNames="id"
+            baseTableName="users"
+            constraintName="fk_1"
+            referencedColumnNames="id"
+            referencedTableName="login"/>
+</changeSet>
 
 
 </databaseChangeLog> 

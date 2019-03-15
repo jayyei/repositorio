@@ -1,0 +1,52 @@
+
+    .wrapper{
+        display: flex;
+        align-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgb(21, 212, 164);
+        padding: 10px;
+        
+
+    }
+
+    .wrapper-info{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .one{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        background: red;
+        margin: 10px;
+
+    }
+
+    .two{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        background: rgb(61, 47, 185);
+        margin: 10px;
+
+    }
+    .three{
+        display: flex;
+        flex-direction: column;
+        background: rgb(29, 212, 44);
+        margin: 10px;
+
+    }
+
+    .four{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        background: rgb(209, 134, 22);
+        margin: 10px;
+
+    }
+

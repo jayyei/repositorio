@@ -49,7 +49,7 @@ public class RequestValidatorAspect {
 
             else if (e instanceof NullPointerException){
                 errorTo.setErrorCode(3);
-                errorTo.setErrorMessage("Error uno prueba put update");
+                errorTo.setErrorMessage("Usuario o contraseñas no encontradas o erroneas");
                 return new ResponseEntity<>(errorTo, HttpStatus.FORBIDDEN);
             }
 
