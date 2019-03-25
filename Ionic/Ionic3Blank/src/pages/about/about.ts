@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { CustomerPage } from '../customer/customer';
 import { HomePage } from '../home/home';
-import { StudentsProvider } from '../../providers/students/students';
+import { StudentsProvider } from '../../providers/students/students-service';
 import { EventManagerProvider } from '../../providers/event-manager/event-manager';
 
 /**

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, Loading, LoadingController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HomePage } from '../home/home';
-import { StudentsProvider } from '../../providers/students/students';
+import { StudentsProvider } from '../../providers/students/students-service';
 import { Students } from '../../model/students-models';
 
 /**
@@ -38,8 +38,8 @@ export class CreateAccountPage {
   // }
 
 }
-usuarioNuevo(){
-  let presentLoading = this.loading.create({
+UsuarioNuevo(){
+  let presentLoading = this.loading.create({ //Se define el controlador del loading
     content: 'Espere por favor'
   });
   presentLoading.present();
@@ -54,4 +54,5 @@ usuarioNuevo(){
     console.log('Succes');
     presentLoading.dismiss();
   })
-}}
+}
+}

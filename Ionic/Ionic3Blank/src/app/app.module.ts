@@ -11,7 +11,7 @@ import { CustomerPage } from '../pages/customer/customer';
 import { MypipePipe } from '../pipes/mypipe/mypipe';
 import { PipesModule } from '../pipes/pipes.module';
 import { CreateAccountPage } from '../pages/create-account/create-account';
-import { StudentsProvider } from '../providers/students/students';
+import { StudentsProvider } from '../providers/students/students-service';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginProvider } from '../providers/login/login';
 import { LoginProviderMock } from '../mock/loginProviderMock';
