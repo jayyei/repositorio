@@ -17,7 +17,7 @@ public interface IbecaService {
       void update (UserDO user);
       UserDO find (long id);
 
-    LoginDO findLogin (long id, String password);
+    UserDO findLogin (LoginDO loginDO);
     void createLogin(LoginDO user);
     void updateLogin (LoginDO user);
     void deleteLogin (long id);

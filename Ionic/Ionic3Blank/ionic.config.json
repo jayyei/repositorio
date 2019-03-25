@@ -1,6 +1,13 @@
 {
   "name": "HelloWord",
+<<<<<<< HEAD
   "integrations": {},
   "type": "ionic-angular",
   "app_id": ""
+=======
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+>>>>>>> 68ea4b608c97b8d7c40ebde6291db90a5b00fdeb
 }
