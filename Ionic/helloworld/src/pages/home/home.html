@@ -6,7 +6,16 @@
   </ion-navbar>
 </ion-header>
 
+
+
 <ion-content padding>
+    <ion-list>
+        <ion-item>
+          <ion-label>{{datetimeValue | date: "yyyy-MM-dd H:mm:ss"}} Calender</ion-label>
+          <ion-datetime picker [(ngModel)]="datetimeValue"
+only-valid="{'inside': {'initial': '2016-04-09', 'final': '2016-06-15'}, 'inclusive': true}"></ion-datetime>
+        </ion-item>
+      </ion-list>
   The world is your oyster.
   <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
