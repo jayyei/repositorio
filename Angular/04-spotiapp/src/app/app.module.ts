@@ -15,6 +15,7 @@ import { NoimagePipe } from './pipes/noimage.pipe';
 import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
 import { ArtistaComponent } from './components/artista/artista.component';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
 // Importar servicios de nuestra aplicacion
 
 
@@ -24,6 +25,7 @@ import { ArtistaComponent } from './components/artista/artista.component';
     HomeComponent,
     SearchComponent,
     NavbarComponent,
+    DomseguroPipe,
     NoimagePipe,
     TarjetasComponent,
     LoadingComponent,
