@@ -1,0 +1,24 @@
+nav{
+    background: #ee4266;
+    padding: 20px;
+}
+.columna{
+    background: #007880;
+    color: #82acff;
+    padding: 20px;
+    width: 25%;
+    margin: 10px;
+}
+.padre{
+    display: flex;
+}
+
+h1{
+    background: salmon;
+    display: inline-block;
+}
+
+.a{
+    background: salmon;
+    display: block;
+}

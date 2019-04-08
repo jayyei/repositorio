@@ -1,7 +1,7 @@
 import { ListaItem } from './lista-item.model';
 
 
-export class Lista{
+ export class Lista {
     id: number;
     titulo: string;
     creadaEn: Date;
@@ -9,7 +9,7 @@ export class Lista{
     terminada: boolean;
     items: ListaItem[];
 
-    constructor(titulo: string){
+    constructor(titulo: string) {
         this.titulo = titulo;
         this.creadaEn = new Date();
         this.terminada = false;
@@ -17,4 +17,4 @@ export class Lista{
 
         this.id = new Date().getTime();
     }
-}
+ }
