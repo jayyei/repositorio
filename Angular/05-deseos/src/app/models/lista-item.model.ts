@@ -1,10 +1,10 @@
 
 
-export class ListaItem{
+export class ListaItem {
     desc: string;
     completado: boolean;
 
-    constructor( desc: string){
+    constructor(desc: string) {
         this.desc = desc;
         this.completado = false;
     }
