@@ -24,13 +24,14 @@ export class DeseosService {
       return nuevaLista.id;
   }
 
-  obtenerLista( id: string | number){
-      id = Number(id);
-      return this.listas.find( listaData =>{
-          return listaData.id === id;
-      });
+  borrarLista( lista: Lista ) {
+      this.listas = this.listas.filter ( listaData => listaData.id !== lista.id);
   }
 
+  obtenerLista(id: string | number) {
+      id = Number(id);
+      return this.listas.find( listaData => listaData.id === id);
+  }
   guardarStorage() {
       localStorage.setItem('data', JSON.stringify(this.listas));
   }

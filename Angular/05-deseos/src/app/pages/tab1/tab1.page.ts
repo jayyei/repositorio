@@ -15,7 +15,6 @@ export class Tab1Page {
   }
 
   async agregarLista() {
-    //
     const alert = await this.alertCtrl.create({
       header: 'Nueva lista',
       inputs: [
@@ -37,7 +36,7 @@ export class Tab1Page {
           text: 'Crear',
           handler: ( data ) => {
             console.log(data);
-            if( data.titulo.length === 0){
+            if ( data.titulo.length === 0) {
               return;
             }
             const listaId = this.deseosService.crearLista(data.titulo);
