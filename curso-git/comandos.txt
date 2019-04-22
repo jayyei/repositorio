@@ -1,0 +1,103 @@
+git init = nos crea una carpeta la cual sera el repositorio, inicia el repositorio
+
+git add file = coloca en escenario el archivo(s) para colocarlos en un commit 
+
+git status = nos muestra una serie de archivos cambiados y la rama ( branch) en la cual estamos ubicados, lo que esta en el stage y lo que no esta en el
+
+git log = no muestra un historial de commits con sus hash, las notas y quien los creo
+
+git add "*.txt" = agrega todos los txt del proyecto
+
+git add *.txt = agrega todos los txt del directorio actual
+
+git add --all = agrega todos los archivos
+
+git add lista de archivos = agrega una serie de archivos de acuerdo al criterio del programador
+
+git add pdfs/ = agrega todos los archivos que esten dentro de la carpeta llamada pdfs
+
+git add pdfs/*.pdf agrega todos los archivos tipo pdf dentro de la carpeta pdfs
+
+git log --oneline = nos muestra el historial de commits pero con el hash corto
+
+git log --oneline --decorate --all --graph
+
+git status -s = modo silence del status
+
+git status -s -b = modo silence de la rama x del status
+
+git config --global alias.elalias "instruccion de git sin el git que quieres que sea llamada con el alias"
+
+git config --global -e = muestra la pantalla de edcicion del usuario en git y los alias que se han creado
+
+git config --gloabl -l muestra el listado no editable del usuario en git y los alias configurados
+
+git diff = nos muestra las diferencias o las modificaciones que se realizaron en el repositorio (pueden ser muchas)
+
+git diff --staged = nos muestra las diferencias o modifiaciones que se realizaron en el repositorio incluyendo los archivos que esten en stage
+
+git commit -am = manda al stage todos los archivos y a la vez hace un commit de los archivos 
+
+git commit --amend -m = se puede volvera modificar el ultimo mensaje del commit anadido"
+
+git reset --soft = Regresar al commit x especificado, pero no deshace cambios
+git reset -- mixed = Regresa a un commit x en la historia y no deshace los cambios en los archivos
+git reset -- hard = Regresa a un punto de la historia pero bnorra cambios y commits hasta cierto punto
+ 
+git reflog = Nos muestra todos los commits y acciones hechas con sus respectivos hash, util para hacer viajes en el tiempo
+
+git mv archivo.ext nuevo_nombre.ext = Cambia el nombre del archivo a uno nuevo
+
+git add -u = Anade al stage los archivos pero actualizados, es decir cuando se borra un archivo que se tenia contemplado en el repositorio y se quiere hacer commit de lo hecho
+
+git branch rama = crea una nueva rama
+
+en la rama master o la rama base, git merge rama-afusionar = fusiona la rama en donde estas con la rama mencionada en el merge
+
+git branch -d rama a borrar = borra "Rama a borrar"
+
+git checkout -b rama = se crea y se mueve a la rama
+
+git tag nombreTag = crea un nuevo tag
+
+git tag = nos muestra los tags
+
+git tag -d nombreTag = borra el nombre del tag
+
+git tag -a v1.0.0 -m "Version 1.0.0"
+
+git tag -a v0.1.0 hash -m "Mensaje del tag"
+
+git show v0.0.1 = nos muestra la informacion del tag, el commit que la posee y los cambios
+
+git stash = permite esconder los cambios hechos para limpiar el stage de los untracked 
+
+git stash list = nos muestra la lista de los stash 
+
+git stash pop = para sacar de la lista y los cambios del ultimo stash realizado
+
+git stash apply stash@{n} = para retomar cierto trabajo puesto en stash 
+ 
+git stash drop = borra el ultimo stash o en su defecto el especificado
+
+git stash save --keep-index = guarda todo menos los archivos en el stage
+
+git stash save --include-untracked = incluye todos los archivos junto a lo que no se le han dado seguimiento
+
+git show stash = muestra informacion del ultimo stash introducido
+
+git stash save "Mensaje " = para agregar un mensaje en el stash
+
+git stash clear = borra todas las entradas que hay en el stash
+
+git rebase -i HEAD~4 = selecciona los ultimos 4 commits para realizar diversas operaciones, una de ellas, la union de commits con squash
+
+
+
+
+
+
+
+
+
+
