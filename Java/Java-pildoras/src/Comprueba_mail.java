@@ -2,18 +2,27 @@ import javax.swing.*;
 
 public class Comprueba_mail {
     public static void main(String[] args){
-        boolean arroba = false;
+        int arroba = 0;
+        int punto = 0;
         String mail = JOptionPane.showInputDialog("Introduce tu email");
 
-        for (int i = 0; i == mail.length()-1; i++){
-            if(mail.charAt(i) == '@'){
-                arroba= true;
+        for (int i = 0; i < mail.length()-1; i++) {
+            if (mail.charAt(i) == '@') {
+                arroba++;
+            }else if (mail.charAt(i) == '.'){
+                punto++;
             }
-            if(arroba) {
+
+        }
+            if(arroba == 1  && punto == 1) {
                 System.out.println("El correo es correcto");
-            } else {
-                System.out.println("El correco es erroneo");
+            } else if (arroba != 1 || punto !=1) {
+                System.out.println("El correo es erroneo");
+            }
+
             }
         }
-    }
-}
+
+
+
+
