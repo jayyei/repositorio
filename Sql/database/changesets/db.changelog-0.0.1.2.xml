@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<databaseChangeLog 
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"> 
+    <changeSet author="criveraa" id="20190421-009">
+	<update tableName="cs_config">
+		<column name="dx_value" type="varchar(500)" value="AAAAVrcNTFA:APA91bEJqrZT8-AKx1pF0iQYaSUmkOtaOg9DYPTsnuvB8cijRKFUwv76ClLeZu4QVNnako2GZN1MlNjuTo4bOqpu47p_ZWS46zSmcwqXgtrsJJpHC7a6Pk7eKt6QXeLFe0xSv6n_PALi" />
+		<where> dx_key = 'FCM_TOKEN' </where>
+	</update>
+    </changeSet>
+</databaseChangeLog> 

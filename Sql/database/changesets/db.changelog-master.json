@@ -1,0 +1,20 @@
+{ 
+    "databaseChangeLog": [
+        {
+            "preConditions": [
+                {
+                    "runningAs": {
+                        "username": "dba"
+                    }
+                }
+            ]
+        }
+   ,{
+    "include" : { "file" : "changesets/db.changelog-0.0.0.8.json" } 
+   }
+   ,{
+    "include" : { "file" : "changesets/db.changelog-0.0.0.g.json" } 
+   }
+ ]
+}
+

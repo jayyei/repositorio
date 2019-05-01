@@ -1,0 +1,439 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="criveraa (generated)" id="1553105726377-1">
+        <createSequence sequenceName="cs_catalog_types_seq"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-2">
+        <createSequence sequenceName="cs_catalogs_seq"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-3">
+        <createSequence sequenceName="cs_config_seq"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-4">
+        <createSequence sequenceName="cs_holidays_seq"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-5">
+        <createSequence sequenceName="cs_resources_seq"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-6">
+        <createSequence sequenceName="dd_fcm_notifications_seq"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-7">
+        <createSequence sequenceName="dd_folio_workflows_seq"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-8">
+        <createSequence sequenceName="dd_project_folios_seq"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-9">
+        <createSequence sequenceName="dd_user_devices_seq"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-10">
+        <createSequence sequenceName="dd_user_folios_seq"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-11">
+        <createSequence sequenceName="dd_user_notifications_seq"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-12">
+        <createSequence sequenceName="dd_users_folios_seq"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-13">
+        <createSequence sequenceName="dd_workflow_custom_tags_seq"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-14">
+        <createSequence sequenceName="hh_user_access_seq"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-15">
+        <createSequence sequenceName="mm_daysoff_requests_seq"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-16">
+        <createSequence sequenceName="mm_notifications_seq"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-17">
+        <createSequence sequenceName="mm_projects_seq"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-18">
+        <createSequence sequenceName="mm_users_seq"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-19">
+        <createTable tableName="cs_catalog_types">
+            <column name="sk_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dx_name" type="VARCHAR(100)"/>
+            <column name="dx_description" type="VARCHAR(200)"/>
+            <column name="dx_type" type="VARCHAR(3)"/>
+            <column defaultValueComputed="now()" name="dd_created" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="dd_updated" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="dx_id" type="VARCHAR(10)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-20">
+        <createTable tableName="cs_catalogs">
+            <column name="sk_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="kn_catalog_type_id" type="INT"/>
+            <column name="dx_name" type="VARCHAR(100)"/>
+            <column name="dx_description" type="VARCHAR(200)"/>
+            <column name="dx_created_user" type="VARCHAR(100)"/>
+            <column defaultValueComputed="now()" name="dd_created" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="dx_updated_user" type="VARCHAR(100)"/>
+            <column name="dd_updated" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="dx_key" type="VARCHAR(3)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-21">
+        <createTable tableName="cs_config">
+            <column autoIncrement="true" name="sk_id" type="SERIAL">
+                <constraints primaryKey="true" primaryKeyName="cs_config_pk"/>
+            </column>
+            <column name="dx_key" type="VARCHAR(100)"/>
+            <column name="dx_type" type="VARCHAR(50)"/>
+            <column name="dx_value" type="VARCHAR(500)"/>
+            <column name="dx_created_user" type="VARCHAR(100)"/>
+            <column defaultValueComputed="now()" name="dd_created" type="TIMESTAMP(6) WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dx_updated_user" type="VARCHAR(100)"/>
+            <column name="dd_updated" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-22">
+        <createTable tableName="cs_holidays">
+            <column name="sk_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dx_description" type="VARCHAR(100)"/>
+            <column name="dn_date" type="INT"/>
+            <column name="dx_type" type="VARCHAR(3)"/>
+            <column name="dn_max_hours" type="numeric"/>
+            <column name="dx_created_user" type="VARCHAR(100)"/>
+            <column defaultValueComputed="now()" name="dd_created" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="dx_updated_user" type="VARCHAR(100)"/>
+            <column name="dd_updated" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-23">
+        <createTable tableName="cs_resources">
+            <column name="sk_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dx_data" type="TEXT"/>
+            <column name="dx_created_user" type="VARCHAR(100)"/>
+            <column defaultValueComputed="now()" name="dd_created" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="dx_updated_user" type="VARCHAR(100)"/>
+            <column name="dd_updated" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-24">
+        <createTable tableName="dd_fcm_notifications">
+            <column name="sk_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="kn_user_notification_id" type="INT"/>
+            <column name="json_object" type="TEXT"/>
+            <column name="dx_created_user" type="VARCHAR(100)"/>
+            <column defaultValueComputed="now()" name="dd_created" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="dx_updated_user" type="VARCHAR(100)"/>
+            <column name="dd_updated" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="dd_sent" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="dx_status" type="VARCHAR(3)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-25">
+        <createTable tableName="dd_folio_workflows">
+            <column name="sk_id" type="numeric">
+                <constraints nullable="false"/>
+            </column>
+            <column name="kn_id_folio" type="INT"/>
+            <column name="kn_id_user" type="INT"/>
+            <column name="dx_desc" type="VARCHAR(4096)"/>
+            <column name="dn_date" type="INT"/>
+            <column name="dn_time" type="numeric(4, 2)"/>
+            <column name="dx_created_user" type="VARCHAR(100)"/>
+            <column defaultValueComputed="now()" name="dd_created" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="dx_updated_user" type="VARCHAR(100)"/>
+            <column name="dd_updated" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="dx_remote" type="VARCHAR(3)"/>
+            <column name="dn_remote_id" type="INT"/>
+            <column name="dx_deleted" type="VARCHAR(3)"/>
+            <column name="dx_extra" type="VARCHAR(3)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-26">
+        <createTable tableName="dd_project_folios">
+            <column name="sk_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="kn_project_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dx_key" type="VARCHAR(80)"/>
+            <column name="dx_description" type="VARCHAR(300)"/>
+            <column name="dx_issue_type" type="VARCHAR(20)"/>
+            <column name="dn_estimate" type="numeric"/>
+            <column name="dx_closed" type="VARCHAR(1)"/>
+            <column name="dx_closed_remote" type="VARCHAR(1)"/>
+            <column name="dx_created_user" type="VARCHAR(100)"/>
+            <column defaultValueComputed="now()" name="dd_created" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="dx_updated_user" type="VARCHAR(100)"/>
+            <column name="dd_updated" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="dx_extra" type="VARCHAR(3)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-27">
+        <createTable tableName="dd_user_devices">
+            <column name="sk_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="kn_user_id" type="INT"/>
+            <column name="fcm_token" type="VARCHAR(500)"/>
+            <column name="dx_created_user" type="VARCHAR(100)"/>
+            <column defaultValueComputed="now()" name="dd_created" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="dx_updated_user" type="VARCHAR(100)"/>
+            <column name="dd_updated" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-28">
+        <createTable tableName="dd_user_notifications">
+            <column name="sk_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="kn_notification_id" type="INT"/>
+            <column name="kn_user_id" type="INT"/>
+            <column name="dx_status" type="VARCHAR(3)"/>
+            <column name="dx_created_user" type="VARCHAR(100)"/>
+            <column defaultValueComputed="now()" name="dd_created" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="dx_updated_user" type="VARCHAR(100)"/>
+            <column name="dd_updated" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="dd_sent" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="dd_read" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-29">
+        <createTable tableName="dd_users_folios">
+            <column name="sk_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="kn_id_user" type="INT"/>
+            <column name="kn_id_folio" type="INT"/>
+            <column name="dx_created_user" type="VARCHAR(100)"/>
+            <column defaultValueComputed="now()" name="dd_created" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="dx_updated_user" type="VARCHAR(100)"/>
+            <column name="dd_updated" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-30">
+        <createTable tableName="dd_workflow_custom_tags">
+            <column name="sk_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="kn_id_workflow" type="INT"/>
+            <column name="kn_id_catalog_type" type="INT"/>
+            <column name="kn_id_catalog" type="INT"/>
+            <column name="dx_created_user" type="VARCHAR(100)"/>
+            <column defaultValueComputed="now()" name="dd_created" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="dx_updated_user" type="VARCHAR(100)"/>
+            <column name="dd_updated" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-31">
+        <createTable tableName="hh_user_access">
+            <column name="sk_id" type="numeric">
+                <constraints nullable="false"/>
+            </column>
+            <column name="kn_id_user" type="INT"/>
+            <column name="kn_id_operation" type="INT"/>
+            <column name="kn_id_source" type="INT"/>
+            <column name="dx_input" type="VARCHAR(32000)"/>
+            <column name="dx_output" type="VARCHAR(32000)"/>
+            <column name="dx_created_user" type="VARCHAR(100)"/>
+            <column defaultValueComputed="now()" name="dd_created" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="dx_updated_user" type="VARCHAR(100)"/>
+            <column name="dd_updated" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-32">
+        <createTable tableName="mm_daysoff_requests">
+            <column name="sk_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="kn_user_id" type="INT"/>
+            <column name="dn_start_date" type="INT"/>
+            <column name="dn_end_date" type="INT"/>
+            <column name="dx_status" type="VARCHAR(3)"/>
+            <column name="dx_created_user" type="VARCHAR(100)"/>
+            <column defaultValueComputed="now()" name="dd_created" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="dx_updated_user" type="VARCHAR(100)"/>
+            <column name="dd_updated" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="dn_days" type="INT"/>
+            <column name="dx_reason" type="VARCHAR(200)"/>
+            <column name="kn_approver_id" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-33">
+        <createTable tableName="mm_notifications">
+            <column name="sk_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dx_name" type="VARCHAR(100)"/>
+            <column name="dx_description" type="VARCHAR(1024)"/>
+            <column name="dx_status" type="VARCHAR(3)"/>
+            <column name="dx_created_user" type="VARCHAR(100)"/>
+            <column defaultValueComputed="now()" name="dd_created" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="dx_updated_user" type="VARCHAR(100)"/>
+            <column name="dd_updated" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="dx_type" type="VARCHAR(3)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-34">
+        <createTable tableName="mm_projects">
+            <column name="sk_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dx_name" type="VARCHAR(200)"/>
+            <column name="dx_remote_created" type="VARCHAR(1)"/>
+            <column name="dx_deleted" type="VARCHAR(1)"/>
+            <column name="dx_deleted_remote" type="VARCHAR(1)"/>
+            <column name="dx_created_user" type="VARCHAR(100)"/>
+            <column defaultValueComputed="now()" name="dd_created" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="dx_updated_user" type="VARCHAR(100)"/>
+            <column name="dd_updated" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-35">
+        <createTable tableName="mm_users">
+            <column name="sk_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dx_username" type="VARCHAR(80)"/>
+            <column name="dx_tempus_username" type="VARCHAR(80)"/>
+            <column name="dx_group" type="VARCHAR(80)"/>
+            <column name="dx_profile" type="VARCHAR(80)"/>
+            <column name="dx_name" type="VARCHAR(80)"/>
+            <column name="dx_lastname" type="VARCHAR(80)"/>
+            <column name="dn_company_start_date" type="INT"/>
+            <column name="dn_client_start_date" type="INT"/>
+            <column name="dx_deleted" type="VARCHAR(1)"/>
+            <column name="dx_level" type="VARCHAR(150)"/>
+            <column name="dx_manager" type="VARCHAR(150)"/>
+            <column name="dx_created_user" type="VARCHAR(100)"/>
+            <column defaultValueComputed="now()" name="dd_created" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="dx_updated_user" type="VARCHAR(100)"/>
+            <column name="dd_updated" type="TIMESTAMP(6) WITHOUT TIME ZONE"/>
+            <column name="dx_admin" type="VARCHAR(3)"/>
+            <column name="dn_theme" type="INT"/>
+            <column name="dx_banner" type="VARCHAR(100)"/>
+            <column name="dx_project" type="VARCHAR(100)"/>
+            <column name="dx_leader" type="VARCHAR(100)"/>
+            <column name="dx_pmo" type="VARCHAR(100)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-36">
+        <addPrimaryKey columnNames="sk_id" constraintName="cs_catalog_types_pk" tableName="cs_catalog_types"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-37">
+        <addPrimaryKey columnNames="sk_id" constraintName="cs_catalogs_pk" tableName="cs_catalogs"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-38">
+        <addPrimaryKey columnNames="sk_id" constraintName="cs_holidays_pk" tableName="cs_holidays"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-39">
+        <addPrimaryKey columnNames="sk_id" constraintName="cs_resources_pk" tableName="cs_resources"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-40">
+        <addPrimaryKey columnNames="sk_id" constraintName="dd_fcm_notifications_pk" tableName="dd_fcm_notifications"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-41">
+        <addPrimaryKey columnNames="sk_id" constraintName="dd_folio_workflows_pk" tableName="dd_folio_workflows"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-42">
+        <addPrimaryKey columnNames="sk_id" constraintName="dd_project_folios_pk" tableName="dd_project_folios"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-43">
+        <addPrimaryKey columnNames="sk_id" constraintName="dd_user_devices_pk" tableName="dd_user_devices"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-44">
+        <addPrimaryKey columnNames="sk_id" constraintName="dd_user_notifications_pk" tableName="dd_user_notifications"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-45">
+        <addPrimaryKey columnNames="sk_id" constraintName="dd_users_folios_pk" tableName="dd_users_folios"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-46">
+        <addPrimaryKey columnNames="sk_id" constraintName="dd_workflow_custom_tags_pk" tableName="dd_workflow_custom_tags"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-47">
+        <addPrimaryKey columnNames="sk_id" constraintName="hh_user_access_pk" tableName="hh_user_access"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-48">
+        <addPrimaryKey columnNames="sk_id" constraintName="mm_daysoff_requests_pk" tableName="mm_daysoff_requests"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-49">
+        <addPrimaryKey columnNames="sk_id" constraintName="mm_notifications_pk" tableName="mm_notifications"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-50">
+        <addPrimaryKey columnNames="sk_id" constraintName="mm_projects_pk" tableName="mm_projects"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-51">
+        <addPrimaryKey columnNames="sk_id" constraintName="mm_users_pk" tableName="mm_users"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-52">
+        <createIndex indexName="cs_config_uidx1" tableName="cs_config" unique="true">
+            <column name="dx_key"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-53">
+        <createIndex indexName="idx_uq_user_folios" tableName="dd_users_folios" unique="true">
+            <column name="kn_id_user"/>
+            <column name="kn_id_folio"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-54">
+        <addForeignKeyConstraint baseColumnNames="kn_catalog_type_id" baseTableName="cs_catalogs" constraintName="cs_catalogs_fk1" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="sk_id" referencedTableName="cs_catalog_types"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-55">
+        <addForeignKeyConstraint baseColumnNames="kn_user_notification_id" baseTableName="dd_fcm_notifications" constraintName="dd_fcm_notifications_fk1" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="sk_id" referencedTableName="dd_user_notifications"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-56">
+        <addForeignKeyConstraint baseColumnNames="kn_id_folio" baseTableName="dd_folio_workflows" constraintName="dd_folio_workflows_fk1" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="sk_id" referencedTableName="dd_project_folios"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-57">
+        <addForeignKeyConstraint baseColumnNames="kn_id_user" baseTableName="dd_folio_workflows" constraintName="dd_folio_workflows_fk2" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="sk_id" referencedTableName="mm_users"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-58">
+        <addForeignKeyConstraint baseColumnNames="kn_user_id" baseTableName="dd_user_devices" constraintName="dd_user_devices_fk1" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="sk_id" referencedTableName="mm_users"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-59">
+        <addForeignKeyConstraint baseColumnNames="kn_notification_id" baseTableName="dd_user_notifications" constraintName="dd_user_notifications_fk1" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="sk_id" referencedTableName="mm_notifications"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-60">
+        <addForeignKeyConstraint baseColumnNames="kn_user_id" baseTableName="dd_user_notifications" constraintName="dd_user_notifications_fk2" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="sk_id" referencedTableName="mm_users"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-61">
+        <addForeignKeyConstraint baseColumnNames="kn_id_user" baseTableName="dd_users_folios" constraintName="dd_users_folios_fk1" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="sk_id" referencedTableName="mm_users"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-62">
+        <addForeignKeyConstraint baseColumnNames="kn_id_folio" baseTableName="dd_users_folios" constraintName="dd_users_folios_fk2" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="sk_id" referencedTableName="dd_project_folios"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-63">
+        <addForeignKeyConstraint baseColumnNames="kn_id_workflow" baseTableName="dd_workflow_custom_tags" constraintName="dd_workflow_custom_tags_fk1" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="sk_id" referencedTableName="dd_folio_workflows"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-64">
+        <addForeignKeyConstraint baseColumnNames="kn_id_catalog_type" baseTableName="dd_workflow_custom_tags" constraintName="dd_workflow_custom_tags_fk2" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="sk_id" referencedTableName="cs_catalog_types"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-65">
+        <addForeignKeyConstraint baseColumnNames="kn_id_catalog" baseTableName="dd_workflow_custom_tags" constraintName="dd_workflow_custom_tags_fk3" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="sk_id" referencedTableName="cs_catalogs"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-66">
+        <addForeignKeyConstraint baseColumnNames="kn_project_id" baseTableName="dd_project_folios" constraintName="folio_project_fk" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="sk_id" referencedTableName="mm_projects"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-67">
+        <addForeignKeyConstraint baseColumnNames="kn_id_user" baseTableName="hh_user_access" constraintName="hh_user_access_fk1" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="sk_id" referencedTableName="mm_users"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-68">
+        <addForeignKeyConstraint baseColumnNames="kn_user_id" baseTableName="mm_daysoff_requests" constraintName="mm_daysoff_requests_fk1" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="sk_id" referencedTableName="mm_users"/>
+    </changeSet>
+    <changeSet author="criveraa (generated)" id="1553105726377-69">
+        <addForeignKeyConstraint baseColumnNames="kn_approver_id" baseTableName="mm_daysoff_requests" constraintName="mm_daysoff_requests_fk2" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="sk_id" referencedTableName="mm_users"/>
+    </changeSet>
+</databaseChangeLog>

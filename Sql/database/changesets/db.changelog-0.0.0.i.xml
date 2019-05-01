@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<databaseChangeLog 
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"> 
+    <changeSet author="criveraa" id="20190421-005">
+		<sql>
+			GRANT SELECT, INSERT, UPDATE         ON cs_catalog_types         TO web ;
+			GRANT SELECT, INSERT, UPDATE         ON cs_catalogs              TO web ;
+			GRANT SELECT, INSERT, UPDATE         ON cs_config                TO web ;
+			GRANT SELECT, INSERT, UPDATE         ON cs_endpoints             TO web ;
+			GRANT SELECT, INSERT, UPDATE         ON cs_holidays              TO web ;
+			GRANT SELECT, INSERT, UPDATE         ON cs_resources             TO web ;
+			GRANT SELECT                         ON databasechangelog        TO web ;
+			GRANT SELECT                         ON databasechangeloglock    TO web ;
+			GRANT SELECT, INSERT, UPDATE         ON mm_users                 TO web ;
+			GRANT SELECT, INSERT, UPDATE, DELETE ON dd_user_devices          TO web ;
+			GRANT SELECT, INSERT, UPDATE         ON mm_notifications         TO web ;
+			GRANT SELECT, INSERT, UPDATE, DELETE ON dd_fcm_notifications     TO web ;
+			GRANT SELECT, INSERT, UPDATE         ON dd_user_notifications    TO web ;
+			GRANT SELECT, INSERT, UPDATE         ON mm_projects              TO web ;
+			GRANT SELECT, INSERT, UPDATE         ON dd_project_folios        TO web ;
+			GRANT SELECT, INSERT, UPDATE         ON dd_users_folios          TO web ;
+			GRANT SELECT, INSERT, UPDATE         ON dd_folio_workflows       TO web ;
+			GRANT SELECT, INSERT, UPDATE, DELETE ON dd_workflow_custom_tags  TO web ;
+			GRANT SELECT, INSERT                 ON hh_user_access           TO web ;
+			GRANT SELECT, INSERT, UPDATE         ON mm_daysoff_requests      TO web ;
+		</sql>
+    </changeSet>
+</databaseChangeLog> 

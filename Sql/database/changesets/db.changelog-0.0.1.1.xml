@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<databaseChangeLog 
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"> 
+    <changeSet author="criveraa" id="20190421-007">
+	<update tableName="cs_config">
+		<column name="dx_value" type="varchar(255)" value="hM4cStZ_-^1019^%$#@!" />
+		<where> dx_key = 'HMAC512_PARAM' </where>
+	</update>
+    </changeSet>
+</databaseChangeLog> 

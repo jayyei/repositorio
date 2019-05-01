@@ -30,10 +30,22 @@ export class Clock extends Component{
     }
 
     render(){
+        const clockDiv = [
+          <div>  
+            <h1>Componente Reloj</h1>
+            <h1>Hora: { this.state.date.toLocaleTimeString() }</h1> 
+         </div>
+        ];
+        
+        const buttonDiv = [
+            <div> 
+                <button>Presiona</button> 
+           </div>
+          ];
         return(
             <div>
-                <h1>Componente Reloj</h1>
-                <h1>Hora: { this.state.date.toLocaleTimeString() }</h1>
+                {clockDiv}
+                {buttonDiv}    
             </div>
         )
     }
