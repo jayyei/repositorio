@@ -1,4 +1,4 @@
---create table persona(
+--create table persona(    Clase 1 a la 16
 --					idPersona int not null,
 --					nombre varchar(20),
 --					cedula varchar(10)

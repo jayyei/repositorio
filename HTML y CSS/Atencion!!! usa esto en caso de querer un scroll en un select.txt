@@ -1,0 +1,1 @@
+onfocus='this.size=8;' onblur='this.size=1;' onchange='this.size=1; this.blur(); //Añade esto en la etiqueta de select maricotas
