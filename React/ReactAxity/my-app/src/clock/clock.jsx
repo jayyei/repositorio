@@ -6,6 +6,7 @@ export class Clock extends Component{
         this.state = {
             date: new Date(),
             isoFormat : false
+            
         };
         //this.showMessage2() = this.showMessage2.bind(this);
     }
