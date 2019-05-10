@@ -1,0 +1,7 @@
+Para poder correr el proyecto base de ionic
+
+npm install @ionic/app-scripts@latest --save-dev
+.
+.
+.
+ionic serve
