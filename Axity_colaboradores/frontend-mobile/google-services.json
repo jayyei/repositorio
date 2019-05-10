@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "300801911333",
+    "firebase_url": "https://rh-notification.firebaseio.com",
+    "project_id": "rh-notification",
+    "storage_bucket": "rh-notification.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:300801911333:android:d4b99fd618b71655",
+        "android_client_info": {
+          "package_name": "com.axity.prueba"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "300801911333-qo3ie6gvlg1ldj2ia81pc86u21nndes4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqvFHdcBhB9yRRMW13Ol8pS3aYQh4a0R4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:300801911333:android:46c99a7fd1f052f4",
+        "android_client_info": {
+          "package_name": "com.axity.unbound"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "300801911333-qo3ie6gvlg1ldj2ia81pc86u21nndes4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqvFHdcBhB9yRRMW13Ol8pS3aYQh4a0R4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
