@@ -7,4 +7,3 @@ function Tarea(nombre, urgencia){
 }
 
 const Tarea1 = new Tarea('Aprender javascript', 'Urgente');
-const Tarea2
