@@ -1,0 +1,37 @@
+body{
+    background-color: aquamarine
+}
+#principal{
+    background-color: azure
+}
+#navegacionprincipal{
+    background-color: blueviolet
+}
+#barralateral{
+    background-color: brown;
+    float: left;
+    height: 1480px
+}
+#contenidoprincipal{
+    background-color: burlywood;
+    margin-left: 220px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#pieprincipal{
+    background-color: yellow;
+    clear: both;
+    margin-top: 20px
+}
+li{
+    background-color: violet;
+    display: inline
+}
+
+/*Para dar estilo a un elemento en el html se necesita darle un #id al estilo
+Algunos componentes suelen estar en modo block, esto es uno abajo de otro, cuando se cambia esta propiedad del display a 'inline' los eleementos se posisionan uno en frente de otro
+
+
+margin ==== separacion entre las cajas o contenedores jejej es decir el espaciado de arriba abajo izquierda o derecha de las cajas
+padding ==== separacion del contenido de las cajas pero de los limites de la misma caja, es decir la separacion del texto de las fronteras de su contenedor

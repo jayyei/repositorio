@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formularios</title>
+</head>
+<body>
+    <form action="" method="">
+        <input type="text" placeholder="Nombre:" maxlength="10" disabled name="nombre">
+        <br/>
+
+        <input type="email" placeholder="Correo: " name="Correo">
+        <br/>
+
+        <textarea name="mensaje" id="mensaje" placeholder="mensaje" ></textarea>
+        <br>
+
+        <label for="pais">Pais</label>
+        <select name="pais" id="pais">
+            <option value="mexico">Mexico</option>
+            <option value="espana">Espana</option>
+            <option value="argentina">argentina</option>
+        </select>
+
+        <input type="radio" name="genero" value="hombre" id="hombre"><label for="hombre">Hombre</label>
+        <input type="radio" name="genero" value="mujer" id="mujer"><label for="mujer">Mujer</label>
+        <br>
+
+        <input type="checkbox" name="tterminos" value="tterminos" id="terminos"><label for="terminos">terminos y condiciones</label>
+
+        <input type="submit" value="Enviar">
+
+    </form>
+</body>
+</html>
+
+<!-- Un formulario se crea a partir de una etiqueta llamada 'form'-->
+<!-- Luego nos seguimos con una llamada 'input', puede haber un input con muchas propiedaddes, tecnicamente es una caja de texto-->
+<!-- Con la etiqueta 'type' nos ayudamos a decirle al html de que tipo se requiere el input -->
+<!-- Puede haber type de texto y submit-->
+<!-- El atributo 'placeholder' Nos permite poder un texto en dicha caja de texto-->
+<!-- El atributo 'required' permite hacer un campo requerido, tambien puede haber opciones de 'disabled' y 'readonly'-->
+<!-- El atributo submit permite dar la funcion de boton que envia el formulario-->
+<!-- Dentro de la etiqueta form va un atributo llamado action que va dirigido a un archivo-->
+<!-- 'method' permite mandar la informacion mediante un comando post o get-->
+<!-- Para colocar un cuadro de texto simplemente se coloca un 'textarea', con 'col' y 'row' se especifica el ancho y el largo-->
+<!--Cada select viene acompanado de una sere de options, declarados por una etiqueta particular-->
+<!-- La etiqueta for sirve para definir y relacionar una label con otro componente del formulario, se basa en un id que tiene que ser el mismo del componente a quien se relaciona-->
