@@ -8,7 +8,7 @@ console.log(mensaje)
 if (1 === 3){
     let mensaje2 = "Hola mundo"
 }
-// dentro del ciclo es solo donde la vriable de tipo let existe
+// dentro del ciclo es solo donde la variable de tipo let existe (ambito local)
 console.log(mensaje2)
 
 //Let tiene un ciclo de vida, debe de estar declaradas e inicializadas antes de usarlas

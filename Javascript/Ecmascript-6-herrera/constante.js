@@ -19,4 +19,4 @@ const Persona = {
 Persona.apellido = "Sanchez"
 console.log(Persona)
 
-//Se pueden manipular propiedades individuales de un objeto constante, pero no se puede manipular el contenido del cuerpo completo
+//Se pueden manipular propiedades individuales de un objeto const, pero no se puede manipular el contenido del cuerpo completo
