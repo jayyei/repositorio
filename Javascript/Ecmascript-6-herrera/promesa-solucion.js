@@ -58,7 +58,7 @@ getEmpleado(1)
     .then( resp => console.log(resp))
 .catch( err => console.log(err));
 
-//En la V2 observamos quesi en el resolve (then) de la primera solucion llamamos una funcion que 
+//En la V2 observamos que si en el resolve (then) de la primera solucion llamamos una funcion que 
 //Devuelve una promesa, entonces ese then puede ser seguido de otro then que resuelva la promesa
 //que devuelve el metodo que se llamo en el primer then
 /* getEmpleado(1).then( empleado => {  //V2

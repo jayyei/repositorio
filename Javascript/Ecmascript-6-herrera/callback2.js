@@ -19,7 +19,7 @@ salario: 2000
 const getEmpleado = (id, callback) => {
     const empleadoDB = empleados.find( empleado => empleado.id === id)
     if(!empleadoDB){
-        callback(`No existe el empleado con el id ${id}`)
+        callback(`No existe el empleado con el id ${id}`)  //Para que nos sirve los callbacks?? simplemente para ejecutar una funcion despues de realizar otra funcion
     } else {
         callback(null, empleadoDB)
     }

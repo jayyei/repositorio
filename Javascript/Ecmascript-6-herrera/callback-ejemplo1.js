@@ -1,4 +1,4 @@
-
+// Los callback son la manera tradicional de hacer tareas a destiempo
 
 const getUsuarioById = (Id, callback) => {  //Esta definicion de funcion recibe dos parametros, un id y una funcion
 
@@ -18,3 +18,5 @@ getUsuarioById(20, (err, user)=>{  //Cuando se invoca esta funcion, debe de reci
     else 
     console.log("El usuario en la base de datos", user);
 })
+
+// La funcioncallback puede ser definida en cualquier lugar

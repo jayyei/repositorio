@@ -14,3 +14,9 @@ tareaAsincrona().then( ()=> console.log("Todo ok"), ()=> console.log("Todo mal")
                                                                                   //Si se termina bien, dentro de ella se puede llamar un resolve o reject, definidos en los parametros de then
 
 console.log("Codigo secuencial")
+
+// Una promesa por lo general esta definidad dentro de una funcion, recibe dos paremetros recibidos en el then y catch al momento de llamar la funcion que la contiene
+
+//NombreDeLaFuncionQueContieneLAPromesa(Argumentos, de, la, funcion).then(funcionREsolve(), funcionReject())
+
+
