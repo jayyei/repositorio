@@ -1,0 +1,7 @@
+   // Con el condicional switch se deben de considerar los siguientes aspectos
+
+	// El valor a evaluar solo puede ser un char, byte, int, String o un enum, jamas podra evualuar double o float
+	
+	//En los case no se permiten operadores relacionales, solo de igualdad
+
+	// La instruccion break es opcional
