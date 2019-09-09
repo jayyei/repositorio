@@ -1,0 +1,8 @@
+ En la programnacion existen 2 paradigmas
+
+1.- La programacion orientada a procedimientos
+	
+
+2.- Programacion orientada a objetos
+	\\Consiste en trasladar la naturaleza de los objetos de la vida real al codigo de programacion
+	\\

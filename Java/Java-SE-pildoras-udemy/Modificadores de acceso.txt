@@ -1,0 +1,17 @@
+ \\Modificadores de acceso java
+		
+	\\ public accesible desde cualquier parte
+
+	\\ private contenido accesible solo desde la misma clase, no desde otras
+
+	\\ protected contenido de la clase es accesible desde el mismo paquete y por herencia
+
+	\\ por defecto: accesible desde el mismo paquete
+	
+// pueden ser aplicables a variables y a metodos en java
+
+	// instanciar una clase es crear un objeto a partir de una clase
+
+	// Polimorfismo: muchas formas -- comportamiento mediante el cual un objeto se puede comportar de distintas formas dependiendo del contexto
+
+
