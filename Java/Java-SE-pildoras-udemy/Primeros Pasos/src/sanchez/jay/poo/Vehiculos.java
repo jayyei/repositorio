@@ -8,7 +8,7 @@ private int ruedas;  // aqui se encapsulan las propiedades de una clase para que
 	
 	private int largo;
 	
-	private int ancho;
+	private double ancho;
 	
 	private int peso;
 	
@@ -28,9 +28,21 @@ private int ruedas;  // aqui se encapsulan las propiedades de una clase para que
 	
 	}
 	
+	public Vehiculos(int ruedas, int largo, double ancho, int peso) {
+		this.ruedas = ruedas;
+		this.largo = 2;
+		this.ancho = 1;
+		this.peso = 2;
+		color = "Sin color";
+	}
 	public String getExtra() {
-		return aireCondicionado? "Tu coche tiene aire acondicionado": 
-			"Tu coche no tiene aire aire Acondicionado";
+		if(this.aireCondicionado == true && this.gps == false && this.tapiceriaCuero == false) {
+			return "Tu coche incluye el aire acondicionado";
+		}else if(this.aireCondicionado == true && this.gps == true && this.tapiceriaCuero == true) {
+			return "Tu coche incluye el aire acondicionado, gps y tapiceria de cuero";
+		}else {
+			return "Tu coche no incluye ningun complemento";
+		}
 	}
 	public void setExtra(boolean aireCondicionado) {
 		this.aireCondicionado = aireCondicionado;
