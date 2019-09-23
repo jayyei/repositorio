@@ -3,3 +3,4 @@
 			-Su utilidad es de simplificar el codigo creando una clase inline sobre la marcha, esto evita tener que 
 			-crear una clase adicional en nuestro codigo para despues crear una instancia.
 			- Se utilizan al gestionar eventos. Muy utilizados en aplicaciones graficas donde el usuario interactua con controles
+d
