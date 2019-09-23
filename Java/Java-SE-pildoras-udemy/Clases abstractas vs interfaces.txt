@@ -1,0 +1,23 @@
+
+		// La herencia multiple no se permite en java
+		//Las interfaces buscan una solucioin a la herencia simple en java
+
+		// una clase en java puede implementar de varias interfaces, al contrario de las clases abstractas, que solo se pueden heredar de manera simple
+
+		// Sintaxis
+		
+		class name extends SuperClass implements class1, class2, .. 
+
+		// se pueden implementar todas la sinterfaces que querramos
+		
+		//Clases abstractas vs interfaces
+		
+			//Una interfaz en java solo contendra metodos abstractos y constantes
+
+			// una clase puede tener tanto metodos abstractos como metodos normales, puede tener constantes y variables
+
+			// Ambas no se pueden instanciar con la palabra new
+			
+			// se almacenan en ficheros class
+			
+			

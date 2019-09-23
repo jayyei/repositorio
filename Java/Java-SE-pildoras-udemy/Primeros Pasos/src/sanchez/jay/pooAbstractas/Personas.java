@@ -17,7 +17,7 @@ public abstract class Personas {
 	public abstract String getDescripcion();
 }
 
-class Empleados extends Personas{
+class Empleados extends Personas implements Comparable, ParaTrabajadores{
 	
 	private double sueldo;
 	private Date fechaAlta;
@@ -35,10 +35,30 @@ class Empleados extends Personas{
 		return "El empleado " + this.getNombre() + " tiene un sueldo de " + this.sueldo
 				+ " y cuenta con una fecha de alta de " + this.fechaAlta;
 	}
+
+	@Override
+	public int compareTo(Object o) {
+		// TODO Auto-generated method stub
+		Empleados empleado = (Empleados)o;
+		if(this.sueldo < empleado.sueldo) {
+			return -1;  //El return hace que se salga del flujo de ejecuccion sin leer lo dema del flujo
+		} if (this.sueldo > empleado.sueldo) {
+			return 1;
+		}else {
+			return 0;
+		}
+	}
+
+	@Override
+	public double setBonus(double gratificacion) {
+		// TODO Auto-generated method stub
+		return ParaTrabajadores.bonus + gratificacion;
+	}
 }
 
-class Jefes extends Empleados{
+class Jefes extends Empleados implements ParaJefes{
 	private double incentivo;
+	private String cargo;
 	
 	public void setIncentivo(double incentivo) {
 		this.incentivo = incentivo;
@@ -49,6 +69,26 @@ class Jefes extends Empleados{
 		// TODO Auto-generated constructor stub
 	} //Jefes heredara el metodo getDescription a partir del metodo de empleado
 								// por lo que ya no se requiere sobreescribir el getDescripcion, aunque se puede hacer
+
+	@Override
+	public void setCargo(String cargo) {
+		// TODO Auto-generated method stub
+		this.cargo = cargo;
+	}
+
+	@Override
+	public String getCargo() {
+		// TODO Auto-generated method stub
+		return "\n Ademas tiene el cargo de " + cargo;
+	}
+
+	@Override
+	public double setBonus(double gratificacion) {
+		// TODO Auto-generated method stub
+		double prima = 2000;
+		return prima + gratificacion + ParaJefes.bonus; // La constante bonus puede traerse de ParaTrabajadores y ParaJefes
+		
+	}
 	
 	
 }
