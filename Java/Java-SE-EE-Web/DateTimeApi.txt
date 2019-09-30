@@ -1,0 +1,15 @@
+		// Esta api es e java 8 o posterior
+		
+		Las principales clases que conforman el datetime son
+
+			//LocalDate(); Para trabajar solo con tiempo
+			//LocalTime(); Para trabajar solo con horas
+			//LocalDateTime(); Para trabajar con fechas y tiempo
+	
+		//Algunos de sus metodos mas comunes son:
+		
+			Now(); regresa un metodo apropiado para la fecha local, etc
+		
+			of(parametros); regresa un objeto de tipo clase de acuerdo a los parametros enviados
+
+			parse(cadena); Regresa un objeto apropiado para la cadena especificada
