@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!-- etiqueta para saber que se usa el standar html5 -->
 <html lang="es">
 <head>
@@ -73,17 +73,25 @@
 	<section>
 		<article>
 			<header>
+			    <hgroup>
 				<h1>Titulo de la noticia 1</h1>
+				<h3>Subtitulo de la noticia 1 </h1>
+			    </hgroup>
 			</header>
+			
+			<figure>
+			     <img src="imagenes/ipn.jpg"/>
+			     <figcaption>Jay y su escuela</figcaption>	<!-- Util para poner nombramientos a las imagenes, dentro de un figure -->		    
+			</figure>
 
-			<p>Noticia 1</p>
+			<p><mark>Noticia 1</mark></p> <!--La etiqueta mark se utiliza para resaltar un texto o remarcarlo pero sin darle enfasis -->
 
 			<p>
-				Seguimos hablando de noticia 1
+				Seguimos hablando de <em>noticia 1</em>  <!--Aqui hablamos de la etiqueta em, que sustituye a la etiqueta <i> deprecada y tiene un sentido semantico relevante en distintos navegadores --> 
 			</p>
 
 			<p>
-				Terminamos de hablar de la noticia 1
+				Terminamos de hablar de la <strong>noticia 1</strong> <!--La etiqueta strong trata de remplazar a la etiqueta <b> que es para dar uso en negritas, es texto importante -->
 			</p>
 
 			<footer>
@@ -92,10 +100,10 @@
 		</article>
 
 		<article>
-			<p>Noticia 2</p>
+			<p><cite>Tiempos violentos</cite></p>  <!-- La etiqueta cite es nueva de HTML5 se utiliza para citar titulos de peliculas, revistas, libros etc -->
 
 			<p>
-				Seguimos hablando de noticia 2
+				Aunque no se sabe porque demonios es tan polular, <cite>Tiempos violentos</cite> cumple de manera adecuada calmando a los espectadores de cine
 			</p>
 
 			<p>
@@ -110,6 +118,7 @@
 
 					<h2>Subtitulo de la noticia 3</h2>
 				</hgroup>
+			<time datetime="2014/01/31" pubdate>Noticia publicada el 31/01/2014 </time>  <!--pubdate nos indica que el atributo de time hace referencia a una fecha, la etiqueta time puede hacer referencia con el atributo datetime y enlazar a una fecha ->
 			</header>
 
 			<p>Noticia 3</p>
@@ -125,7 +134,8 @@
 	</section>
 
 	<footer>
-		Derechos reservados Tel 5581669223
+		<small>Derechos reservados</small> <!-- La etiqueta small da un contexto de letra pequeña en html, aunque su contenido semantico es mas para textos legales -->
+		<adress>Tel 5581669223 </address> <!-- La etiqueta address en teoria html5 recomienda que vaya dentro del footer y que se maneje para dar datos personales o contactos -->
 	</footer>
 </body>
 </html>
