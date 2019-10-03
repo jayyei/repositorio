@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Solo hay dos tipos de etiquetas, la block y la inline, las block generan un salto de linea, lo que hace que ocupen todo el ancho de la pagina */
+
+/* En css existen selectores de etiqueta, selectores de id, y selectores de clase */
+#cabeceraweb{
+	background-color: #0C9;
+}
+
+#navegacionprincipal{
+	background-color: #C36;
+}
+
+#barralateral{
+	background-color:#FF0;
+}
+
+#contenidoprincipal{
+	background-color:#3F3;
+}
+
+#pieprincipal{
+	background-color:#C0C;
+}
+
+
