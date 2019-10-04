@@ -14,14 +14,23 @@
 
 #barralateral{
 	background-color:#FF0;
+	float:left; /*HAce que elcomponente sea flotante al colocarlo en equis posicion y que los demas elementos lo reodeen */
+	height:1020px;
 }
 
 #contenidoprincipal{
 	background-color:#3F3;
+	padding:20px; /*La propiedad padding marcauna separecion desde el borde de una caja al contenido de la misma, es decir de la caja hacia dentro */
 }
 
 #pieprincipal{
 	background-color:#C0C;
+	clear:both; /*Con clear both nos aseguramos que este componente no trate a sus alrededores con algunas propiedades marcadas por los componenete vecisnos, por ejemplo el float:left */
+	margin-top:20px /* La propiedad hace referencia al espacio que hay entre el borde del contenedor hacia afuera*/
 }
+
+li{
+	background-color:#F6F;
+	display:inline; /*Con la propiedad display: inline hacemos que equis componenentes sean en linea y no generen saltos de linea */
 
 
