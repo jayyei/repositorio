@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+
+
+
+<style>					
+
+						 /* predesor * Si ele elemento del componente contiene la coincidencia, aplicara el estilo */
+p[name^="miselementos"]{ /* predesor ^ Si el nombre del componente empieza con esta coincidencia, aplicarara el estilo */
+	color:#F00;			 /* predesor $ Si el nombre del componente termina en la coincidencia, aplicara el estilo */
+}						 
+
+p:nth-child(2){ /* Pseudo classes, esta etiqueta observa todas las hermanas p y determina cual es la segtunda etiqueta hermana y*/    color:#06C;	                                    /*asi entonces aplicara el estilo */
+}  /* En vez de colocar un numero a la pseoudo clases puedes colocar odd (inpares) y even (pares) */ 
+
+p:first-child{
+	color:#FC3;	
+}
+
+p:last-child{
+	color:#C9C	
+}
+
+p:only-child{
+	color: #606;	
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<p>Hola</p>
+<p>Adios</p>
+<p>Febrero</p>
+
+<ol>
+	<li>Frutas</li>
+    <li>
+    	<p>manzana</p>
+		<p>limon</p>
+        <p>pera</p>
+        <p>Melon</p>
+    </li>
+    
+</ol>
+</body>
+</html>
