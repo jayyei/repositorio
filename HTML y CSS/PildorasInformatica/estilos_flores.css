@@ -1,0 +1,82 @@
+/*Nota el codigo css y html se ejecuta de arriba a abajo*/
+
+
+/*inicio del reset css */
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    font-weight: normal;
+   }
+   table { border-collapse: collapse; border-spacing: 0; }
+   td, th, caption { font-weight: normal; text-align: left; }
+   img, fieldset { border: 0; }
+   ol { padding-left: 1.4em; list-style: decimal; }
+   ul { padding-left: 1.4em; list-style:square; }
+   q:before, q:after { content:''; }
+
+/*fin del reset css*/
+
+body{
+    font-size: 62.5%
+}
+
+h1{
+    font: 2.4em Verdana, Geneva, sans-serif;
+    background: -webkit-linear-gradient(top, rgb(18, 21, 216), #0cf);
+    width: 30%;
+    border-radius: 10px;
+    margin: 15px auto;
+    text-align: center;
+    padding: 15px;
+    color: aliceblue;
+    box-shadow: tan 5px 5px 10px; /* Color de la sombra, arriba o derecha y por ultimo cuanto quieres el difuminado*/
+    text-shadow: thistle 2px 2px 3px;
+}
+
+h2{
+    font: bold 1.7em Verdana, Geneva, sans-serif;
+    margin: 0px;
+    padding: 5px 0 5px 8px;
+    color: #000;
+}
+
+section{
+    width:91%;
+    border-top: 1px dashed #999;
+    margin: 15px auto;
+}
+
+figure{
+    float: left; /*Para que el elemento que las posea sea flotante, y que los demas elementos lo rodeen*/
+}
+
+figure img{ /*Selector descendiente solo aplica a las etiquestas img que esten dentro de figure*/
+    padding: 4px;
+    background: rgb(102, 98, 98);
+    border-radius: 20px;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out 0.1s; /* la primera medida hace referencia a cuanto tarda el efecto, la ultima medida es el tiempo que el efecto tarda en arrancar*/
+    box-shadow: #999 5px 5px 10px;
+}
+
+figure img:hover{ /*Solo para figuras img hijas de figure*/
+    -webkit-transform: scale(1.2);
+}
+
+figcaption{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    text-align: center;
+    margin-top: 5px;
+}
+
+footer{
+    clear: both; /*rompe el float anterior de los elementos que lo preceden*/
+    padding-top: 100px;
+}
+
+footer p{
+    font: 1.6em Georgia, "Times New Roman", Times, serif;
+    color: #999;
+
+}
