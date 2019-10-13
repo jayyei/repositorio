@@ -1,0 +1,69 @@
+Tipos de selectores
+
+    --Por etiqueta: a, body, h, etc. no tienes que modificar el html
+
+    --id: en las etiquetas html con el atributo id="texto", en css puedes identificarlo de la siguiente manera
+            #menu{
+                text-decoration: none;
+            }
+
+    --clase: en las etiquetas html con el atributo class="algo" puedes modificar propiedades de los mismos en css de la siguiente manera
+            .azul{
+                text-decoration: none;
+            }
+    
+    -- pseudoclases: aplicable a elementos html, clases, id, etc se puede aplicar a cualquiera de los anteriores y las principales son las siguientes:
+        objeto:hover; atiende al efecto cuando se pasa por encima el mouse
+        objeto:focus; atiende al efecto cuando se interactua o se este trabajando en el, por ejemplo con un input
+        objeto:first-child; atiende al primer elemento hijo del objeto senaladdo
+        objeto:last-child; similar al anterior
+       
+
+Aqui un listado de todas las pseudoclases
+
+https://www.w3schools.com/css/css_pseudo_classes.asp
+
+    --por atributo, representado en corchetes en donde ahi se pueden especificar diferentes maneras, por ejemplo
+            input[type=text]{
+                ...propiedades
+            }
+
+Aqui un listado de todos los selectores por atributo
+
+https://www.w3schools.com/css/css_attribute_selectors.asp
+
+Agrupando selectores;
+
+        --por comas: a:hover, #id, .class, element{
+            color: #f00;
+        }
+
+Selectores descendientes;
+
+        Todos descendientes: selecciona a los descendientes a partir de un selector dado, se denota por un espcacio en blanco
+            ejemplo:
+                    div a{
+                        color: red;
+                    }
+            // aplicara este escilo a todos los descendientes que sean a de div, es decir, no importa el nivel en donde se encuentren, el estilo se aplicara desde el primer nivel hasta el ultimo
+
+        Hijos directos: Selecciona a todos los descendientes directos, se denota por medio del mayor que
+            ejemplo:
+                    div>a{
+                        color: red;
+                    }
+            // aplicara el co0lor rojo a todos los elementos a hijos directos de div
+
+
+Selector universal;
+        * Se representa con el asterisco, las propiedades de este estilo se aplicaran a todos los elementos
+            *{
+                color: rojo:
+            } 
+
+        Este * se puede aplicar en selectores especficos, por ejemplo
+
+        span>*{
+            color: red;
+        }
+        //En este caso, todos los descendientes directos del span, se les aplicara el estilo

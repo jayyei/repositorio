@@ -1,0 +1,9 @@
+		Position
+-- Nos ayuda a identificar respecto a quien se va posicionar el objeto que estamos definiendo
+-- Esta propiedad modifica las propiedades top, left right y bottom (En ciertos momentos parece ser que estas no funcionen)
+
+	Valores de position
+-- Static: forma predeterminada, de inicio, que no puede desplazarse  aunque le apliques las propiedades top, left, right, bottom, y z-index
+-- Relative: Es el mas comun, aqui al momento de desplazar un objeto este se desplaza respecto de su posicion original, respecto a si mismo, los objetos que se encuentren alrededor de el no se moveran con el desplazamiento del mismo, si no que llegado el caso, el objeto que esta siendo desplzado llegara a encimar a los objetos que encuentre a su paso, si un componente hijo es relativo, provoca que el componente que lo contiene va a tener que cambiar de tamaño
+-- absolute: Desplaza el objeto respecto al objeto padre que lo contiene, al hacer los calculos, los limites los define el padre, para que un hijo pueda posicionarse respecto al padre, el padre debera tener una posicion diferente a la static
+-- fixed: similar a la posicion static, solo que su posicion es respecto al navegador, y no obedece al scroll (util para poner componenentes e imagenes en primer plano)

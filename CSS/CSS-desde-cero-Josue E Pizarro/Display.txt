@@ -1,0 +1,12 @@
+		La propiedad display
+	--Nos ayuda determinar cual sera la forma de la caja
+	--Trabaja en conjunto con padding, border, width, height y outline
+	
+La forma predeterminada de los objetos en html es 
+	--Display inline: cuando los elementos pueden presentarse en la misma linea, lo malo de esta configuracion es que no puedes cambiar la configuracion del tamano de la caja, ya sea margin padding, etc
+	
+luego sigue
+	--Display block: provoca que el objeto ocupela linea entera, y produce el tipico salto de linea, todo el espacio linea que tiene de ancho su padre
+	--Display inline-block: Provaoca que el objeto se pueda modificar el tamno de la caja, alto, ancho etc y puede vivir en la misma linea
+	--Display none: Es como si el objeto no existiera, esta oculto 
+	

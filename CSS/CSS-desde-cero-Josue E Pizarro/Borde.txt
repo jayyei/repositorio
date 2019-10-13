@@ -1,0 +1,11 @@
+	Propiedad borde
+ -- border: define el borde del objeto tamano, tipo de lado, color, etc
+	
+-- border-top
+
+-- border-radius: para establecer una curvatura en las esquinas, se puede establecer en px y %
+
+Ten cuidado al momento de generar compatibilidad con los navegadores
+	-webkit-: google
+	-moz-: mozzila
+	-o-: opera 

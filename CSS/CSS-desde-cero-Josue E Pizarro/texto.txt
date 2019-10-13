@@ -1,0 +1,24 @@
+He aqui algunas propiedades para formatear texto
+
+    color: indica el color del texto contenido en la caja, puede ser hexadecimal o rgba
+    font-family: propiedad comnpuesta, es decir con subpropiedades, indica la jerarquia de las fuentes de texto, es la jerarquia de la familia tipografica
+                    ejemplo. font-family: Avant Garde CE, Helvetica, sans-serif;
+
+   la propiedad font-size define el tamano del texto, su medida puede ser en px o en em 
+                    ejemplo: font-size: 30px;
+
+    la propiedad font-weight: establece el peso, grosor del texto, puede ser bold, normal, o un valor en puntos de 100 a 900
+
+    la propiedad font-style: cambia el estilo del texto, sus valores posibles son normal, italic, y oblique
+
+    la propiedad text-transform: Forza la utlilizacion de un estilo de escritura, valores posibles son: uppercase, lowercase y capitalize
+
+    la propiedad text-decoration: define la decoracion del texto, con valores posibles de none, underline, overline y line-throught
+
+    la propiedad text-ident: genera un sangrado al texto, pueden ser valores positivo o negativos, generalmente en px
+
+    la pripiedad text-align: alinea el texto dentro de una caja, valores posibles son left, right, center y justify
+
+    la propiedad letter-spacing: con valor en px, genera espacio entre letras
+
+    la propiedad line-height: aumenta o reduce el interlinieado de un texto, en px

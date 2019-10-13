@@ -1,0 +1,11 @@
+		COLOR
+
+Existen tres formas de establecer el color hexadecimal
+
+//Hexadecimal
+	-- # 00-FF 00-FF 00-FF van del cero al 255 cada uno, la mayor saturacion es 255 y la minima 0
+		R    G     B
+	#9933FF tiene una version reducida en tres digitos tal como: #93F
+
+RGBA
+	rgba(rojo, verde, azul, alpha): los colores van del 0 al 255 en decimal y el alpha, va de 0-1, que significa 0 = transparencia total, 1 = opacidad total

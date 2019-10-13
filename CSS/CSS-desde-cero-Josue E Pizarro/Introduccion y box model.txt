@@ -1,0 +1,26 @@
+			INTRODUCCION A CSS
+-- CSS significa cascading style sheets
+-- es una sintaxis que trabaja en conjunto con html para estructurar y maquetar nuestro sitio web
+-- En css todos los objetos son cajas 
+-- Css funciona a traves de selectores
+-- Los objetos seran modificados por propiedades
+-- Hay pripiedades y/o selectores incompatibles con algunos navegadores
+-- Las propiedades se heredan de los padres a hijos
+
+-- Todos los nombres de clases, selectores etc llevan guiones medios en vez de espacios, terminan en punto y coma
+-- Las pocas excepciones para poner espacios es colocar comillas dobles
+
+
+		Box model
+	Estas tres propiedades seran las que modificaran el tamaño del objeto, el tamaño del objeto estara conformado por la suma de estas propiedades
+	
+-- Tiene un ancho y alto predefino, establecido a traves del contenido que este posee
+-- Padding: Es el espacio interior que hay dentro de la caja en medio de lo que es el contenido de la caja y el borde de la misma (un aire para respirar)
+-- Borde: es la linea alrededor de nuestra caja, que sirve para delimitar el contenido
+
+	Estas dos propiedades no modifican el tamaño de la caja
+-- Outline: Es una especie de linea que existe alrededor de un objeto, para saber que se utiliza esta caja
+-- Margin: Espacio alrededor de la caja para evitar que este pegados a otros objetos
+
+	CSS3
+--box-sizing: cambia la forma de dimensionar la caja, es decir establecer un tamaño de alto y ancho final de la caja

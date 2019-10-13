@@ -1,0 +1,9 @@
+		Tres propiedades
+ Float
+	-- Lanza al objeto a un lado y permite a otros envolverlo, sus posibles valores son none, left, right, esto es lazar el objeto de su posicion y arrojarlo a las esquinas del contenedor padre que lo contenga
+
+ Clear 
+	-- Provoca que un objeto que flota salte la linea (Con sus valores posibles both, left, right, none) cuando quieres que tu objeto salte la linea 
+ 
+ OverFlow
+	-- Controla los contenidos excedentes (valores posibles: visible, hidden, scroll, auto) visible permite que el contenido de la caja pueda desbordarse, hidden hace que el excedente se oculte, scroll muestra las barras de desplazamiento siempre y auto lo que hace que aparecezca la barra de navegacion solo cuando es necesario

@@ -1,0 +1,15 @@
+        Propiedades de fondo
+
+   --background-color: define el color de la imagen del texto, puede ser hexadecimal o rgba
+
+   --background-image: url(../images/fondo.jpg); Establece una imagen de fondo para el objeto, puede estar en la carpeta o por HTTP
+
+   --background-repeat: define la forma de repeticion del fondo, sus valores son repeat, repeat-y, repeat-x y no repeat
+
+   --background-position: define la posicion del fondo  sus valores son: center, top, left, right, bottom y cordenadas x, y generalmente en px
+
+   --background-size: define el tamano del fondo del objeto, valores posibles son cordenadas x, y Y cover, que hace que el fondo sea cubierto por completo
+
+   --background-image: linear-gradient(#3f9ff5, #333333) pone un degradado lineal de arriba a abajo, posee un tercer parametro para indicar en que posicion empezar
+
+   --background-image: radial-gradient(#hex, #hex) degradado lineal que puede ser circular o eliptico

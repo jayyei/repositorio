@@ -1,0 +1,7 @@
+ Las propiedades margin y padding pueden dar los 4 lados al mismo tiempo 
+	--uno solo valor: implica que este valor sera aplicado en los cuatro lados de la caja
+	-- dos valores: El primer valor sera aplicado para arriba y abajo, el segundo valor, para la izquierda y derecha
+	-- tres valores: el primero se aplica a la parte de arriba, el segundo a los lados de izquierda y derecha y el tercer valor a abajo
+	-- Cuatro valores: se otorgan de acuerdo a las manecillas del reloj
+
+	
