@@ -1,0 +1,28 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #666;
+    margin: 2% 2% 2% 13%;
+    background-image: url(http://lorempixel.com/250/300);
+    background-repeat: no-repeat; /* Las lineas de estilos se aplican de arriba hacia abajo, es decir, si tienes dos lineas iguales,pero con diferentes propiedades, la ultima sobrescribira a la otra*/
+    background-repeat: repeat-y;
+}
+
+h1, h2{
+    margin: 0% 0% 2%;
+    text-transform: uppercase;
+    font-weight: normal;
+    cursor: default;
+}
+
+h1 { /* atributos solo para h1, puede incluso sobrescribir los atributos de la seleccion de arriba */
+    font-size: 2.4em; 
+    font-style: italic; 
+    background-color: aqua;
+    color: #fff;
+    padding: 1% 2%;
+}
+
+h2, p, img{
+    margin-left: 2%; 
+}
