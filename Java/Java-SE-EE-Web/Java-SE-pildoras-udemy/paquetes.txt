@@ -1,0 +1,26 @@
+Los paquetes son necesarios para organizar las clases
+
+ayudan a evitar conflictos de nombres
+
+para controlar la visibilidad de las clases
+
+
+no puede haber dos clases con el mismo nombre en el mismo paquete
+
+en java tenemos dos principales paquetes (piensa como si fueran carpetas)
+
+// el paquete java 
+	dentro de 
+		// java.awt (aqui hay herramientas para crear ventanitas
+
+		// java.util
+			dentro de
+				// Java.util.regex
+
+		// java.io (herramientas de entrada y salida)
+
+// el paquete javax
+	dentro de 
+		// javax.activity
+		// javax.annotation
+

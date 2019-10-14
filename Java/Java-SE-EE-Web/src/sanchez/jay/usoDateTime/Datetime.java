@@ -13,10 +13,15 @@ public class Datetime {
 		//Datetime.usarOf();
 		//Datetime.usarParse();
 		//Datetime.regresaPartesDateTime();
-		ComparaDateTime objeto = new ComparaDateTime();
+		//ComparaDateTime objeto = new ComparaDateTime();
 		//objeto.isBefore();
 		//objeto.isAfter();
-		objeto.compareTo();
+		//objeto.compareTo();
+		
+		AjustandoDateTime objetoFecha = new AjustandoDateTime();
+		//objetoFecha.ajustaDateTime();
+		objetoFecha.modificarTiempo();
+		
 	}
 	
 	public static void regresaPartesDateTime() {

@@ -1,0 +1,32 @@
+		Colecciones
+	// Una coleccion representa un grupo de objetos conocidos como elementos
+	// Una coleccion es un alamcen de objetos dinamico, no puede alamacenar datos primitivos como lo hace un array
+	// El proposito es trabajar con un conjunto de elementos para poder guardarlos
+	// Podemos almacenar cualquier tipo de objeto y podemos usar una serie de metodos comunes, anadir, eliminar, obtener tamano, ordenar, etc
+	// Partiendo de la interfaz generica Collection extienden otra serie de interfaces genericas
+
+
+	Colecciones
+		--Listas(list)  Es una coleccion de objetos donde cada uno de ellos lleva un indice asociado, puede ser repetidos, esl esl sustituo del array
+		--Conjuntos(set) Una coleccion de objetos que no admite duplicados, tampoco ordenamiento, ejemplo de conjunto seria la clase hashSet de La api java
+		--Colas(Queue) Seria un coleccion de objetos que se comportan como lo haria un grupo de personas en la cola de un supermercado
+
+	Mapas
+		--map Aunque muchas veces se hable de los mapas como una coleccion, en realidad no lo son, ya que no heredan de la interfaz collection, simplemente es un objeto que relaciiona una llave key con un valor
+
+	
+Interfaces  para mayor referencia visita: http://www.reloco.com.ar/prog/java/collections.html
+	List 	
+		Clases
+		--ArrayList:  Mas eficiente para acceder a los elementos de forma aleatoria, pero poca eficiencia para insertar en medio  de la lista, o borrarlos
+		--LinkedList:Menos eficiente para acceder a los elementos aleatorios pero es mas eficiente para insertar o remover elementos en medio o al principio de una lista
+
+	set
+		Clases
+		--Hashset: no acepta datos repetidos, utliza la tecnica de has code para encontrar o determinar si estan repetidos
+		--treeSet: En orden de acuerdo a lo que se defnine en compareTo
+
+	Map
+		Clases
+		--HashMap: Almacena pares de valores en donde cada key debe de ser unica, acepta valores repetidos pero llaves no
+		--TreeMap: Almacena estos pares de valores en estructura jerarquica conocida como arboles, sigue secuencia por key

@@ -2,5 +2,11 @@
 <workingSetManager>
 <workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1569730354719_0" label="Java Main Sources" name="Java Main Sources"/>
 <workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1569730354756_1" label="Java Test Sources" name="Java Test Sources"/>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1571004884452_3" label="Java SE-EE" name="Java SE-EE">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Java-SE-EE-Web" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Java-SE-EE-Web" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Java-SE-EE-Web" type="4"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1569730356955_2" label="Window Working Set" name="Aggregate for window 1569730356955"/>
+<mruList name="Java SE-EE"/>
 </workingSetManager>

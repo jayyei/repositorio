@@ -1,0 +1,6 @@
+
+/// CREACION DE PAQUETES PROPIOS
+
+// El nombre del paquete ha de estar en minusculas // en eclipse da error si no es asi 
+// Por convencion se utiliza como nombre del paquete el nombre del dominio al reves
+// Si no tienes nombre de domino, puedes utilizar tu propio nombre al reves utilizando la nomenclatura del punto

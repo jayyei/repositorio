@@ -1,0 +1,30 @@
+Introduccion a Java
+
+
+El funcionamiento de Java consiste en realizar un programa con extension.java.
+Este archivo se compila y gener un byteCode que no es mas que un archivo intermediario entre el lenguaje de programacion y el codigo binario
+El archivo resultante de compilar un programa de java es un archivo con extension class.
+El archivo con extension class se interpreta en cualquier plataforma que contenga el JRE: Java runtime Enviroment
+El JDK incluye el JRE y un editor algo obsoleto.
+Write once, run everyWhere.
+
+Java es neutro respecto a la arquitectura
+Es adaptable ya que los tipos primitivos son los mismos en cualquier arquitectura
+Es interpretado, es multihilo o sea pueden correr varios procesos a la vez
+
+Java es un lenguaje de proposito general.
+
+
+Tipos de aplicaciones que se pueden realizar en Java:
+
+Apliaciones de consola: Son programas de java que se ejecutan en una consola de windows
+
+Aplicaciones de proposito general: Dentro de este grupo existen las de escritorio 
+
+Applets (Ya en desuso): Aplicaciones Java que se ejecutan dentro de un navegador de internet
+
+Java es case sensitive.
+Java tiene palabras reservadas: Palabras que forman parte del lenguaje de programacion.
+Toda aplicacion Java esta a menos dentro de una clase
+Las llaves delimitan el bloque de codigo.
+En Java todas las sentencias terminan en punto y coma;

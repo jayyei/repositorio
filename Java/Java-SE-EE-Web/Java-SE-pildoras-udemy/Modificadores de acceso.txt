@@ -1,0 +1,28 @@
+ \\Modificadores de acceso java
+		
+	\\ public accesible desde cualquier parte
+
+	\\ private contenido accesible solo desde la misma clase, no desde otras
+
+	\\ protected contenido de la clase es accesible desde el mismo paquete y por herencia
+
+	\\ por defecto: accesible desde el mismo paquete
+	
+// pueden ser aplicables a variables y a metodos en java
+
+	// instanciar una clase es crear un objeto a partir de una clase
+
+	// Polimorfismo: muchas formas -- comportamiento mediante el cual un objeto se puede comportar de distintas formas dependiendo del contexto
+
+
+/// Los modificadores de acceso se pueden aplicar a variables, constantes, metodos y clases
+
+// Los 4 modificadores de acceso son publi, protected, private y default
+
+
+/// public: El elemento con este modificador sera accesible desde la misma clase, desde el mismo paquete, desde las subclases que hereden de el y desde todos lados
+/// private: El elemento con este modificador sera accesible desde la misma clase, nada mas
+
+//Protected: El elemento con este modificador sera accesible desde la misma clase, desde otras clases en el mismo paquete y desde clases que hereden de la clase 
+
+//default: Este modificador es cuando no colocas el modificador, los elementos con este modificador, seran accesibles desde la misma clase, desde el mismo paquete pero no sera accesible si se accede en un paquete diferente, ni aunque se utilize la herencia
