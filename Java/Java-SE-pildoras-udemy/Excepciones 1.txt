@@ -1,0 +1,30 @@
+			Distribucion de Errores
+	Tiempo de Compilacion			Tiempo de Ejecucion
+							|
+						    Throwable
+							|
+						     --------
+						     |       |
+						   Error    Exception
+							      |
+							      | 
+                                                              |
+							-----------------
+                                                        |                |
+                                                    IOException	      RunTimeException			
+
+Todo error en tiempo de ejecucion hereda de Throwable 	
+Debajo de esta clase hay dos subclases la clase error y exception
+
+La clase error se refiere a errores de hardware (poca memoria, corrupcion de memoria, poco se puede hacer )
+
+El manejo de errores se centraliza en la clase Exception
+	Las dos clases que heredan de Exception son IOException y RuntimeException	
+
+
+
+IOException y RunTimeException
+
+	// Las excepciones de IOexception no tiene nada que ver con el programador java, son excepciones en donde el no tiene la culpa
+	// Las excepciones runTimeException Puede se sido por culpa del programador, en donde violaste alguna regla de java
+		
