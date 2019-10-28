@@ -16,7 +16,7 @@ public class CalculoAreas {
 				+ "4.- Circulo");
 		int figura = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la opcion"));
 		
-		Scanner entrada = new Scanner(System.in);	
+		Scanner entrada = new Scanner(System.in);	  
 
 		switch (figura) {
 		case 1:
