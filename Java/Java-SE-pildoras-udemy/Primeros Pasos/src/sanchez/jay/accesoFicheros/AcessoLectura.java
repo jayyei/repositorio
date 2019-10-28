@@ -1,5 +1,6 @@
 package sanchez.jay.accesoFicheros;
 
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -21,13 +22,18 @@ class LeerFichero{
 	public void leeDatos() {
 		try {
 			FileReader entrada = new FileReader("C:\\Users\\mrjay\\Desktop\\Repositorio\\Java\\Java-SE-pildoras-udemy\\primerFichero.txt");
-			int caracter = entrada.read();
-			char letra = (char)caracter;
-			while(caracter!=-1) {
-				System.out.print(letra);
-				caracter= entrada.read();
-				letra = (char)caracter;
+			BufferedReader mibuffer = new BufferedReader(entrada);
+			String linea = "";
+			//int caracter = entrada.read();
+			//char letra = (char)caracter;
+			while(linea != null) {
+				linea = mibuffer.readLine();
+				System.out.println(linea);
+				//System.out.print(letra);
+				//caracter= entrada.read();
+				//letra = (char)caracter;
 			}
+			entrada.close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
