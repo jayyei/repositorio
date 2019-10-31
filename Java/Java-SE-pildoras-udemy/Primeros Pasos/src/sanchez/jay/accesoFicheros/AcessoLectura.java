@@ -21,6 +21,8 @@ public class AcessoLectura {
 class LeerFichero{
 	public void leeDatos() {
 		try {
+			//Con la clase fileReader puedes leer caracter(representacion decimal) por caracter un fichero externo
+			//La clase bufferedReader permite leer la linea por defecto de una instancia de FileReader
 			FileReader entrada = new FileReader("C:\\Users\\mrjay\\Desktop\\Repositorio\\Java\\Java-SE-pildoras-udemy\\primerFichero.txt");
 			BufferedReader mibuffer = new BufferedReader(entrada);
 			String linea = "";
