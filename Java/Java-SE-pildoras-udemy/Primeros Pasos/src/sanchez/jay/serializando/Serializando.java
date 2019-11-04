@@ -8,6 +8,8 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
+
+//Se serializan objetos, esto es la accion de serializar en java
 public class Serializando {
 
 public static void main(String[] args) {

@@ -1,0 +1,7 @@
+Jsx es una sintaxis que al transpilar su codigo, genera Js
+para transpilar jsx, se utilizar babel
+
+toda sintaxis jsx tiene su correspondiente a js  que en si, utiliza la libreria de react, y su traduccion seria algo dura de evaluar
+es por eso que se utiliza jsx que es una azucar sintatica que practicamente enbellece el codigo.
+
+cada elemento html visualizado en jsx en si es un elemento creado a partir de React.createElement que solo puede aceptar un elemento que envuelva a a todos, dentro de este elemento se pueden crear elementos de react, a los que se llaman elementos children

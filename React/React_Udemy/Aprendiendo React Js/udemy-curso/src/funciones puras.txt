@@ -1,0 +1,16 @@
+Se dice que una funcion es pura por dos razones:
+    *Porque siempre devuleve el mismo valor para los mismos parametros de entrada
+    *La logica de la funcion no produce efectos colaterales dentro de ella
+
+function (a, b) {
+    return a+b;
+}
+
+//Ejemplo de funcion inpura
+function sumaImpura(a,b){
+    return a + b + Math.random();
+}
+function sumaImpura2(a){
+    b = b +a
+    return b
+}
