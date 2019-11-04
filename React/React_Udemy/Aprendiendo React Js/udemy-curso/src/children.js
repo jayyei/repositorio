@@ -15,7 +15,7 @@ class Box extends Component {
 }
 
 class Article extends Component{
-    static propTypes = {
+    static propTypes = { //A traves de la dependenncia de proptypes, se puede crear un objeto statico dentro de la clase indicando el tipo de dato de las propiedades a esperar asi como si es requerida o no, esto solo lanzara un warning a la consola del navegador
         author: PropTypes.string.isRequired
     }
     

@@ -41,3 +41,8 @@ componentDidMount()     //Se ejecuta tras renderizar el componente
                         /* Aqui podemos anadir las llamadas para recuperar datos del
                         servidor y escuchar eventos */
                         //Se puede usar el setState
+
+componentWillReceiveProps() //Solo se ejecuta cuando el componente recibira nuevas props
+                            //Util cuando se usa las props para formar el state del componente
+                            //se puede usar el setstate y a veces no provoca render
+                            
