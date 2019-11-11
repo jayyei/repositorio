@@ -1,0 +1,40 @@
+.App {
+  padding-top: 36px;
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.SearchForm-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.MoviesList {
+  display:flex;
+  flex-wrap : wrap;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.MoviesList-item {
+  margin-bottom: 24px;
+  width: 40%;
+}
