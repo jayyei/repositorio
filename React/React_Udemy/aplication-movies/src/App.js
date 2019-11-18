@@ -4,6 +4,7 @@ import './App.css';
 import 'bulma/css/bulma.css'
 import {SearchForm } from './components/SearchForm'
 import { MovieList } from './components/Movies-list';
+import { Detail } from './pages/detail';
 
 class App extends Component{
   state = { usedSearch: false, results: []}
@@ -22,6 +23,12 @@ class App extends Component{
 
   
   render(){
+    const url = new URL(document.location) //Desde js sacas el parametro url de la ubicaion actual
+    const hasId = url.searchParams.has('id') // si es url puedes buscar parametros y preguntar si tiene el id
+
+    if(hasId){
+      return <Detail id={url.searchParams.get('id')}/>
+    }
     return (
       <div className="App">
         <Title>Search Movies</Title>
