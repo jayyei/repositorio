@@ -1,17 +1,20 @@
 import React, {Component } from 'react';
 import PropTypes from 'prop-types';
-
+import { ButtonBackToHome } from '../components/BackTohome' 
 const API_KEY = '4287ad07';
 
 export class Detail extends Component{
     static propTypes = {
-        id: PropTypes.string
+        match: PropTypes.shape({
+            params:PropTypes.object,
+            isExact: PropTypes.bool,
+            path: PropTypes.string,
+            url: PropTypes.string
+        })
     }
     state = {movie: {}}
 
-    _goBack(){
-        window.history.back();
-    }
+   
     _fetchMovie({id}){
         fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&i=${id}`)
             .then(res=>res.json())
@@ -22,7 +25,8 @@ export class Detail extends Component{
     }
 
     componentDidMount(){
-        const { id } = this.props
+        console.log(this.props)
+        const { id } = this.props.match.params
         this._fetchMovie({id})
     }
     
@@ -30,7 +34,7 @@ export class Detail extends Component{
         const {Title, Poster, Actors, Metascore, Plot } = this.state.movie
         return(
             <div>
-                <button onClick={this._goBack}>Volver</button>
+                <ButtonBackToHome/>
                 <h1>{Title}</h1>
                 <img src={Poster}/>
                 <h3>{Actors}</h3>
@@ -40,3 +44,6 @@ export class Detail extends Component{
         )
     }
 }
+
+
+//History y location son nativos de html5 cuando el componente es declarado como ruta el roouter lo inyecta 

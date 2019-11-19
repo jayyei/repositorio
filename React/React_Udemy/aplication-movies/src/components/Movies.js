@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom'; //Hace las navegaciones usando el enroutado declarado en este caso fue el api history 
 
 export class Movies extends Component {
     static propTypes = {
@@ -11,7 +12,7 @@ export class Movies extends Component {
     render(){
       const { poster, title, year, id } = this.props
       return(
-        <a href={`?id=${id}`} className="card">
+        <Link to={`/detail/${id}`} className="card">
             <div className="card-image">
                 <figure className="image">
                     <img src={poster} 
@@ -26,7 +27,7 @@ export class Movies extends Component {
                     </div>
                 </div>
             </div>
-        </a>
+        </Link>
       )
     }
 }
