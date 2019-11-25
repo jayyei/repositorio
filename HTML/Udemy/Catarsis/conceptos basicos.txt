@@ -1,0 +1,20 @@
+/// Conceptos basicos //
+
+*- Internet : Conjunto descentralizado de redes fisicas heteregoneas de alcance mundial
+              que utilizan los portocolos TCP/IP y que funcionan como una red logica unica.
+
+*- Web : sistema de distribucion de documentos de hipertexto o hipermedios interconecatdos y accesibles via Internet
+        sea hipertexto = link 
+
+*- Dominio : Red de identificacion asociada a un grupo de dispositivos o equipos conectados
+            a internet. Su proposito es traducir las direcciones IP de cada nodo activo en la red.
+
+*- Pagina web : Documento electronico capaz de contener multimedia, adaptado para la www que puede 
+                ser accedido desde un navegador
+
+*- Sitio web : Coleccion de paginas de internet relacionadas y comunes a un domino de internet o subdominio
+               En la web
+    
+*- Protocolo de comunicacion : reglas y normas que permiten que dos o mas entidades de un sistema se comuniquen para 
+                               transmitir datos. Incluyendo los metodos de recuperacion en caso de error.
+

@@ -1,0 +1,13 @@
+/// Protocolos de comunicacion ///
+
+*-HTTP : Es el protocolo mas utilizado en cada transaccion de la web. Establece los medios
+         y reglas para estabelecer transacciones de peticion-respuesta a traves de un localizador de recursos URL
+
+*- IP : Identificar las terminales de destino y de origen para una comunicacion
+
+*- TCP : Protocolo de transmision de control Asegura que los datos en proceso de transferencia sean recibidos
+         sin errores y en el mismo orden en que se recibieron
+
+*- FTP : Protocolo de tranferencia de archivos Permite realizar la trasnferencia de archivos a dispositivos remotos 
+         A traves de una conexion segura (generalmente con un nombre de usuario y contrasena )
+
