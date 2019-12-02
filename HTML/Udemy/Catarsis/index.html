@@ -12,7 +12,7 @@
     <link rel="icon" href="images.png"> <!--Para indicar el icono para algun marcador del navegador-->
 </head>
 
-<body>
+<body bgcolor="#ccc" background="images/imagen1.jpg">
     <h1>Ocupa una linea entera el solo, es un Header y se considera el h1 como el principal</h1>
     <h2>Soy el subtitulo 2</h2>
     <h3>Soy el subtitulo 3</h3>
@@ -26,6 +26,33 @@
     Jay <br> <br>
     <!--Etiqueta para crear un salto de linea-->
     Sanchez
+    <br>
+    <font face="Arial, Helvetica, sans-serif" color="#bbb" syze="+2"><h1>Creando links</h1></font>
+    <h2>Lista desordenanda</h2>
+    <ul>
+        <li><p>Soy un parrafo dentro de una lista no ordenada</p></li>
+        <li>Soy el segundo item</li>
+        <li>Soy el tercer item</li>
+    </ul>
+    <h2>Lista ordenada</h2>
+    <ol>
+        <li><p>Soy un parrafo dentro de una lista no ordenada</p></li>
+        <li>Soy el segundo item</li>
+        <li>Soy el tercer item</li>
+    </ol>
+
+    <img src="images/imagen1.jpg" width="100" height="120"> <!--La etiqueta width y height logran distorsionar la imagen-->
+    <img src="http://lorempixel.com/200/100"> <!--Y como ya es novedad, la etiqueta img con src  como atributo nos sirve para dar una imagen al archivo html-->
+    <img src="http://placehold.it/200x100">
+    <br>
+    <a href="otro.html">Ir al otro</a> <!--La etiqueta a puede tener como hijos a mas etiquetas como imagenes-->
+    <br>
+    <a href="http://google.com" target="_blank"> Ir a google</a> <!-- el atributo target permite abrir el vinculo en una nueva pestana o en la misma-->
+    <br>
+    <a href="tel:5581669223">Marcale al Jay</a> <!--E igual mente con href=tel:222222 puedes marcar a un numero telefonico-->
+    <br>
+    <a href="mailto:sanchezrj0328@gmail.com?subject=Hola desde el link&body=Soy el correo que se va a enviar &cc=jay@gmail.com">Escribele a Jay</a> <!-- Con href igual a mailto abrimos el visor de correos predeterminado en la maquina y podemos enviar correo a la dirrecion establecida-->
+        <!--Se pueden agregar mas atributos como el asunto separando la direccion y este con un signo de interrogacion e incluso parte del cuerpo del correo con un &body  y una copia con el atributo en linea &cc-->
 </body>
 
 </html>

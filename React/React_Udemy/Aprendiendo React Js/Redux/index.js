@@ -1,4 +1,4 @@
-
+import {createStore} from '/redux';
 
 const contador = document.getElementById('contador')
 const decrementar = document.getElementById('decrementar')
@@ -25,7 +25,7 @@ function counterApp(state= INITIAL_STATE, action) {  //Este es un reducer
     }
 }
 
-const store = Redux.createStore(counterApp) //El create store recibe como parametro el reducer creado
+const store = createStore(counterApp) //El create store recibe como parametro el reducer creado
 store.subscribe(() =>{
     const state = store.getState()
     console.log('state cambiado', state);

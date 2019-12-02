@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tablas en Html</title>
+</head>
+<body>
+    <table border="1" cellpadding="10" width="80%" align="center" bgcolor="#ccc">
+        <tr bgcolor="#eaeaea"> <!--Table row, se utiliza para comenzar un renglon en la tabla-->
+            <td rowspan="2">Uno</td> <!--Table definition para agregar columnas dentro del renglon de la tabla que lo contiene-->
+            <td width="30%">Dos</td>
+            <td>Tres</td>
+        </tr>
+        <tr> <!--Table row, se utiliza para comenzar un renglon en la tabla-->
+                             <!--Table header para colocar encabezados en latabla-->
+            <th>cinco</th>
+            <th>seis</th>
+        </tr>
+        <tr>
+            <td colspan="2">siete</td>
+            <td>nueve</td>
+        </tr>
+    </table>
+</body>
+</html>
+
+<!--Rowspan sirve para aplicar directamente al elemento html un tamano de renglon para que este pueda abarcar mas de otro o que quiza sea del doble (Tamano de renglon de arriba a abajo-->
+<!--colspan sirve para aplicar directamente a un elemento de la tabla que ocupe dos espacios o mas (de izquierda a derecha)-->

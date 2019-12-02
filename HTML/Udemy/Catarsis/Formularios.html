@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formularios</title>
+</head>
+<body>
+    <Form action="pagina.php" method="POST" enctype="multipart/form-data"> <!--Etiqueta para manejar formularios, abre y cierra la etiqueta Form-->
+                     <!--El atributo action permite indicar a que pagina ira la informacion-->
+                     <!--El atributo method para indicar las opciones de envio (get/post)-->    
+        <label>Nombre: <!--Tambien con el atributo for puedes indicar a que input esta referenciada este label-->
+            <input type="text" name="nombre" placeholder="nombre">
+        </label>
+        <br>
+        <label>Contrasena: <!--Con el atributo value se puede colocar un valor predeterminado al input-->
+            <input type="password" name="contrasena" placeholder="Mas de 10 caracteres">
+        </label>
+        <br>
+        <label>Comentarios: 
+            <textarea  name="Comentarios" placeholder="Escribe aqui">
+                Soy el contenido de inicio del text area
+            </textarea>
+        </label>
+        <br>
+        <label>Edad:
+            <input type="number" name="edad" placeholder="edad" step="2" max="18" min="0">
+        </label>
+        <br>
+        <label>Correo:
+            <input type="email" name="correo" placeholder="name@dominiio.com">
+        </label>
+        <br>
+        <label>Span?:
+            <input type="checkbox" name="spam" value="si">
+        </label>
+        <br>
+        <label> Masculino
+            <input type="radio" name="genero" value="m">
+        </label>
+        <label> Femenino
+            <input type="radio" name="genero" value="f">
+        </label>
+        <br>
+        <label> Ciudad:
+            <select name="ciudad">
+                <option value="mxl">Mexicali</option>
+                <option value="hgo">Hidalgo</option>
+                <option value="mty">Monterrey</option>
+            </select>
+        </label>
+        <button>Enviar</button>
+    </Form>     
+</body>
+</html>
