@@ -1,5 +1,0 @@
-tns = verifica si el NativeScript esta intalado
-tns doctor = para verificar si el ambiente de trabajo (Android) esta bien configurado para comenzar a trabajar
-tns create = crea un nuevo proyecto de nativescript
-tns devices android = busca los dispositivos conectados y muestra caracteristicas de los mismos
-tns run android = instala la aplicacion en un dispositivo android 

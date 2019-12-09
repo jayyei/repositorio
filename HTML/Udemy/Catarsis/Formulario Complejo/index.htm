@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Formulario de contacto</title>
+    <link rel="icon" href="imagenes/favicon.png">
+</head>
+
+<body bgcolor="#cccccc" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0" marginwidth="0" marginheight="0">
+   <font face="Arial, Helvetica, sans-serif" color="#666">
+       <table width="100%" cellpadding="30" border="0" cellspacing="0">
+            <tr bgcolor="#469915">
+                <td>
+                    <table width="600" align="center">
+                        <tr>
+                           <td>
+                               <center>
+                                    <font color="#ffffff" size="+6">
+                                        <img src="imagenes/mariposa.png">
+                                        CONTACTANOS
+                                    </font>
+                                </center>
+                           </td> 
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td>
+                    <form action="otra.php" method="POST">
+                        <table width="600" align="center" cellpadding="8">
+                            <tr>
+                                <td align="right" width="50%">Nombre</td>
+                                <td width="50%"><input type="text" name="nombre"></td> 
+                            </tr>
+                            <tr>
+                                <td align="right" width="50%">Apellidos</td>
+                                <td width="50%"><input type="text" name="apellidos"></td> 
+                            </tr>
+                            <tr>
+                                <td align="right" width="50%">Correo Electronico</td>
+                                <td width="50%"><input type="email" name="Correo" placeholder="correo@dominio.com"></td> 
+                            </tr>
+                            <tr>
+                                <td align="right" width="50%">Sitio Web</td>
+                                <td width="50%"><input type="url" name="sitio" placeholder="http://sitio.com"></td> 
+                            </tr>
+                            <tr>
+                                <td align="right" width="50%">Edad</td>
+                                <td width="50%"><input type="number" name="edad" min="10" max="100" step="1" value="18"></td> 
+                            </tr>
+                            <tr>
+                                <td align="right" width="50%">Genero</td>
+                                <td width="50%">
+                                    <label>
+                                        <input type="radio" name="genero" value="m" checked>
+                                        Masculino
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="genero" value="f">
+                                        Femenino
+                                    </label>
+                                </td> 
+                            </tr>
+                            <tr>
+                                <td align="right" width="50%">Ingreso mensual</td>
+                                <td width="50%"><input type="range" name="ingreso" min="0" max="100000" step="20000"></td> 
+                            </tr>
+                            <tr>
+                                <td align="right" width="50%">Curriculo</td>
+                                <td width="50%"><input type="file" name="archivo"></td> 
+                            </tr>
+                            <tr>
+                                <td align="right" width="50%" valign="top">Comentarios</td>
+                                <td width="50%"><textarea name="comentarios" placeholder="Escribelos aqui..." rows="6" cols="30"></textarea></td> 
+                            </tr>
+                            <tr>
+                                <td align="right" width="50%" valign="top"></td>
+                                <td width="50%"><input type="image" src="imagenes/boton-enviar.png"> </td> 
+                            </tr>
+                        </table>
+                    </form>
+                </td>
+            </tr>
+            <tr bgcolor="#cccccc">
+                <td>
+                    <table width="600" align="center">
+                        <tr>
+                            <td>
+                                <center>
+                                    Todos los derechos reservados, 201X
+                                </center>
+                            </td> 
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+       </table>
+   </font> 
+</body>
+</html>

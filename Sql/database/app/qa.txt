@@ -1,4 +1,0 @@
-for i in `ls -1 *.xml` ; do iconv -f ISO-8859-1 -t UTF-8 $i > changesets/$i ; done
-../liquibase --changeLogFile="db.changelog-master.xml" --logLevel=info update
-../liquibase --changeLogFile="db.changelog-0.0.0.8.json" --logLevel=info update
-
