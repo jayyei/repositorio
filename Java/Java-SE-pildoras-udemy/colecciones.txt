@@ -1,0 +1,59 @@
+             // Colecciones
+
+	* Una coleccion es un almacen de objetos dinamico, puedes cambiar el tamano al momento de ejecuccion
+	* no se pueden almacenar datos de tipo primitivo
+	* Solo datos de tipo object
+	* Pueden ir provista de ordenamiento
+	* Se pueden insertar y eliminar elementos
+
+
+	  // Tipos de colecciones
+-- Cada coleccion tiene su interfaz correspondiente, todo este grupo de interfaces hereda de la interfaz collection
+	* Coleccion de set  //Estas son rapidas, consume pocos recursos
+		*SortedSet
+	* Coleccion de list //Es la mas utilizada, se parece mucho a los arrays, consume mas recursos que set
+	* Coleccion de Queue //Son las colas, permiten acceder al primer elemento y al ultimo, el primero en entrar es el primero en salida
+	* Coleccion de Map --Esta ultima no hereda de Collection //Son parejas de clave-valor
+		*SortedMap
+
+
+Comenzamos por ...
+	
+	interfaz List... La coleccion mas utilizada, se implementa en las clases se utilizan mas las dos primeras
+		* ArrayList // Muy rapida accediendo a elementos 
+		* LinkedList // Listas enlazadas: Gran eficiencia agregando o eliminando elementos
+		* Vector // Obsoleta, 
+		* CopyOnWriteArrayList Obsoleta, 
+
+	//Ventajas: 
+		-Acceso aleatorio
+		-Estan ordenadas(collection.sort())
+		-Anadir/Eliminar sin restriccion
+		-ListIterator modifica en cualquier dirrecion
+		-Sintaxis similar a los arrays
+
+	//Desventajas
+		-Bajo rendimiento en operaciones concretas que se resolverian con otras interfaces	
+
+
+	interfaz set ..
+	
+	//Ventajas
+		-No permite elementos duplicados
+		-uso sencillo de add
+	
+	//Desventajas
+		-No tiene acceso aleatorio, no puedes acceder a un elemento en concreto si antes no haz accedido a los anteriores
+		-Poca eficiencia a la hora de ordenar elementos 
+
+
+	interfaz Queues
+	
+	//Ventajas
+		-Muy rapido al acceder al primer y ultimo valor
+		-Permite crear colas de elementos muy eficientes
+
+	//Desventajas
+		-Acceso lento a los elementos intermedios	
+
+

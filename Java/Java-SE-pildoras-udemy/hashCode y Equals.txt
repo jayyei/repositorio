@@ -1,0 +1,15 @@
+
+		//Metodos hashcode y equals
+
+	En el stack es un espacio de memoria de acceso rapido, aqui es donde se almacenan los datos de tipo primitivo
+
+	En el Heap es una memoria de acceso no tan rapido, aqui se almacenan o se crean espacios para objetos, en el heap se alamacenan los objetos pero...
+
+	en el stack se genera una referencia del objeto o espacio almacenado en el Heap, (vinculo, apunta a)
+
+	se crean espacios diferentes en el heap por cada objeto que se crea, pero tambien se crean referencias de ellos en el stack
+
+	El codigo unico que se le asigna a cada espacio en memoria heap se le llama Hashcode es un identificador unico de cada espacio
+
+
+	--El metodo equals comprueba si dos objetos son iguales si los dos apuntan al mismo lugar de la memoria
