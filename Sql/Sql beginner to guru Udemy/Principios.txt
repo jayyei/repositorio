@@ -1,0 +1,22 @@
+	-- Base de datos
+	// Los datos son almacenados en columnas y renglones
+	// En cada columna es asignado
+		- un unico nombre 
+		- un tipo de dato
+		- opcionalmente restricciones(por ejemplo, es requerido, longitud, etc
+
+	//Cada renglon es un registro diferente en la base de datos
+
+	Primary Key
+	// Es una columna opcional y especial  usado para identificar un registro en base de datos. unica opcional
+
+	Surrogate key (llave sustituta)
+	// Es un tipo de llave primaria la cual usa un valor unico generado, considerado una buena practica en el desarrollo de base de datos
+	
+	Relacion de tablas en base de datos
+	// Definido a traves de restricciones de llaves foraneas en conjunto con las primary key
+	
+	Existen distintos tipos de relacion
+		* Uno a uno: registro en la tabla A se relaciona exactamente un registro en la tabla B
+		* Uno a muchos: El registro en la tabla A relaciona muchos in la tabla B, but La tabla B relaciona solo un unico registro en la tabla A
+		* Un registro en la tabla A relaciona muchos en la tabla B y en la tabla B relacionas muchos registros de la tabla A	

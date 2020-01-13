@@ -1,9 +1,0 @@
-  //Clase: 
-	Modelo donde se redactan las caracteristicas comunes de un grupo de objetos
-	despues de creada se puede crear instancias de esta clase
-
-  // Objeto:
-	Ejemplar o instancia de una clase
-		tienen sus propias propiedades y sus metodos diferentes
-
-  // Para acceder a las propiedades de un objeto se acceden mediante la notacion del punto

@@ -1,0 +1,27 @@
+package sanchez.jay.colecciones;
+
+import java.util.LinkedList;
+import java.util.ListIterator;
+
+public class PruebaLinkedList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		LinkedList<String> personas = new LinkedList<String>();
+		personas.add("Ana");
+		personas.add("Pedro");
+		personas.add("Juan");
+		personas.add("Sara");
+		System.out.println(personas.size());
+		
+		ListIterator<String> it = personas.listIterator();
+		
+		it.next();
+		it.add("Juan");
+		for(String persona: personas) {
+			System.out.println(persona);
+		}
+	}
+
+}

@@ -1,0 +1,7 @@
+		DDL
+	-- Lenguaje de definicion de datos : Es usado para definir el modelo relacional 
+	
+		DML
+	-- Lenguaje de manipulacion de datos: Te permite anadir (INSERT), cambiar (UPDATE), o eliminar (DELETE) datos
+	-- EL RDBMS forza a los datos adherirse a las reglas de la DDL
+	

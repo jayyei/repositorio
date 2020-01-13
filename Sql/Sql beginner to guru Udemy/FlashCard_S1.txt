@@ -1,0 +1,26 @@
+	Que es una base de datos relaciona?
+		Es un modelo de base de datos para almacenar datos en tablas las cuales tiene relacion con otras tablas
+	
+	Quien propone el modelo relacional?
+		Edgar F Codd en 1969
+	
+	Que es SQL?
+		Significa Lenguaje de peticiones estructurado, un lenguaje estandar para almacenar, manipular y recuperar datos en una base
+
+	Que representa una columna en una base de datos relacional?
+		Representa un Set de valres de datos a traves de: un nombre unico, un tipo de dato y opcionalmente una restriccion como la longitud, si es nullo, etc.
+
+
+	Que es un renglon en una base de datos relacional?
+		ES un registro en la base de datos
+
+	Que es una llave primaria?
+		es una columna special en la base de datos para identificar un registro en la base, es opcional, pero altamente recomendada
+	
+	Que es una llave sustituta?
+		Es un tipo de llave primaria, es generalmente un identificador generado por el sistema que no tiene valor en el negocio y su valor no deberia cambiar, usarla es considerada una buena practica 
+
+	Como esta definida las relaciones en las tablas de base de datos?
+		estan definidas a traves de las llaves foraneas en conjunto con las llaves primarias
+
+	

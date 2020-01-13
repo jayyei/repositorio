@@ -1,0 +1,8 @@
+	Aritmetic operators in SQL
+
+	* Multiply
+	/ Divide
+	DIV integer division
+	% Modulo
+	+ Suma
+	- resta

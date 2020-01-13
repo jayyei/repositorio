@@ -1,6 +1,0 @@
-		// Que son las clases internas anonimas??
-			-Son clases que se encuentran dentro de otra clase y que ademas no tienen nombre
-			-Su utilidad es de simplificar el codigo creando una clase inline sobre la marcha, esto evita tener que 
-			-crear una clase adicional en nuestro codigo para despues crear una instancia.
-			- Se utilizan al gestionar eventos. Muy utilizados en aplicaciones graficas donde el usuario interactua con controles
-d

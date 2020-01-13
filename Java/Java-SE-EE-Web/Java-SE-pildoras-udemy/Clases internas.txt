@@ -1,8 +1,0 @@
-		// Las clase sinternas son clases que se encuentran en el ambito de otra clase
-
-		Aplicaciones
-			
-			//Para acceder a los campos privados de una clase desde otra clase
-			// Para ocultar una clase de otras pertenecientes al mimo paquete
-			// Para crear clases internas anonimas, muy utiles para gestionar eventos y retrollamadas
-			// cuando solo una clase debe acceder a los campos de ejemplar de otra clase

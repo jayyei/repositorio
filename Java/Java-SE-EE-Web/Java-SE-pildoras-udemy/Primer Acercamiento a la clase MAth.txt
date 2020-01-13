@@ -1,3 +1,0 @@
-En un programa de java al menos debe de existir una clase
-
-En java hay clases propias y dfinidas, las propias las haces tu y las definidas son las que se realizaron en la API de java

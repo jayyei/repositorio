@@ -1,0 +1,17 @@
+		Base de datos
+	-- es un conjunto de datos relacionados y como es que estos se relacionan
+	-- Tipos de datos: como String, dates, Times, Numbers.
+	
+		
+		DBMS Database Management Systems
+	-- Son programas de computadoras especializados para base de datos
+	-- Estos tienen 4 importantes caracteristicas
+		*Definicion de datos: DEfine la data a ser rastreada
+		*Manipulacion de data: Agrega, actualiza, o borra la data
+		*Recuperacion de data: Extrae y reporta sobre la data en la base de datos
+		*Administra: Define usuarios en el sistema, seguridad, monitoreo y adminstracion del sistema
+
+		Tipos de base de datos
+	-- De archivo plano: En donde los datos son guardados en un archivo del SO
+	-- Relacional: La data es guardad en tablas de base de datos, las cuales tienen relacion entre ellas mismas
+	-- Jerarquica: Los datos son guradados en estruturas de tipo arbol
