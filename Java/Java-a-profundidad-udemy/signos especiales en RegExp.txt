@@ -1,0 +1,37 @@
+	// Algunos puntos a tomar en cuenta en las expresiones regulares
+	
+// punto se ocupa para encontrar cualquier caracter excepto los caracteres de nueva linea
+// para especificar un caracter, este se escapa con una barra invertida \
+
+
+// en Java el signo ^ se indica antes de una cadena para indicar que dicha expresion debe de comenzar con ella
+// en Java el signo $ se indica despues de una cadena para indicar que dicha expresion debe de finalizar con ella
+
+//Para verificar tus expresiones regulares visita regexplanet.com
+
+// los corchetes implican un conjunto [], ejemplo : [0-9]
+
+// para hacer una negacion en un conjunto se ocupa de la siguiente manera [^conj]
+
+// por ejemplo esta expresion regular \w equivale a la siguiente: [a-zA-Z]
+// para su complemento esta expresion regular \W equivale a la siguiente: [^a-zA-Z]
+
+// para espacios /s
+// para no espacios /S
+
+// para digitos /d
+// para no digitos /D
+
+// Las llaves indican un rango de la repeticion de la cadena que lo antesora
+ ejemplo: "aa{3,5}" coincide con aquella Cadena que tenga al menos tres "aa" seguidas
+ 
+// por ejmplo para una validacion de codigo postal "\d{5}"
+
+// para no limitar del lado izquierdo "a{,5}"
+// para no limitar del lado derecho "a{5,}"
+
+// los rangos habituales son las siguientes
+
+ el simbolo * equivale a 0 o mas veces {0,}
+ el simbolo + equivale a uno o mas veces {1, }
+ el simbolo ? equivale a una o ninguna vez {0,1}
