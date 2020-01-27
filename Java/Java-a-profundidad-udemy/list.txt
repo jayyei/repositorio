@@ -1,0 +1,9 @@
+	/// List
+	-- sus indices comienzan desde cero
+		// Proporciona metodos para buscar elementos e iterar a traves de ellos
+		// proporciona listIterator
+
+	-- Clases que la implementan
+		** ArrayList
+		** LinkedList
+		** Vector

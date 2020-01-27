@@ -1,0 +1,22 @@
+  --- Colecciones Java a profundidad
+	// es una estructura de datos que puede guardar referencias a otros objetos
+	
+
+ --- En la api de java partimos de la interfaz collection
+	
+	// Luego a su vez, de ella se derivan las interfaces set, queue y list
+
+	// Set es una coleccion no ordenada que no puede contener duplicados
+	
+	// la interfaz Queue es una coleccion FIFO que es primero en entrar primero en salir (cola)
+
+	// Map no hereda de collection, pero asocia claves con valores, no puede tener claves duplicadas
+	
+	
+--- La interfaz collection tiene 
+
+--- firmas de metodos de agregar, borrar, comparar objetos o elementos en una coleccion
+	
+--- Convertirse en arreglo (array)
+
+-- Devolver un objeto iterator para recorrer toda la coleccion
