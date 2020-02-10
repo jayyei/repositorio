@@ -1,0 +1,43 @@
+
+		
+		// Streams Java 8
+
+	-- Se introducen a partir de la version 8
+		
+	-- Son similares a los iteradores de las colecciones (objetos Iterator)
+
+	-- Las clases de Streams implementan la interfaz Stream o una de las interfaces de Stream especializadas para procesar colecciones 		de valores int, long o double.
+
+	-- En conjunto con las lambdas, los streams permiten realizar tareas sobre colecciones de elementos (arreglos u objetos Collection)
+
+	
+
+		// Stream pipeline
+
+	-- La canalizacion de Streams o canalizacion de flujos es la accion de desplazar elementos a traves de una secuencia de pasos de 	   procesamiento
+
+	-- El stream pipeline comienza con un origen de datos (como un arreglo o coleccion).
+
+	-- El stream pipeline realiza varias operaciones intermedias sobre el origen de datos y finaliza con una operacion terminal
+	
+	-- El stream pipeline se forma mediante el encadenamiento de llamadas a metodos
+
+
+		// Operaciones intermedias
+
+	-- Especifica las tareas a realizar sobre los elementos del Stream
+	
+	-- Siempre produce un nuevo Stream
+
+	-- Las operaciones intermedias son perezosas; es decir, no se ejecuntan sino hasta que se invoque a una operacion terminal
+	
+	-- las operaciones intermedias contribuyen al rendimiento del procesamiento de streams.
+
+		
+		//Operaciones terminales
+
+	-- inician el procesamiento de las operaciones intermedias
+
+	-- Siempre producen un resultado
+	
+	-- las operaciones terminales son ansiosas, ya que realizan la operacion solicitada cuando se les invoca

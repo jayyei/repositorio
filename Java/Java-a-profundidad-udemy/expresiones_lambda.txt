@@ -1,0 +1,15 @@
+
+
+
+
+		// Expresiones lambda
+	
+	-- Las expresiones lambdas nos ayudaran a realizar la programacion funcional
+	-- una expresion lambda representa a un metodo anonimo
+	
+		// Sintaxis de una expresion lambda
+	-- (lista parametros) -> {instrucciones}
+
+ 	// lambda sin necesidad de expresar el tipo de dato
+ 	(x,y) -> x + y;
+	

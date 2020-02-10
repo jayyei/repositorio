@@ -1,0 +1,6 @@
+			// Metodos referenciados
+
+	(args) -> Class.staticMethod(args) 
+
+	//Esto lo podemos convertir en un metodo referenciado
+	Class::staticMethod

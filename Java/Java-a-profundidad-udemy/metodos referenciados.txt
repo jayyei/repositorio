@@ -1,0 +1,26 @@
+		//Metodos referenciados
+
+	-- es una sintaxis corta de una expresion lambda que ejecuta solamente un metodo
+
+	-- sintaxis corta
+		Object::nombre_metodo
+
+	--se utilizan expresiones lambdas en lugar de clases anonimas
+
+	--Cuando la expresion lambda solo llama a un metodo es en ese caso en el cual se pueden llamar a los metods reference
+
+	Consumer<String> c = System.out::printl
+			    
+			     Objeto       metodo al cual llama
+			  referenciado
+			   o clase
+
+	-- Un metodo referenciado solo pueden ser usados para reemplazar a una expresion lambda que invoque un solo metodo
+	-- y para usar una expresion lambda necesitamos una interfaz funcional (si y solo si es interfaz funcional, que es aquella que 	tiene solo un metodo abstracto)
+
+	// 4 tipos de metodos referenciados
+	
+	1.- a un metodo estatico
+	2.- a un metodo de instancia
+	3.- a un metodo de instancia de un objeto existente
+	4.- a un constructor
