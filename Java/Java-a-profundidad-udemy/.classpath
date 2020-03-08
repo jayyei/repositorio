@@ -3,5 +3,9 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="C:/Users/mrjay/Downloads/postgresql-42.2.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mrjay/Downloads/mysql-connector-java-5.1.48/mysql-connector-java-5.1.48.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mrjay/Downloads/org.eclipse.persistence.jpa.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mrjay/Downloads/javax.persistence.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mrjay/Downloads/eclipselink-2.0.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

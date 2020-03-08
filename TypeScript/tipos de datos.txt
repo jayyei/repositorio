@@ -1,0 +1,35 @@
+    // Tipos de datos en Typescript
+
+--Primitivos:
+
+    ~~~ String
+    ~~~ Numeros:
+            let decimal: number = 6;
+            let hex: number = 0xf00d;
+            let binary: number = 0b1010;
+            let octal: number = 0o744;
+    ~~~ Booleanos
+    ~~~ Null
+    ~~~ Undefined
+    ~~~ Array:
+            let list: number[] = [1,2,3];
+            let list: Array<number> = [1,2,3];
+
+    ~~Tupla: Te permite expresar un arreglo con un numero de elementos fijos cuyos tipos son conocidos
+            let tupla: [string, number];
+
+    ~~Enum: es una forma de dar nombres de una manera mas amigable a un conjunto de valores
+            let Color {Red, Green, Blue}
+            let c: Color = Color.Green
+
+    ~~ Any: Cualquier tipo
+    ~~ void: ningun tipo
+    ~~ Never: The never type represents the type of values that never occur. For instance, never is the return type for a function expression or an arrow function expression that always throws an exception or one that never returns; Variables also acquire the type never when narrowed by any type guards that can never be true.
+
+The never type is a subtype of, and assignable to, every type; however, no type is a subtype of, or assignable to, never (except never itself). Even any isn’t assignable to never
+
+--Compuestos:
+
+    ~~~ Objetos literales
+    ~~~ Clases
+    ~~~ Funciones
