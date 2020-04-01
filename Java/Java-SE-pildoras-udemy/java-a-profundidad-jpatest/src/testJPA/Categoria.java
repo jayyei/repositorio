@@ -11,7 +11,11 @@ import java.util.List;
  */
 @Entity //indica que es una clase de tipo entity
 @Table(name="categorias") //Referencia a la tabla de la cual esta mapeada
-@NamedQuery(name="Categoria.findAll", query="SELECT c FROM Categoria c")
+//NamedQuery: Es una consulta estatica o una consulta recurrente
+@NamedQueries({
+	@NamedQuery(name="Categoria.findAll", query="SELECT c FROM Categoria c"),
+	@NamedQuery(name="Categoria.findByCategoriaId", query = "SELECT c FROM Categoria c WHERE c.categoriaid =:categoriaid")
+})
 public class Categoria implements Serializable {
 	private static final long serialVersionUID = 1L;
 
