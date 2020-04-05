@@ -1,12 +1,20 @@
 {
   "compileOnSave": true,  //Esta opcion permite actualizar automaticamente los js al haber cambiado el ts
   "compilerOptions": {
-      "module": "commonjs",
+      "module": "amd",
       "target": "es5",
       "noImplicitAny": false,
       "sourceMap": false,
       "watch": true,
-  }
+      "outFile":"build/main.js"
+  },
+  "include":[ //para incluir los ts files que se enmcuentren en determinadas rutas
+    "app/**/*"
+  ],
+  "exclude":[ //para excluir archivos ts que se encuentren en determinadas rutas
+    "node_modules",
+    "src/"
+  ]
 }
 
 

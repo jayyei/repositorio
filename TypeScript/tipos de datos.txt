@@ -33,3 +33,6 @@ The never type is a subtype of, and assignable to, every type; however, no type 
     ~~~ Objetos literales
     ~~~ Clases
     ~~~ Funciones
+
+modo observador : tsc -w
+para mas informacion visita https://www.typescriptlang.org/
