@@ -1,21 +1,22 @@
 {
-  "compileOnSave": true,  //Esta opcion permite actualizar automaticamente los js al haber cambiado el ts
+  "compileOnSave": true,
   "compilerOptions": {
+      "experimentalDecorators": true,
+      "experimentalDecorators": true,
+      "experimentalDecorators": true,
       "module": "amd",
       "target": "es5",
       "noImplicitAny": false,
       "sourceMap": false,
       "watch": true,
-      "outFile":"build/main.js"
+      "outFile":"build/main.js",
+      "experimentalDecorators": true
   },
-  "include":[ //para incluir los ts files que se enmcuentren en determinadas rutas
-    "app/**/*"
-  ],
-  "exclude":[ //para excluir archivos ts que se encuentren en determinadas rutas
-    "node_modules",
-    "src/"
-  ]
+  "exclude" : ["node_modules", "08-interfaces/**"]
 }
 
 
 //tsc -init
+/*
+
+*/

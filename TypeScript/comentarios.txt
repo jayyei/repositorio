@@ -1,0 +1,24 @@
+// comentarios en el tsconfig.json
+
+
+"include":[ //para incluir los ts files que se enmcuentren en determinadas rutas
+  "app/**/*"
+],
+"exclude":[ //para excluir archivos ts que se encuentren en determinadas rutas
+  "node_modules",
+  "src/"
+]
+
+//Generar un archivo de salida a partir de ciertos ts
+** tsc --outFile build/app.js validaciones/fechas validaciones/texto app
+
+//generar un js en modo observador
+** tsc -w app.ts
+
+//para importar namespaces desde cualquier lugar se utiliza el etiquetado de reference
+** /// <reference path="validaciones/textos.ts" />
+
+//iniciando un proyecto de node te permitira descargar la dependencia de lite-server, util para levantar tu aplicacion en un pequeño servidor
+
+//Por si existen dudas acerca de como funciona systemjs visita el siguiente enlace
+** https://riptutorial.com/es/systemjs

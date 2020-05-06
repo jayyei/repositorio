@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="java-a-profundidad-jpatest/src"/>
+	<classpathentry kind="src" path="Java-a-profundidad-udemy/src"/>
+	<classpathentry kind="src" path="ProyectoEmpresaJPA/src"/>
+	<classpathentry kind="output" path="Java-a-profundidad-udemy/bin"/>
+</classpath>

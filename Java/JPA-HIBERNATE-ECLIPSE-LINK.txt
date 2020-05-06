@@ -1,0 +1,19 @@
+//////// Diferencias entre JPA, HIBERNATE y ECLIPSE-LINK
+
+---- Jpa es la propuesta estandar que ofrece java para implementar un Framework de (ORM) que permite interactuar con la 
+	base de datos por medio de objetos, de esta manera, jpa es el encargado de convertir objetos java en instrucciones
+	para el manejador de base de datos (MDB)
+	
+     Jpa es una especificacion y no un framework como tal, es decir jpa es un documento en el cual se plasman las reglas
+	que debe cumplir cualquier proovedor que desea desarrollar una implementacion de JPA, de forma que cualquier persona
+	puede tomar la especificacion y desarrollar su propia implementacion de jpa
+
+ 
+     Por lo tanto esto quiere decir que existen muchas implementaciones de jpa, en la actualidad existen varios proveedores
+	como son los siguientes
+
+	-Hibernate
+	-EclipseLink
+	-TopLink
+	-ObjectDB
+	-OpenJPA

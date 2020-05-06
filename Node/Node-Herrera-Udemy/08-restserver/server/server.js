@@ -1,3 +1,4 @@
+require('./config/config')
 const express = require('express')
 const app = express();
 var bodyParser = require('body-parser');
@@ -21,7 +22,12 @@ app.put('/usuario/:id', function(req, res) { //para poner un recurso en un lugar
 
 app.post('/usuario', function(req, res) { //para enviar informacion al servidor para que este la trate como considere oportuno
     let body = req.body;
-
+    if (body.nombre === undefined) {
+        res.status(400).json({
+            ok: false,
+            mensaje: 'El nombre es necesario'
+        });
+    }
     res.json({
         persona: body
     });
@@ -31,6 +37,6 @@ app.delete('/usuario', function(req, res) {
     res.json('delete Usuario');
 })
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
     console.log("Escuchando el puerto 3000")
 })
