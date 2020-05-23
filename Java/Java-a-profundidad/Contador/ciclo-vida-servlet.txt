@@ -1,0 +1,9 @@
+		//Ciclo de vida de un servlet
+
+	**Existen tres metodos involucrados en el ciclo de vida de un componente, cuando se ejecuta un servlet, se crea una instancia del mismo en el 	servidor web
+	
+	--init() Se ejecuta una sola vez cuando se crea la instancia del servlet
+
+	--service() 
+	
+	--destroy() se ejecuta cuando la instancia desaparezca

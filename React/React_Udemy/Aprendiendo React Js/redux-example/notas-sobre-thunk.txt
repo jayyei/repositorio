@@ -1,0 +1,57 @@
+El redux thunk te permite escribir actions creators que regresen una funcion en lugar de una action,
+esto puede servir para retardar el despacho de una action o despachar cierta accion siempre y cuando alguna
+condicion se cumpla.
+
+La funcion que devuelve el action creator por thunk recibe los metodos dispatch y getState como parametros
+
+un action creator normal seria:
+
+const INCREMENT_COUNTER = 'INCREMENT_COUNTER';
+
+function increment() {
+  return {
+    type: INCREMENT_COUNTER
+  };
+}
+
+ //y su uso dentro de algun llamado a api
+function incrementAsync() {
+  return dispatch => {
+    setTimeout(() => {
+      // Yay! Can invoke sync or async actions with `dispatch`
+      dispatch(increment());
+    }, 1000);
+  };
+}
+
+pero si lo vemos en thunk seria algo asi
+
+function incrementIfOdd() {
+  return (dispatch, getState) => {
+    const { counter } = getState();
+
+    if (counter % 2 === 0) {
+      return;
+    }
+
+    dispatch(increment());
+  };
+}
+
+Para habilitar Redux Thunk, use applyMiddleware():
+
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import rootReducer from './reducers/index';
+
+// Note: this API requires redux@>=3.1.0
+const store = createStore(
+  rootReducer,
+  applyMiddleware(thunk)
+);
+
+// Meet thunks.
+// A thunk is a function that returns a function.
+// This is a thunk.
+
+El método Promise.all(iterable) devuelve una promesa que termina correctamente cuando todas las promesas en el argumento iterable han sido concluídas con éxito, o bien rechaza la petición con el motivo pasado por la primera promesa que es rechazada.
