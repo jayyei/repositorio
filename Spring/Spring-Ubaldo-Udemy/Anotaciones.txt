@@ -1,0 +1,25 @@
+
+
+		//Anotaciones de Spring
+
+	@Controller, su trabajo es crear un mapeo del modelo de objetos java y encontrar una vista generalmente HTML, CSS y Js algo asi como lo que
+	Representaria un Servicio Web
+
+	@RestController returna el objeto y la data es directamente escrita dentro de la respuesta HTTP como JSON o xml
+	
+	@ResController es una combinación de @Controller y @ResponseBody
+
+	@Ambas para la capa web o de controladores de Spring
+
+		//La mayor diferencia entre las clases de componente, servicio y Repository es que son usadas para diferente clasificacion
+	
+	@Component Usada atraves de la aplicación para marcar los beans como componentes administrados de spring, Spring solo levanta y registra
+	beans con esta anotación y no busc en los @Service y @Repository en general.
+
+	Los casos de @Servie y @Repository son casos especiales de @Component, son tecnicamente lo miso pero usados para diferentes propositos
+
+	@Repository: su trabajo es atrapar las exepciones especificas y relanzarlas como una de las excepciones unificadas y sin control de Spring
+
+	@Service: usada  para marcar beans que mantienen logica del negocio, no hay caso especial mas que usarlos en la capa de servicios.
+
+	@Autowired para manejar una sola instancia de alguna clase en particular (inyeción de dependencias) que posean el @Component o @Service

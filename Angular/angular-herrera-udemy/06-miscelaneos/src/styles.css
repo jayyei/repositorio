@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+.main-container{
+  margin-top: 40px;
+}
+
+
+/*La unica manera de aplicar css a todos los componentes seria a este archivo, pero
+si los componentes poseen estilos propios que aplican, entonces primero obedeceran
+a los estilos que se encuentren en dichos componentes.
+Si quieres que obedezcan a el estilo general primeramente, utiliza la palabra !important */
+
+   /* p {
+     color: yellow;
+   }*/

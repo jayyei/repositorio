@@ -1,0 +1,15 @@
+
+
+	// La anotacion controller
+	
+	- Un controlador en Spring MVC es una clase normal a la cual se le agrega la anotacion @Controller a nivel de clase
+	
+	-En una clase controllador podemos tener uno o mas metodos, estos pueden estar marcados con las anotaciones 
+	@GetMapping, @PostMapping, y @RequestMapping (action controller)
+
+	-Los metodos son ejecutados al ser invocados por medio de la url espcificada como parametro de las anotaciones @getMapping("url")
+
+	-Por lo general devuelven cadenas, las cuales se consideran como el nombre del archivo html que se tiene que renderizar en el navegador
+	 Esto es en el caso de uso de motor de plantillas Thymeleaf, se buscara un archivo (vista) llamado como el nombre de la cadena que devuelva el 	 metodo
+
+	

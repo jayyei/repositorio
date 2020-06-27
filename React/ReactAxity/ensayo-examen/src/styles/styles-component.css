@@ -1,0 +1,41 @@
+.styleH2 {
+    background-color: #472822;
+    margin-left: 1%;
+    width: fit-content;
+    flex-grow: 0.2; /*Para indicar que tanto crecera con respecto a los demas elementos*/
+    flex-shrink: 2; /*Para indicar que tanto se encojera con respecto a los demas elementos*/
+    flex-basis: 200px; /*Tamaño base del elemento html */
+    border-radius: 10%; 
+    color: thistle;
+}
+
+.button1 {
+    text-align: center;
+    background-color: yellowgreen;
+    border-radius: 10%;
+    color: rgb(28, 31, 31);
+    padding: 0.5% 1%;
+    border: 1px solid #472822;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+.button1:hover {
+    
+    box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.imagen {
+    width: 200px;
+    height: 100px;
+    border-radius: 30%;
+    max-width: 100%;
+    height: auto;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+.imagen:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    opacity: 0.7;
+}

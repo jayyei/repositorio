@@ -1,0 +1,9 @@
+
+
+	//Tymeleaf
+
+	Es un motor de plantillas para aplicaciones web desarrolladas con Java, es similar a los JSP, con algunas diferencias
+
+	Comunmente utilizado con Spring boot para generar vistas con codigo html para aplicaciones web
+
+	EN un proyecto Spring boot, ya viene configurado thymeleaf con valores por defecto al momento de agregar la dependencia
