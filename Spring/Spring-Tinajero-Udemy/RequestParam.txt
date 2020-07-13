@@ -1,0 +1,5 @@
+
+	BINDING (vincular) Request Parameters
+
+	-- Para vincular un parametro de una petición HTTP se utiliza la anotación @RequestParam de Spring MVC. Se pueden vincular parametros de una 	petición tipo GET y POST
+

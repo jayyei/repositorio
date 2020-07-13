@@ -1,0 +1,7 @@
+
+
+	URL dinamica (Url Template) son usadas para obtener parte de ellas en un metodo de un controlador (como parametro)
+
+	Una url dinamica puede contener 1 o mas PathVariable (Parametros entre llaves{})
+
+	Todos estos parametros llegan al controlador como de tipo string

@@ -1,0 +1,18 @@
+
+
+	@RequestMapping (Nivel del metodo)
+
+	-- Cuando se incluye antes de la declaración de un metodo en un controlador sirve para especificar la URL y el metodo HTTP (Post, Put, Delete, Get 
+	y Patch)
+
+	-- En versiones anteriores de Spring 4.3 se utilizaba esta anotación para mapear los metodos de los controladores a las URL
+
+	-- Despues de dicha versión, se agregaron las siguientes variaciones de RequestMapping( GetMapping("/url"), PostMapping("/url"),...etc)
+
+	
+
+	@RequestMapping (nivel de clase)
+	
+	--Nos indica el prefijo de las peticiones de los metodos dentro de la clase 
+
+	

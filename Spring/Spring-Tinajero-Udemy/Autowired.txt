@@ -1,0 +1,9 @@
+
+
+	Autowired
+	-- Procedimiento para inyectar una clase de servicio en un controlador
+
+	-- Para ello se hace uno de la anotacion @Service esta va en la clase implementacion del servicio
+	-- Por defecto, las clases de servicio tienen alcance singleton;
+
+	--Ahora con @Autowired se utiliza para inyectar dichas instancias en la clase controllador
