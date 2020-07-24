@@ -1,0 +1,13 @@
+
+		Restricciones de llaves foraneas en una base de datos:
+	Cuando en una tabla se posee una llave foranea de otra tabla, se dice que esta tabla es hija de la otra tabla, al momento de insertar un registro
+	en la tabla hija, debe de haber un registro en la tabla padre que coincida en indice con la clave foranea de dicho registro en la tabla hija,
+	al momento de actualizar o eliminar registros en la tabla padre, la tabla hija puede tener distintos comportamientos como son los siguientes;
+
+	-- Cascade : Si un registro de la tabla padre es eliminado o actualizado, los valores de las filas coincidentes de la tabla hija se actualizan o 
+	eliminan automaticamente.
+
+	-- Set Null : si un registro de la tabla padre es eliminado o actualizado, los valores de las llaves foraneas de las tablas hijas correspondientes
+	son seteados a NULL
+
+	-- Restrict : no se pueden borrar o actualizar registros en la tabla padre que coincidan con registros en la tabla hija.

@@ -1,0 +1,7 @@
+
+		//JPA
+
+	-- Java persistence api es una especificacion que permite a los desarrolladores Java a hacer un mapeo entre los objetos y las tablas de una 
+	base de datos (ORM) (Object Relational Mapping) 
+
+	

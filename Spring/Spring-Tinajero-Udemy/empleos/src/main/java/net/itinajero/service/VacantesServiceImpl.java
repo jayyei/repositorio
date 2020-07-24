@@ -5,6 +5,9 @@ import java.text.SimpleDateFormat;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import net.itinajero.model.Vacante;
@@ -86,6 +89,36 @@ public class VacantesServiceImpl implements IVacantesService{
 	public void guardar(Vacante vacante) {
 		lista.add(vacante);
 		
+	}
+
+	@Override
+	public List<Vacante> buscarDestacadas() {
+		
+		return null;
+	}
+
+	@Override
+	public void eliminar(Integer idVacante) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Vacante> buscarByExample(Example<Vacante> example) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Vacante> buscarByJpql(Vacante vacante) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Page<Vacante> buscarTodas(Pageable page) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

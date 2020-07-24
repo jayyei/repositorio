@@ -25,11 +25,23 @@
           <AssociatedConnUserName>SA</AssociatedConnUserName>
           <FullPath>anotherSP.sql</FullPath>
         </FileNode>
+        <FileNode Name="Case.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local)\:False:SA</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)\</AssociatedConnSrvName>
+          <AssociatedConnUserName>SA</AssociatedConnUserName>
+          <FullPath>Case.sql</FullPath>
+        </FileNode>
         <FileNode Name="ClausulasSql.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local)\:False:SA</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>(local)\</AssociatedConnSrvName>
           <AssociatedConnUserName>SA</AssociatedConnUserName>
           <FullPath>ClausulasSql.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Estructuras-Control.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local)\:False:SA</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)\</AssociatedConnSrvName>
+          <AssociatedConnUserName>SA</AssociatedConnUserName>
+          <FullPath>Estructuras-Control.sql</FullPath>
         </FileNode>
         <FileNode Name="Foreign-key.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local)\:False:SA</AssociatedConnectionMoniker>
@@ -85,11 +97,23 @@
           <AssociatedConnUserName>SA</AssociatedConnUserName>
           <FullPath>Tables.sql</FullPath>
         </FileNode>
+        <FileNode Name="try-catch.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local)\:False:SA</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)\</AssociatedConnSrvName>
+          <AssociatedConnUserName>SA</AssociatedConnUserName>
+          <FullPath>try-catch.sql</FullPath>
+        </FileNode>
         <FileNode Name="TypeData.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local)\:False:SA</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>(local)\</AssociatedConnSrvName>
           <AssociatedConnUserName>SA</AssociatedConnUserName>
           <FullPath>TypeData.sql</FullPath>
+        </FileNode>
+        <FileNode Name="While.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local)\:False:SA</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)\</AssociatedConnSrvName>
+          <AssociatedConnUserName>SA</AssociatedConnUserName>
+          <FullPath>While.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
