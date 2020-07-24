@@ -14,15 +14,14 @@ public class Utileria {
 		//Obtenemos el nombre original del archivo
 		String nombreOriginal = multiPart.getOriginalFilename();
 		nombreOriginal = nombreOriginal.replace(" ", "-");
-		String nombreFinal = randomAlphaNumeric(8) + nombreOriginal;
 		
 		try {
 			// Formamos el nombre del archivo para guardarlo en el disco duro.
-			File imageFile = new File(ruta + nombreFinal);
+			File imageFile = new File(ruta + nombreOriginal);
 			System.out.println("Archivo: " + imageFile.getAbsolutePath());
 			//Guardamos fisicamente el archivo en HD
 			multiPart.transferTo(imageFile);
-			return nombreFinal;
+			return nombreOriginal;
 			
 		}catch(IOException e) {
 			System.out.println("Error " + e.getMessage());

@@ -15,6 +15,9 @@
       <li class="nav-item">
         <a class="nav-link" sec:authorize="hasAnyAuthority('ADMINISTRADOR')"  th:href="@{/usuarios/index}">Usuarios</a>
       </li>          
+      <li class="nav-item">
+        <a class="nav-link" sec:authorize="hasAnyAuthority('SUPERVISOR', 'ADMINISTRADOR', 'USUARIO')"  th:href="@{/solicitudes/myself}">Mis solicitudes</a>
+      </li>          
     </ul>  
     <div sec:authorize="isAnonymous()">
 	    <a class="btn btn-primary" th:href="@{/index}">Ingresar</a>&nbsp;

@@ -84,7 +84,10 @@ public class HomeController {
 	}
 
 	@GetMapping("/")
-	public String mostrarHome(Model model) {		
+	public String mostrarHome(Model model, HttpSession session) {
+		if(session.getAttribute("usuario") == null) {
+		return "redirect:/index";
+		}
 		return "home";
 	}
 	

@@ -82,4 +82,5 @@ public class CategoriasController {
 		attributes.addFlashAttribute("msg", "Registro Eliminado");
 		return "redirect:/categorias/index";
 	}
+	
 }

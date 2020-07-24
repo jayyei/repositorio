@@ -67,6 +67,7 @@ public class DatabaseWebSecurity extends WebSecurityConfigurerAdapter{ //Esta cl
 		.antMatchers("/vacantes/**").hasAnyAuthority("SUPERVISOR", "ADMINISTRADOR")
 		.antMatchers("/categorias/**").hasAnyAuthority("SUPERVISOR", "ADMINISTRADOR")
 		.antMatchers("/usuarios/**").hasAnyAuthority("ADMINISTRADOR")
+		//.antMatchers("/solicitudes/**").hasAnyAuthority(authorities)
 		// Todas las demas URls de la aplicacion requieren autenticacion
 		.anyRequest().authenticated()
 		.and().formLogin().loginPage("/login").permitAll();
