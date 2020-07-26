@@ -1,0 +1,26 @@
+
+	//Banana box and Data binding
+
+	--Es una notacion de angular que hace referencia al famoso two-ways bidinng, osea al mecanismo de actualizar la vista y el modelo al mismo tiempo
+
+	-- La interpolacion es la forma de mostrar datos del Componente al DOM (esa representacion que hace el browser del HTML con forma de objetos)
+		* DEL COMPONENTE -> AL DOM 
+		* Utiliza la anotacion {{}} -> Ejemplo: <h1 innerText={{titulo}}>
+
+	-- El Property Binding se usa para pasar datos del Controler al DOM y los datos van en una unica direccion
+		* Utiliza [] envolviendo la propiedad -> Ejemplo: <div [propiedad]="algo">
+		* Es mas usado que la interpolacion debido a que angular pone atencion a estas propiedades
+		* No puedes actualizar valores del elemento a la variable
+		* No puedes llamar a una funcion
+		* Cuando lo que seteas no es un string, entonces si tienes que usar property binding
+
+	-- el event binding es la forma de enviar algo del elemento al compoenente, la sintaxis es (evento) =template statement
+		* cualquier accion que haga el usuario es una accion que se puede capturar
+		* Ejemplo: <button (click)="onSave()">
+		* Te genera ademas el evento para que puedas hacer uso de el $event
+
+	-- Si quieres crear tu propio event binding usa Clase EventEmitter junto con la anotacion @Output
+
+	--El banana in a Box es la forma de two-way binding es la combinacion de property binding con Event binding[()]
+		* Hay que importar la directiva ngmodule para poder usarla
+		* Y para que funcione la directiva NGModule hay que importar el modulo FormsModule

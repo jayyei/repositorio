@@ -1,0 +1,132 @@
+<h4>Formularios <small> Template </small></h4>
+<hr>
+<!--La configuracion de un formulario template se realiza casi todo en html-->
+<form #formulario="ngForm" autocomplete="off" (ngSubmit)= "guardar(formulario)">
+
+  <div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Nombre</label>
+      <div class="col-8">
+        <input class="form-control"
+              [ngClass]="{'is-invalid': nombre.invalid && nombre.touched}"
+               type="text"
+               name="nombre"
+               [ngModel]="carlos.nombre"
+               required
+               placeholder="Nombre"
+               #nombre="ngModel"
+               minlength="3"> <!-- Al agregar ngModel Angular manejara algunas clases adicionales-->
+        <small class="form-text text-danger" *ngIf="nombre.invalid && nombre.touched">
+          Ingrese 3 letras como mínimo
+        </small>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Apellido</label>
+      <div class="col-8">
+        <input class="form-control"
+               [ngClass]="{'is-invalid': apellido.invalid && apellido.touched}"
+               type="text"
+               [ngModel]="carlos.apellido"
+               required
+               name="apellido"
+               placeholder="Apellido"
+               #apellido=ngModel
+               minlength="3"
+               >
+        <small class="form-text text-danger" *ngIf="apellido.invalid && apellido.touched" >
+          Ingrese 3 letras como mínimo
+        </small>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Correo</label>
+    <div class="col-8">
+      <input class="form-control"
+             type="email"
+             [ngClass]="{'is-invalid': correo.invalid && correo.touched}"
+             pattern="[a-z0-9,_%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+             #correo="ngModel"
+             name="correo"
+             [ngModel]="carlos.correo"
+             placeholder="Correo electrónico"
+             required
+             minlength="3"> <!-- Para cualquier validacion se requiere de 'required' y especificar bien la condicion del ngClass-->
+      <small class="form-text text-danger" *ngIf="correo.invalid && correo.touched" >
+        Correo no valido
+      </small>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Nombre</label>
+    <div class="col-8">
+      <select class="form-control"
+            [ngClass]="{'is-invalid': pais.invalid && pais.touched}"
+            name="pais"
+            required
+            [disabled]="paises.length === 0"
+            [ngModel]="carlos.pais"
+            #pais="ngModel"
+      >
+        <option *ngFor="let pais of paises"
+          [value]="pais.codigo">{{pais.nombre}}</option>
+      </select>
+      <small class="form-text text-danger" *ngIf="pais.invalid && pais.touched" >
+        Seleccione una opción
+      </small>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Género</label>
+    <div class="col-8">
+      <div class="form-check form-check-inline">
+        <input id="masculino"
+          [ngClass]="{'is-invalid': genero.invalid && genero.touched}"
+          class="form-check-input"
+          type="radio"
+          name="genero"
+          required
+          value="M"
+          #genero="ngModel"
+          [ngModel]="carlos.genero">
+        <label class="form-check-label" for="masculino">Masculino</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input id="femenino"
+          [ngClass]="{'is-invalid': genero.invalid && genero.touched}"
+          class="form-check-input"
+          type="radio"
+          name="genero"
+          required
+          value="F"
+          #genero="ngModel"
+          [ngModel]="carlos.genero">
+        <label class="form-check-label" for="femenino">Femenino</label>
+      </div>
+      <small class="form-text text-danger" *ngIf="genero.invalid && genero.touched" >
+        Seleccione una opción
+      </small>
+    </div>
+  </div>
+
+
+
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">&nbsp;</label>
+    <div class="input-group col-md-8">
+      <button type="submit" class="btn btn-outline-primary btn-block">
+        Guardar
+      </button>
+    </div>
+  </div>
+
+</form>
+
