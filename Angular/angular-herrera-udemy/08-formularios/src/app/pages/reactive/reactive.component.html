@@ -50,6 +50,44 @@
     </div>
   </div>
 
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Usuario</label>
+    <div class="col">
+      <input class="form-control"
+             type="email"
+             formControlName="usuario"
+             [ngClass]="{'is-invalid': isValid('usuario')}"
+             placeholder="Nombre de usuario">
+      <small *ngIf="isValid('usuario')" class="text-danger">
+        Ese nombre de usuario ya fue tomado
+      </small>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Contraseña</label>
+    <div class="col">
+      <input class="form-control"
+             type="password"
+             formControlName="pass1"
+             [ngClass]="{'is-invalid': isValid('pass1')}"
+             placeholder="Contraseña">
+    </div>
+  </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Repita</label>
+      <div class="col">
+        <input class="form-control"
+               type="password"
+               formControlName="pass2"
+               [ngClass]="{'is-invalid': isValid('pass2') || !isValidPass('pass1','pass2')}"
+               placeholder="Repita Contraseña">
+      </div>
+    </div>
+
+
+
   <div class="form-group row" formGroupName="direccion">
     <label class="col-2 col-form-label">Dirección</label>
     <div class="form-row col">

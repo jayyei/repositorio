@@ -34,6 +34,7 @@ export class TemplatesComponent implements OnInit {
   }
 
   guardar(formulario : NgForm):void{
+     //formulario.reset() la referencia local a la forma puede ser utilizada para llamar a su metodo reset
     console.log("Submit disparado", formulario)
     if(formulario.invalid){
       Object.values(formulario.controls) //Devuelve los valores correspondientes a las propiedades de un objeto
