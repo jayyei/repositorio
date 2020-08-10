@@ -1,0 +1,16 @@
+
+		//Los tipos primitivos presentan ciertas clases envolventes, por ejemplo
+
+	- int = Integer;
+	- long = Long;
+	- float = Float;
+	- double = Double;
+	- boolean = Boolean;
+	- byte = Byte;
+	- char = Character;
+	- short = Short;
+
+	// Sele concoe como autoboxing a la accion de envolver primitivos o sustituirlos por sus clases envolventes
+
+	// Al concepto de guardar objetos de clases envolventes en tipos primitivos (int, long, float, double) se le conoce 
+	como unboxing

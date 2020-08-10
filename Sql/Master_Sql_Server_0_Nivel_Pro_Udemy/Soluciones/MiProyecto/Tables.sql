@@ -76,7 +76,7 @@ CREATE TABLE Pais(
 );
 
 CREATE TABLE Especialidad(
-	idEspecialida int NOT NULL PRIMARY KEY IDENTITY(1,1),
+	idEspecialidad int NOT NULL PRIMARY KEY IDENTITY(1,1),
 	especialidad varchar(30),
 );
 
@@ -115,3 +115,29 @@ CREATE TABLE Concepto(
 	idConcepto tinyint IDENTITY(1,1) NOT NULL PRIMARY KEY,
 	descripcion varchar(100)
 );
+
+-- llama a este store procedure para cambiar nombres de columnas
+EXEC sp_rename 'dbo.Especialidad.idEspecialida', 'idEspecialidad', 'COLUMN';
+
+-- Para eliminar constraints 
+SELECT *
+FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS
+WHERE TABLE_NAME = 'MedicoEspecialidad'; --observa primero las constraints
+alter table Especialidad drop constraint PK__Especial__C11AC25A745518EE;
+
+
+ -- Por ejemplo si queremos borrar un campo de tipo pk debemos de borrar antes sus constraints relacionadas
+-- Debe de ser como en cascada
+alter table MedicoEspecialidad drop constraint FK_MedicoEspecialidad_Especialidad; -- el ya no depende de nadie
+alter table Especialidad drop constraint PK__Especial__C11AC25A745518EE; -- de el depende el de arriba
+alter table Especialidad drop column idEspecialidad; -- de el dependen los dos de arriba
+
+--si queremos recuperar todo eso, entonces empezamos al reves
+SELECT * FROM Especialidad;
+--alter table Especialidad drop column idEspecialidad; 
+alter table Especialidad add idEspecialidad int not null identity(1,1); -- Agregamos el que una vez fue dependiente de las dos constraints
+alter table Especialidad add constraint PK_Especialidad PRIMARY KEY (idEspecialidad); --Esta seria la primera constraint la de pk de especialidad
+
+SELECT * FROM MedicoEspecialidad;
+-- Y esta seria la segunda constraint a recuperar de lo que se habia borrado
+alter table MedicoEspecialidad add constraint FK_idEspecialidad_Especialidad FOREIGN KEY (idEspecialidad) REFERENCES Especialidad(idEspecialidad); 

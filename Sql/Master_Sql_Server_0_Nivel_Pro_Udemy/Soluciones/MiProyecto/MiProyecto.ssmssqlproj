@@ -19,6 +19,24 @@
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
+        <FileNode Name="Alta_Medico_Proc.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local)\:False:SA</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)\</AssociatedConnSrvName>
+          <AssociatedConnUserName>SA</AssociatedConnUserName>
+          <FullPath>Alta_Medico_Proc.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ALTA_Paciente_Proc.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local)\:False:SA</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)\</AssociatedConnSrvName>
+          <AssociatedConnUserName>SA</AssociatedConnUserName>
+          <FullPath>ALTA_Paciente_Proc.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Alta_turnos_Proc.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local)\:False:SA</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)\</AssociatedConnSrvName>
+          <AssociatedConnUserName>SA</AssociatedConnUserName>
+          <FullPath>Alta_turnos_Proc.sql</FullPath>
+        </FileNode>
         <FileNode Name="anotherSP.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local)\:False:SA</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>(local)\</AssociatedConnSrvName>
@@ -84,6 +102,12 @@
           <AssociatedConnSrvName>(local)\</AssociatedConnSrvName>
           <AssociatedConnUserName>SA</AssociatedConnUserName>
           <FullPath>SP_SUBQUERY.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery1.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local)\:False:SA</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)\</AssociatedConnSrvName>
+          <AssociatedConnUserName>SA</AssociatedConnUserName>
+          <FullPath>SQLQuery1.sql</FullPath>
         </FileNode>
         <FileNode Name="Stored_Proc_Variables_DECLARE.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local)\:False:SA</AssociatedConnectionMoniker>

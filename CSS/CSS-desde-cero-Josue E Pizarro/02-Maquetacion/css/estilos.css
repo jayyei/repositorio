@@ -1,0 +1,279 @@
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #6d6e70;
+    font-size: 12px;
+    margin: 45px;
+    background-color: #eaeaea;
+}
+
+#contenido-principal{
+    position: relative;
+    width: 900px;
+    background-color: #fff;
+    margin: 0 auto;
+    -webkit-box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+}
+
+header, footer, #contenido{
+    position: relative;
+    display: block; /*El bloque toma el tamano del contenedor que lo contiene*/
+}
+header {
+    background-color: #ccc;
+}
+
+footer{
+    height: 33px;
+    background-color: #00adee;
+}
+
+nav{
+    position:relative;
+    display: block;
+    background-color: #00adee;
+    height: 51px;
+}
+
+nav a {
+    position:relative;
+    display:inline-block;
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 8px;
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+
+nav a:hover {
+    color: #404041;
+    background-color: #fff;
+}
+
+nav #logo{
+    margin:0;
+    height: 51px;
+    background-color: #fff;
+    width:196px;
+    vertical-align: top;
+    background-image: url(../imagenes/logo.png); /*Recuerda que padding + height se sumarian y provocarian un desborde*/
+    padding: 0; /*El padding se suma al tamano total de la caja, cuidado con eso*/
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: 500px;
+    overflow: hidden;
+    margin-right: 30px;
+    -webkit-box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+
+#imagen-encabezado{
+    position: relative;
+    display: block;
+    height:280px;
+    background-image: url(../imagenes/fondo-portada.jpg);
+}
+
+#imagen-encabezado > span{
+    position: absolute; /*Al ser un componente bloque y con posisicion absoluta ya no hereda el tamano completo de la linea*/
+    display: block;
+    background-color: rgba(64, 64, 65, 0.6);
+    color: #fff;
+    font-size: 42px;
+    bottom: 0px;
+    left:0px;
+    right:0px;
+    padding: 15px 120px;
+}
+
+#noticias{
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    width: 225px;
+    background-color: #fff;
+    bottom: 0px;
+}
+
+#noticias > div {
+    position: relative;
+    display: block;
+    height: 295px;
+    overflow-y: auto;
+}
+
+#noticias > a {
+    position: absolute;
+    display: block;
+    background-color: #00adee;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 10px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    text-align: center;
+}
+
+#noticias > div > a {
+    position: relative;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #58595b;
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+
+#noticias > div > a:hover {
+    background-color: #404041;
+}
+
+#noticias > div > a > span {
+    position: relative;
+    display: block;
+    color: #00adee;
+    margin: 0 0 5px;
+    font-size: 18px;
+}
+
+#noticias > div > a > p {
+    margin: 0;
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+
+#noticias > div > a:hover p{
+    color: #fff;
+}
+
+#contenido{
+    overflow: auto; /*Este es el contenedor de las columnas y este debe de tener el overflow: auto*/
+}
+
+.columna-introduccion{
+    position: relative; /*Cuando realices columnas, asegurate que el contenedor de las columnas tenga un overflow y de auto*/
+    display: block; /* no ose puede usar inline block porque esto genera un pequeno espacio entre bloques*/
+    float: left;
+    width: 50%;
+    padding: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.columna-introduccion h1,
+.columna-introduccion h2 {
+    position: relative;
+    display: block;
+    margin: 0 0 5px;
+    font-weight: normal;
+}
+
+.columna-introduccion h1{
+    font-size: 36px;
+}
+
+.columna-introduccion h2{
+    font-size: 18px;
+}
+
+.columna-introduccion p {
+    margin: 0 0 20px;
+}
+
+.columna-introduccion * {
+    padding-left: 40px;
+}
+
+.bullet-azul{
+    background: url(../imagenes/bullet.jpg) no-repeat left center;
+}
+
+footer h4 {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    background-color: #404041;
+    font-size: 14px;
+    font-weight: normal;
+    padding:  8px 35px 9px;
+    margin: 0px;
+}
+
+footer span {
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    padding-left: 60px;
+}
+
+footer span a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer span a:hover{
+    text-decoration: underline;
+}
+
+footer div{
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    height: 33px;
+    background-color: #404041;
+    padding: 0 10px;
+}
+
+footer div a{
+    position: relative;
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    text-indent: 200px;
+    overflow: hidden;
+    background-image: url(../imagenes/iconos-sociales.png);
+    background-repeat: no-repeat;
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+
+footer div #facebook {
+    background-position: 11px 5px;
+}
+
+footer div #facebook:hover {
+    background-position: 11px -28px;
+}
+
+footer div #youtube {
+    background-position: -40px 5px;
+}
+
+footer div #youtube:hover {
+    background-position: -40px -28px;
+}
+
+footer div #twitter {
+    background-position: -89px 5px;
+}
+
+footer div #twitter:hover {
+    background-position: -89px -28px;
+}

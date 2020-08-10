@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Eventos con addEventListener</title>
+    <script>
+      var imagen = new Array(3); //No hya diferencia con la expresion corta de definir un arreglo
+      function tipoFlor(){
+        alert("pensamientos")
+      }
+
+      function manejaFlor(){
+        //En javascript existen dos tipos de ambitos (scopes); el ambito global y el ambito de funcion, cualquier variable que se declara en una funcion pertenece a ella y a sus anidados, a diferencia del ambito global
+
+        //document.getElementsByTagName("img")[0].onclick=tipoFlor;
+        for(let i=0; i<4; i++){
+          imagen[i] = document.getElementsByTagName("img")[i]; // las variables declaradas dentro de una funcion en js son del ambito de la funcion solamente, no importa que sean var
+          //Las variables con let siguen esta trayectoria, solo que ellas pueden encapsularse a scopes de tipo bloque (en un for o un if) para que solamente puedan ser accesibles dentro de ellas
+          imagen[i].addEventListener("mouseover", crecer, false); //forma recomendada por html5 para agregar el manejador de eventos
+          imagen[i].addEventListener("mouseleave", decrecer, false);
+          imagen[i].addEventListener("click", function(){alert("pensamientos")}, false);
+
+        }
+      }
+
+      function crecer(){
+        imagen.width=550;
+        imagen.height=330;
+      }
+      function decrecer(){
+        imagen.width=200;
+        imagen.height=200;
+      }
+
+      window.addEventListener("load", manejaFlor, false);
+      //window.onload=manejaFlor;
+    </script>
+  </head>
+  <body>
+    <p>
+      <img src="imagenes/1.jpg" >&nbsp;
+      <img src="imagenes/2.jpg" >&nbsp;
+      <img src="imagenes/3.jpg" >&nbsp;
+      <img src="imagenes/4.jpg" >&nbsp;
+    </p>
+  </body>
+</html>

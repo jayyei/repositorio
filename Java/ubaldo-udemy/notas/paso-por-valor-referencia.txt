@@ -1,0 +1,5 @@
+
+	//Los tipos primitivos unicamente pasan la copia de su valor al momento de ser utilizados en los parametros de alguna 	
+	  funcion, por lo tanto si es afectada, se afecta la copia del valor y no el origen del valor
+
+	//Los datos de tipo object al ser pasados como parametros de funcion se suelen pasar como de referencia, esto es pueden ser modificados dentro de la 	funcion generada

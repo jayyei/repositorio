@@ -1,0 +1,237 @@
+
+
+body{ /*Selector de etiqueta*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color:#666;
+    margin: 20px 20px 20px 250px; /* Se empieza desde arriba y en sentido del reloj*/
+    background-image: url(http://lorempixel.com/250/300);
+    background-repeat: repeat-y;
+}
+
+h1, h2 { /*La coma se ultiliza para agrupar selectores*/
+    margin: 0 0 20px; /* arriba, los lados y abajo*/
+    text-transform: uppercase;
+    font-weight: normal;
+    cursor: default;
+}
+
+h1{
+    font-size: 40px;
+    background-color: rgb(89, 0, 255);
+    color: #fff;
+    padding: 10px 30px; /* arriba y abajo, despues izquierda y derecha*/
+}
+
+h2, p, img {
+    margin-left:30px;
+}
+
+p {
+    letter-spacing: 3px;
+    line-height: 30px;
+}
+
+a {
+    color: rgb(233, 103, 52);
+    text-decoration: none;
+    letter-spacing: 0px;
+    padding: 5px 10px;
+}
+
+a:hover{
+    background-color: bisque;
+    color:rgb(143, 93, 36);
+}
+
+a[href="http://google.com"]{
+    color:#add;
+}
+
+a[href="http://google.com"]:hover{
+    background-color: #aff;
+}
+
+p span {
+    display: inline-block; /*Es mas parecido a inline que a block, 
+    pero puede cambiar de tamano, cuando se tiene el display inline, no se puede
+    modificar el tamano o el margin */
+    width: 300px;
+    float: right; /*Saca el elemento del contexto original para que se vaya a la derecha
+    solo funciona con display block , o mas bien bloquea los otros display*/
+    text-align: right;
+    margin: 20px 0px 20px 20px;
+    letter-spacing: 0px;
+    font-size: 30px;
+    color: #999;
+    font-style: italic;
+}
+
+p span:before, p span:after{ /*agrega contenido antes y al final del selector*/
+    content: '"';
+}
+
+img {
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius:50%;
+    border-radius: 50%; /*Debido a que es una propiedad de CSS3 se deben de colocar las mencionadas arriba*/
+    border: 5px solid #eaeaea;
+}
+
+#borde-azul{
+    border-color: #147fcc;
+}
+
+.azul{
+    color: #147fcc;
+}
+
+.azul:hover{
+    color:#fff;
+}
+
+.circulo
+{
+    font-size:90px;
+    color:#ccc;
+    border: 5px solid #ccc;
+    padding: 15px 40px;
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+#circulo-1{
+    display:inline;
+}
+
+#circulo-2{
+    display: inline-block;
+    width:100px;
+}
+
+#circulo-3{
+    display:block; /*con esto ocupara todo el espacio horizontal*/
+    width:50px;
+}
+
+#circulo-4{
+    display:none;
+}
+
+#mostrar{
+    min-width: 20px;
+    min-height: 20px;
+    max-width: auto;
+    max-height: auto;
+    display: inline-block;
+    border: 2px dashed #ccc;
+    vertical-align: middle;
+}
+
+#mostrar:hover #circulo-4{
+    display:block;
+}
+
+#circulo-5{
+    position:static;
+    top:500px;
+}
+
+#circulo-6{
+    position:relative; /*Con position relativa no implica que los demas elementos se muevan si este se mueve, mas bien implica que este traslapara a otros*/
+    top:50px;
+}
+
+#padre{
+    position: relative;
+    width:600px;
+    height: 400px;
+    display: inline-block;
+    border: 2px dashed #ccc;
+    vertical-align: middle;
+}
+
+#circulo-7{
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#circulo-8{
+    position: fixed; /* similar a abosulte, pero esto es respecto a la ventana de navegador, no a un padre*/
+    bottom: 20px;
+    left:20px;
+}
+
+input[type=text], input[type=password],
+textarea, input[type=file], select{
+    position: relative;
+    display: block;
+    width:100%; /*Esto es 100% mas el padding que se le vaya a agregar, en resumen suma ambos*/
+    padding: 10px 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; /*Ajusta los tamanos de width y padding para que en conjunto abarquen lo correspondiente*/
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+    border:none;
+    background-color: #ccc;
+    color: #666;
+    outline: none;
+    font-size:16px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+label{
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+}
+
+input[type=text]:hover, input[type=password]:hover,
+textarea:hover, input[type=file]:hover, select:hover{
+    background-color: #666;
+    color: #fff;
+}
+
+input[type=text]:focus, input[type=password]:focus,
+textarea:focus, input[type=file]:focus, select:focus{
+    background-color: #147fcc;
+    color:#fff;
+}
+
+input[type=radio],
+input[type=checkbox],
+button, label{
+    cursor: pointer;
+}
+
+button{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+    color:#fff;
+    background-color: violet;
+    border: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+button:hover{
+    background-color: #333;
+}
+
+.derecha{
+    text-align:right;
+}

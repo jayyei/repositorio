@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Iniciando con CSS</title>
+	<link href="imagenes/icono-highres.png" rel="shortcut icon" sizes="196x196">
+	<link href="css/estilos.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+	<table width="70%" cellspacing="5" cellpadding="0" bordercolor="#eaeaea" align="center">
+    <tr>
+        <td>
+            <input type="text" name="nombre" placeholder="Nombre">
+        </td>
+        <td>
+            <input type="password" name="pwd" placeholder="Contraseña">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>
+                <input type="radio" name="genero" checked value="m">Masculino</label>
+            <label>
+                <input type="radio" name="genero" value="f">Femenino</label>
+        </td>
+        <td>
+            <label>
+                <input type="checkbox" name="spam" value="si">¿Quieres spam masivo?</label>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <select name="ciudad">
+                <option value="">-- SELECCIONA --</option>
+                <option value="df">Distrito Federal</option>
+                <option value="wsh">Washington</option>
+                <option value="bar">Barcelona</option>
+                <option value="ba">Buenos Aires</option>
+                <option value="tk">Tokio</option>
+            </select>
+        </td>
+        <td>
+            <input type="file" name="archivo">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <textarea name="comentarios" placeholder="Comentarios"></textarea>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <div class="derecha">
+                <button>Enviar</button>
+            </div>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
