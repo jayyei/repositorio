@@ -1,0 +1,6 @@
+
+
+	//Undefined
+
+	--Que nunca se ha seteado su valor, es decir que no tiene asignacion de valor dicha variable
+	--I have never set this value

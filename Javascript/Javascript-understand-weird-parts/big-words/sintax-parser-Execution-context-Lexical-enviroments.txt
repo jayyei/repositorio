@@ -1,0 +1,18 @@
+
+
+	//Sintax parser
+
+	-- A program taht reads your code and determines What it does and if its grammar is valid
+		(Your code is'nt magic. Someone else wrote a program to translate it for the computer)
+
+	
+	//Lexical enviroment
+
+	--Lexical means 'having to do with words or grammar. A lexical enviroment exists in programming languages in which where you
+	  write something is important (care where you put your things)
+
+
+	//Execution context
+	
+	--There are lots of lexical enviroments. Which one is currently running is managed via execution contexts. It can contain
+	  things beyond what youe've written in your code

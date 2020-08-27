@@ -1,0 +1,10 @@
+
+
+	//Single threaded
+
+	-- One command at a time
+
+	
+	//Synchoronous
+	
+	--One at a time

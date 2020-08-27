@@ -1,0 +1,10 @@
+
+
+	//Scope
+
+	--Where a variable is available in your code
+	--And if it's truly the same variable or a new copy
+
+	//Asynchronous
+	
+	--More than one at a time

@@ -1,0 +1,8 @@
+
+
+	//Invocation
+	
+	--Running a function or calling a function
+
+	-- Anytime you execute or invoke a function in javascript a new execution context is created and put on the execution
+	stack, this execution context will have it's own space for variables and functions

@@ -1,0 +1,10 @@
+
+
+	//Variable enviroment
+
+	--Where the variables live
+	--And how they relate to each other in memory
+
+	--Debido a que cada ejecucion de funciones tiene su propio entorno de variable, se dice que las variables que 
+	vivan dentro de contextos de ejecucion distintos pueden llamarse igual
+

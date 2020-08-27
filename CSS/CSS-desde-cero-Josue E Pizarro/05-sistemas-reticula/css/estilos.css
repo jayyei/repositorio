@@ -15,11 +15,6 @@
     box-sizing: border-box;
 }
 
-.grid_1 {
-    width: 320px;
-    margin-right: 20px;
-}
-
 .grid_2 {
     width: 320px;
     margin-right: 20px;
@@ -72,4 +67,312 @@ header #logo
 	margin-bottom: 25px;
 	text-indent: 300px;
 	overflow: hidden;
+}
+
+#menu-principal {
+    margin-bottom: 20px;
+}
+
+#menu-principal a {
+    position: relative;
+    display:block;
+    margin-bottom: 10px;
+    padding : 8px 20px;
+    background-color: #0e0e0e;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    background-image: url(../imagenes/bullet.jpg);
+    background-repeat: no-repeat;
+    background-position: 350px center;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#menu-principal a:hover,
+#menu-principal .seleccionado{
+    color: #fccc00;
+    background-position: 263px center;
+}
+
+#menu-contacto a{
+    position: relative;
+    display: block;
+    margin-bottom: 7px;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 3px 0 3px 31px;
+    background-image: url(../imagenes/iconos-contacto.png);
+    background-repeat: no-repeat;
+}
+
+#menu-contacto a:last-child{
+    margin-bottom: 0px;
+}
+
+#menu-contacto #facebook {
+    background-position: 0 0;
+}
+
+#menu-contacto #facebook:hover {
+    background-position: 0 -20px;
+}
+
+#menu-contacto #contacto {
+    background-position: 0 -40px;
+}
+
+#menu-contacto #contacto:hover {
+    background-position: 0 -60px;
+}
+
+header div:last-child {
+    padding: 90px 120px 0px 120px;
+}
+
+h1{
+    text-transform: uppercase;
+    position: relative;
+    display: block;
+    margin: 0 0 20px;
+    font-size: 20px;
+}
+
+header p {
+    color: #0f0f0f;
+}
+
+#contenido
+{
+    background-color: #fff;
+    padding-top: 30px;
+}
+
+.padding-left{
+   padding-left: 20px; 
+}
+
+.padding-right{
+   padding-right: 20px; 
+}
+
+#links-articulos{
+    position:relative;
+    display:block;
+    margin-bottom: 20px;
+}
+
+#links-articulos a {
+    color: #666;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+}
+
+#links-articulos a:hover{
+    color: #000;
+    background: url(../imagenes/mas.png) no-repeat right center ;
+}
+
+.boton-negro{
+    position: relative;
+    display: inline-block;
+    background-color: #000;
+    color: #fccc00;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-bottom: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.boton-negro:hover{
+    color: #fff;
+}
+
+.bloque {
+    display: block;
+}
+
+form{
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+}
+
+input[type=text],
+input[type=password]{
+   position: relative;
+   display: block; 
+   border: 1px solid #0f0f0f;
+   background-color: #fff;
+   color: #000;
+   font-size: 16px;
+   padding: 15px;
+   margin-bottom: 10px;
+   width: 100%;
+   box-sizing: border-box;
+   outline: none;
+}
+
+.derecha{
+    text-align: right;
+    position: relative;
+    display: block;
+    clear: both;
+}
+
+#link-cliente{
+    position: absolute;
+    display: block;
+    bottom: 15px;
+    left: 0;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    color: #323232;
+}
+
+button{
+    position: relative;
+    display: inline-block;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #fccc00;
+    padding: 15px 20px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #000;
+    color: #fccc00;
+}
+
+.entrada-proyectos{
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+}
+
+h2{
+    position: relative;
+    display: block;
+    font-size: 14px;
+    margin: 0 0 20px;
+}
+
+.entrada-proyectos img{
+    position: relative;
+    display: block;
+    width: 300px;
+    height: 190px;
+    border: 3px solid #000;
+    box-sizing: border-box;
+}
+
+.entrada-proyectos img:hover{
+    border-color: #fccc00;
+}
+
+.pleca-gris{
+    position: relative;
+    display: block;
+    padding: 30px 0;
+    color: #fff;
+    background-color: #333;
+}
+
+.pleca-gris h3{
+    position: relative;
+    display: block;
+    font-size: 14px;
+    color: #fccc00;
+    margin: 0 0 20px;
+}
+
+.pleca-gris p {
+    margin: 0;
+}
+
+#contenedor-pie h3 {
+    position: relative;
+    display: block;
+    color: #fff;
+    margin: 0 0 10px;
+    font-size: 14px;
+}
+
+#contenedor-pie p {
+    position: relative;
+    display: block;
+    color: #868686;
+    margin: 0;
+}
+
+.datos-contacto{
+    margin-top: 10px;
+}
+
+.datos-contacto strong{
+    color: #fccc00;
+    position:relative;
+    display: inline-block;
+    width: 112px
+}
+
+.datos-contacto span{
+    color: #fff;
+}
+
+#amigas{
+    position: relative;
+    display: block;
+    margin-top: 10px;
+}
+
+#amigas a{
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../imagenes/iconos-alianzas.png);
+    background-repeat: no-repeat;
+    text-indent: 100px;
+    overflow: hidden;
+    margin-right: 25px;
+}
+
+#amigas #android{
+    background-position: 5px 0;
+}
+
+#amigas #android:hover{
+    background-position: 5px -50px;
+}
+
+#amigas #escudo{
+    background-position: -57px 0;
+}
+
+#amigas #escudo:hover{
+    background-position: -57px -50px;
+}
+
+#amigas #natura{
+    background-position: -121px 0;
+}
+
+#amigas #natura:hover{
+    background-position: -121px -50px;
 }
