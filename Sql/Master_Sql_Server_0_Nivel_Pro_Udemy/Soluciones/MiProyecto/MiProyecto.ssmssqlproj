@@ -85,6 +85,12 @@
           <AssociatedConnUserName>SA</AssociatedConnUserName>
           <FullPath>insertTurno.sql</FullPath>
         </FileNode>
+        <FileNode Name="ModeladoEjercicioAxity.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local)\:False:SA</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)\</AssociatedConnSrvName>
+          <AssociatedConnUserName>SA</AssociatedConnUserName>
+          <FullPath>ModeladoEjercicioAxity.sql</FullPath>
+        </FileNode>
         <FileNode Name="Operadores.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local)\:False:SA</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>(local)\</AssociatedConnSrvName>
@@ -102,12 +108,6 @@
           <AssociatedConnSrvName>(local)\</AssociatedConnSrvName>
           <AssociatedConnUserName>SA</AssociatedConnUserName>
           <FullPath>SP_SUBQUERY.sql</FullPath>
-        </FileNode>
-        <FileNode Name="SQLQuery1.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local)\:False:SA</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>(local)\</AssociatedConnSrvName>
-          <AssociatedConnUserName>SA</AssociatedConnUserName>
-          <FullPath>SQLQuery1.sql</FullPath>
         </FileNode>
         <FileNode Name="Stored_Proc_Variables_DECLARE.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local)\:False:SA</AssociatedConnectionMoniker>
