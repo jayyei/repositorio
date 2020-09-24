@@ -92,6 +92,8 @@ git stash clear = borra todas las entradas que hay en el stash
 
 git rebase -i HEAD~4 = selecciona los ultimos 4 commits para realizar diversas operaciones, una de ellas, la union de commits con squash
 
+git log --all --decorate --oneline --graph = para que se vea todo bonito
+
 
 
 
