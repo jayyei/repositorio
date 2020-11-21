@@ -1,0 +1,26 @@
+ 
+
+// the default values differ based on the type of the instance variable
+
+//only instance and static variables have default values (variables staticas y variables de instancia) Any variables declared 
+ in a method (behavior of the class) must be explicitly initialized before they are used
+
+
+public class Car {
+
+	String color; //legal default value is null
+	
+	public void printVIN(){
+	  int vin;
+	  System.out.println(vin); // Compiler error
+	}
+}
+
+// the following table identifies the default ofr each of the types
+
+	Type			Default Value
+	Any Java object		null
+	boolean			false
+	byte, short, int, long	0
+	float, double		0.0
+	char			'\u0000' or NUL/blank character

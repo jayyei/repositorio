@@ -1,0 +1,8 @@
+// There are eight primitive data types: byte, short, int, long, float, double, boolean and char
+
+//So float has 32 bits
+
+//And double has 64 bits
+
+//The JVM treats primitives diferently, they can be treated more efficiently than an object
+  

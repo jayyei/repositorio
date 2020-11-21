@@ -1,0 +1,9 @@
+
+
+//Stack and heap
+
+In the memory managed by the JVM behind the scenes, object references and the objects assigned to them are managed by stacks and heap
+
+//So stacks are a list of references defined within a given block of code (also known as a scope)
+
+//The heap is where all objects are actually stored in memory
