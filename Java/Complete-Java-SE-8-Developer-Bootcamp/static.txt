@@ -1,0 +1,10 @@
+
+
+//Static methods/variables are things that belongs to an especific class
+
+They can also be accessed by a class instance, it's weird but works.
+
+You should notice (especially for the exam) that accessing static member with a null class reference
+will not throw a NullPointerException.
+
+Static methods cannot access instance variable or methods. Plus, we really shouldn't call static methods with an object reference
