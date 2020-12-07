@@ -3,15 +3,11 @@ const app = Vue.createApp({
     return {
       counter: 10,
       name: "",
-
+      lastName: "",
+      //fullname: "",
     };
   },
   methods: {
-    outputFullname(){
-      console.log('running again')
-      if(this.name === '') return ''
-      return this.name + ' ' + 'Sanchez'
-    },
     submitForm(e) {
       //e.preventDefault();
       alert("Submitted!");
@@ -30,8 +26,33 @@ const app = Vue.createApp({
       }
       this.counter = this.counter - n;
     },
-    resetInput(){
-      this.name = ""
+    resetInput() {
+      this.name = "";
+    },
+  },
+  watch: {
+    counter(value){
+      if(value>50){
+        setTimeout(()=>{
+          this.counter = 0;
+        }, 2000)
+      }
+    }
+    /* name(value) {
+      //it is the same name of data 'name' asi funciona la conexion de un watcher
+      if(value === '') this.fullname = '';
+      this.fullname = value + " " + this.lastName;
+    },
+    lastName(value){
+      if(value === '') this.fullname = ''
+      this.fullname =  this.name + ' ' + value;
+    } */
+  },
+  computed: {
+    fullname(){
+      console.log('running again')
+      if(this.name === '' || this.lastName === '') return ''
+      return this.name + ' ' + this.lastName;
     }
   },
 });

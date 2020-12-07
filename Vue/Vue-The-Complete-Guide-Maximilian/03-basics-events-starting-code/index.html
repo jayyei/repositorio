@@ -23,7 +23,8 @@
       <p v-once>Starting Counter: {{ counter }}</p>
       <p>Result: {{ counter }}</p>
       <input type="text" v-model="name">
-      <p>Your name: {{ outputFullname() }}</p>
+      <input type="text" v-model="lastName"> <!--v-on:click = @clic, v-bind:value =:value-->
+      <p>Your name: {{ fullname }}</p>
       <button v-on:click="resetInput">Reset Input</button>
       <form v-on:submit.prevent="submitForm"> <!--Event modifier-->
         <input type="text">
