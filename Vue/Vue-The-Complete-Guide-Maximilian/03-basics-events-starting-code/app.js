@@ -30,7 +30,7 @@ const app = Vue.createApp({
       this.name = "";
     },
   },
-  watch: {
+  watch: { //Watcher solo mira una propiedad del data, de hecho se tiene que llamar de esa misma manera
     counter(value){
       if(value>50){
         setTimeout(()=>{
