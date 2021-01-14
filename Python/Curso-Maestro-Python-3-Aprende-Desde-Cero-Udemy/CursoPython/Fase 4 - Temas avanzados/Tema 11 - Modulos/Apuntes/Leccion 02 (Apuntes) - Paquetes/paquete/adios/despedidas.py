@@ -1,9 +1,8 @@
-# Este es un módulo con funciones que saludan
+#Este es un modulo con funciones que despiden
 
-def despedir():
-	print("Adiós, me estoy despidiendo desde la función despedir() del módulo despedidas")
+def despedirse():
+    print("Adios, me estoy despidiendo, desde la funcion despedirse del modulo adios")
 
-
-class Despedida():
-	def __init__(self):
-		print("Adiós, me estoy despidiendo desde el __init__ de la clase Despedida")
+class Despido():
+    def __init__(self):
+        print("Adios, me despido desde la clase despido en el modulo adios")
