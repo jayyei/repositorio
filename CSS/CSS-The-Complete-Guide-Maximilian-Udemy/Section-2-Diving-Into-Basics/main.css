@@ -1,0 +1,22 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#product-overview {
+    background: #ff1b68;
+}
+
+
+.section-title {
+    color: #2ddf5c;
+}
+
+#product-overview h1 {  /* Todos los h1 dentro del contenedor con id determinado, no importa si no es hijo directo */
+    color: white;
+    font-family: 'Anton', sans-serif;
+}
+
+/* The rule with more information wins over rules with less information */ 
+h1 {
+    font-family: sans-serif;
+}

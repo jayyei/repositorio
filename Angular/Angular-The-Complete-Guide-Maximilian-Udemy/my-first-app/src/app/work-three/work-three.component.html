@@ -1,0 +1,12 @@
+
+<button 
+    (click)='handleClick()'
+    class='btn btn-primary'>
+    Display Details
+</button>
+<p *ngIf="isVisible"> Secret password {{'tuna'}}</p>
+<div 
+    [ngClass]="{'blue-color': number > 4}"
+    *ngFor="let number of counts">
+    {{number}}
+</div>

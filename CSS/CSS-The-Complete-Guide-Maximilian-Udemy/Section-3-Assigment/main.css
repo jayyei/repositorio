@@ -1,0 +1,20 @@
+.mexican-box {
+    padding: 5px;
+    border: 1px solid green;
+    margin: 6px;
+}
+
+.first-box {
+    height: 300px;
+    width: 50%;
+    visibility: hidden;
+}
+
+body * {
+    display: inline-block;
+}
+
+body div:last-child:hover {
+    color: white;
+    background-color: black;
+}

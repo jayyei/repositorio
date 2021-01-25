@@ -1,0 +1,15 @@
+	// Primitive Type
+	* a type of data that represents a single value
+	
+	That is not an object
+	
+	// seven types of primitives
+	
+	*undefined: represents lack of existence (you should'nt set a variable to this)
+	*null: represents lack of existence but (you can set a variable to this) the variable has no value
+	*boolean
+	*number
+	*string 
+	*symbol
+	
+	

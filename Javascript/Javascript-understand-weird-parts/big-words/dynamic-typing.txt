@@ -1,0 +1,4 @@
+
+	//Dynamic Typing
+	
+	* You Don't Tell the engine what type of data a variable holds, it figures it out while your code is running

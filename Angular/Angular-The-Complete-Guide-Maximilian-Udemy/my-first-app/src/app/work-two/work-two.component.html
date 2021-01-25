@@ -1,0 +1,13 @@
+<label>Input fiel</label>
+<input
+    type='text'
+    class='form-control'
+    [(ngModel)]='username'
+>
+<p>{{username}}</p>
+
+<button 
+    class='btn btn secondary'
+    [disabled]='username.length === 0'
+    (click)='resetUsername()'
+>Reset username</button>

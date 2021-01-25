@@ -1,0 +1,35 @@
+body {
+    font-family: 'Potta One', cursive;
+}
+
+body > h1 {
+    color: magenta
+}
+
+.li-second code {
+    color: blue;
+}
+
+code {
+    font-family: monospace;
+    color: red;
+}
+
+li {
+    font-family: 'Hachi Maru Pop', cursive;
+}
+
+/* ol li:first-child {
+    background: black;
+    color: white;
+} */
+
+ol li:not(:first-child){
+    background: black;
+    color: white;
+}
+
+ol li {
+    background: black;
+    color: white;
+}
