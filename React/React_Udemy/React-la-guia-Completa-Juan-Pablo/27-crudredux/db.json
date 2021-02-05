@@ -1,0 +1,19 @@
+{
+  "productos": [
+    {
+      "nombre": "Producto ejemplo ",
+      "precio": "666",
+      "id": 9
+    },
+    {
+      "nombre": "Cambio producto",
+      "precio": "345",
+      "id": 10
+    },
+    {
+      "nombre": "Ingeniero de software",
+      "precio": 1230,
+      "id": 11
+    }
+  ]
+}

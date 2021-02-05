@@ -1,8 +1,7 @@
 import Sequelize from 'sequelize';
-import { sequelize } from '../database/database';
-import Project from './Project';
+import { sequelizeInstance } from '../database/database';
 
-const Task = sequelize.define('task', {
+const Task = sequelizeInstance.define('task', {
     id: {
         type: Sequelize.INTEGER,
         primaryKey: true
@@ -20,9 +19,5 @@ const Task = sequelize.define('task', {
     timestamps: false
 });
 
-Task.belongsTo(Project, {
-    foreignKey: 'projectId',
-    targetKey: 'id'
-});
 
 export default Task;

@@ -1,6 +1,6 @@
 import Sequelize from 'sequelize';
 
-const sequelize = new Sequelize(
+export const sequelizeInstance = new Sequelize(
     'postgres',
     'postgres',
     'abc',
@@ -16,5 +16,3 @@ const sequelize = new Sequelize(
         logging: true
     }
 );
-
-export const sequelize;

@@ -1,8 +1,8 @@
 import Sequelize from 'sequelize';
-import { sequelize } from '../database/database';
+import { sequelizeInstance } from '../database/database';
 import Task from './Task';
 
-const Project = sequelize.define('project',{
+const Project = sequelizeInstance.define('project',{
     id: {
         type: Sequelize.INTEGER,
         primaryKey: true
@@ -27,5 +27,6 @@ Project.hasMany(Task,{
     foreignKey: 'projectId',
     sourceKey: 'id'
 });
+Task.belongsTo(Project, {foreignKey: 'projectId', targetKey: 'id'})
 
 export default Project;
