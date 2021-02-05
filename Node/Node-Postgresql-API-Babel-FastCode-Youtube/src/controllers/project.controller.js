@@ -1,10 +1,14 @@
 import Project from '../models/Project'
 
 export async function getProjects(req, res) {
-    const projects = await Project.findAll();
-    res.status(200).json({
-        data: projects
-    })
+    try {
+        const projects = await Project.findAll();
+        res.status(200).json({
+            data: projects
+        });
+    } catch (e) {
+        console.log(e)
+    }
 };
 
 export async function createProject (req, res) {
@@ -32,3 +36,55 @@ export async function createProject (req, res) {
     }
     res.send(newProject);
 };
+
+
+export async function getOneProject (req, res) {
+    const { id } = req.params;
+    try {
+        const project = await Project.findOne({
+            where: {
+                id
+            }
+        })
+        res.json({
+            data: project
+        })
+    } catch (e) {
+        console.error(e);
+    }  
+};
+
+export async function deleteOneProject (req, res) {
+    const { id } = req.params;
+    try {
+        const deleteRowCount = await Project.destroy({
+            where: {
+                id
+            }
+        });
+        res.json({
+            message: 'Project deleted successfully',
+            count: deleteRowCount
+        })
+    } catch (e) {
+        console.error(e);
+    }
+}
+
+export async function updateProject (req, res) {
+    const { id } = req.params;
+    const { name, priority, description, deliverydate } = req.body;
+    const arrayNumbers = await Project.update({
+        name,
+        priority,
+        description,
+        deliverydate
+    }, {
+        where: {
+            id
+        }
+    });
+    res.json({
+        info: arrayNumbers
+    })
+}
