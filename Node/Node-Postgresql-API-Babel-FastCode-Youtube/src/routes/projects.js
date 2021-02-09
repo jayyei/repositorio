@@ -12,6 +12,6 @@ router.get('/project/:id', getOneProject);
 
 router.delete('/project/:id', deleteOneProject);
 
-router.put('/project/:id', updateProject)
+router.put('/project/:id', updateProject);
 
 export default router;
