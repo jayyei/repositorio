@@ -13,7 +13,8 @@ const Task = sequelizeInstance.define('task', {
         type: Sequelize.BOOLEAN
     },
     projectId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        field:'projectid'
     }
 }, {
     timestamps: false
