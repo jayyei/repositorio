@@ -1,0 +1,40 @@
+
+// Lista de comandos conocidos para docker
+
+-- docker build path_dockerfile : construye una imagen a partir de un archivo Dockerfile
+-- docker run image_id  : crea e instancia un contenedor basando en una imagen
+-- docker ps : enlista los contenedores corriendo actualmente
+-- docker ps -a : enlista los contenedores corriendo y detenidos
+-- docker start container_id or name : reinicia la ejecuccion de un contenedor detenido
+-- docker run -p 8000:80 -d image_id : crea e instancia la imagen, pero el proceso corre en background
+-- docker attach id_container : corre el contenedor en la consola
+-- docker start -a id_container : corre el contenedor en la consola (a = attached, d = detached)
+-- docker run -it image_id : corre y crea el contenedor basado en la interactividad de la terminal
+-- docker start -a -i container_id: corre el contenedor existente con attached mode e interactivo
+-- docker rm container_id: borra un contenedor detenido
+-- docker container prune: remueve todos los contenedores detenidos
+-- docker rmi images_ids : remueve imagenes
+-- docker run -p external:internal -d -rm image_id : corre y crea un contenedor de cierta imagen pero al detenerse, borrara el contenido
+-- docker image inspect image_id : para inspeccionar una imagen
+-- docker cp origin destination container_id:/test  : copia archivos en contenedores
+-- docker run -p 3001:80 -d --rm --name goalsapp image_id : para definir un nombre al contenedor
+-- docker build -t goals:1 . : crea una imagen a partir de un DockerFile pero con el name y tag puestos
+-- docker image prune -a : borra todas las imagenes
+-- docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback image_name  : con -v declaras el nombre del volumen y el path con el que estara relacionado tu proyecto
+-- docker volume rm : borra un volumen con el id o nombre dado
+-- docker volume prune : limpieza de volumenes
+-- docker run ... -v $(pwd):/app : version corta de la definicion de un bind mount 
+-- docker run  -v feedback:/app/feedback -v "/home/jay/Escritorio/Repositorio:/app" -v /app/node_modules feedback-node:volumes : implementa un tercer volumen para respaldar aquellos archivos que no deben de ser sobrescritos en un update del module
+
+// Sumary of volumes
+-- docker run -v volume_name:/app/feedback = sirve como volumen nombrado y enlaza el contenido de un volumen en docker con el path del contenedor, es decir que el volumen 'feedback' sera central para los demas contenedores que posean el comando indicando este volumen
+-- docker run -v "path/of/your/app:/app_docker" =  sirve como enlace para actualizaciones automaticas del codigo fuente con el contenido del /app del contenedor de docker
+-- docker run -v path/docker/specific = sirve como volumen anonimo y para expresar que el path de este volumen si es mas especifco, sobreescriba a los demas
+-- docker run -v "path/of/your/app:/app_docker:ro" = sirve como volumen de solo lectura
+-- docker volume create volume_name = crea un volumen manualmente
+
+// Dont use bind bounds in production, only in development
+
+-- docker run ... --env PORT=8000 = establece algunas variables de entorno al momento de ejecuccion
+-- docker run ... --env-file .env = establece un archivo con variables de entorno
+-- docker build ... --build-arg DEFAULT_PORT=8080 = establece un argumento en build para la imagen de docker

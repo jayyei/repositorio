@@ -1,0 +1,13 @@
+-- python3 -m venv .env = crea un entorno virtual para aislar dependencias de python
+-- source .env/bin/activate = activa el nuevo entorno virtual creado
+-- ls -al = muestra las carpetas ocultas en el directorio
+-- pip freeze = lista las dependencias el entorno virtual
+-- deactivate = desactiva un virtual env
+-- pip install dependency=version =  instala una version de cierta dependencia
+-- django-admin startproject project_name = para crear un proyecto de django
+-- django-admin startproject project_name . = crea un proyecto pero elimina la creacion de un folder
+-- python3 manage.py startapp posts = crea una aplicacion dentro de un proyecto de django
+-- python3 manage.py migrate = aplicar cambios (migrations) de los modelos a las bases
+-- python3 manage.py makemigrations = crea los cambios (migrations) en base a los modelos para que despues puedan ser enviados a la base con migrate
+-- python3 manage.py shell = abre la shell de python-django en consola
+-- python freeze > requirements.txt = crea un archivo de requerimientos el cual enlista las dependencias
