@@ -67,8 +67,10 @@ app.get('/people', async (req, res) => {
   }
 });
 
+// Replace localhost with host.docker.internal or use 127.0.0.1:27017
+// You can change the ipaddress by the container name of the database if db and this one are on the same network
 mongoose.connect(
-  'mongodb://localhost:27017/swfavorites',
+  'mongodb://mongodb:27017/swfavorites',
   { useNewUrlParser: true },
   (err) => {
     if (err) {

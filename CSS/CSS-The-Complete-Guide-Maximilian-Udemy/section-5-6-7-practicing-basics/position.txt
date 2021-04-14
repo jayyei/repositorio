@@ -1,0 +1,9 @@
+
+//
+    * position static =  does not do anything
+    * position fixed = relative to the viewport, you can apply to block and inline elements
+    * z-indez only has effect in elements with position != static
+    * position absolute = si tiene ancestros con alguna posicion, este ancestro sera el contexto, si no sera el html
+    * position relative = the position context es en el elemento mismo
+    * position sticky = rare combination of fixed and relative position, actua como fixed dentro de su contenedor, cuando el contenedor sale del viewport, desaparece junto con este
+    

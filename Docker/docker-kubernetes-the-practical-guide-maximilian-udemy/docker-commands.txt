@@ -38,3 +38,29 @@
 -- docker run ... --env PORT=8000 = establece algunas variables de entorno al momento de ejecuccion
 -- docker run ... --env-file .env = establece un archivo con variables de entorno
 -- docker build ... --build-arg DEFAULT_PORT=8080 = establece un argumento en build para la imagen de docker
+-- host.docker.internal = puedes  usarlo para que localhost sea visible en docker
+-- docker run  --network host = para cambiar el network al correr un container
+-- docker run --name some-mongo -d mongo:tag = configura un container basado en mongo
+-- docker network = utility for creating new networks
+
+// other ways to use docker volume and bind mound
+-- en la conf docker run: -v "$(pwd)"/target:/app = donde solo pwd funciona en linux y mac, ro = readonly
+-- en la conf docker run: --mount type=bind,source="$(pwd)"/target,target=/app = similar a volume
+-- docker run --name goals-backend -v logs:/app/logs -v /home/jay/Escritorio/Repositorio/Docker/docker-kubernetes-the-practical-guide-maximilian-udemy/multi-01-starting-setup/backend:/app -v /app/node_modules -d --rm -p 81:80 --network goals-net goals-node
+-- docker run --name goals-backend -v logs:/app/logs -v /path/backend:/app -v /app/node_modules -d --rm -p 81:80 --network goals-net -e MONGODB_USERNAME=max  goals-node
+-- docker-compose up = usalo para el docker compose 
+-- docker-compose up -d = detached mode
+-- docker-compose down -v = baja los containers y los borra por defecto, la -v indica tambien borrar los volumenes, ya que esto no lo hace por defecto
+
+// Docker-compose por defecto borra los contenedores al momento de bajar la aplicacion
+
+-- docker-compose build = construye imagenes, sin containers
+
+// Puedes correr imagenes oficiales de docker desde tu ordenador
+-- docker run -it node 
+-- docker exec = corre un comando en un contenedor corriendo
+-- docker exec -it container_name command
+-- docker run -it image_name override_default_command 
+-- docker run -it node npm init
+-- docker run -it -v /local/path:/app util-image npm init 
+

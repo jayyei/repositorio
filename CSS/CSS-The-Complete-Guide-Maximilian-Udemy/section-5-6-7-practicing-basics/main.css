@@ -1,0 +1,139 @@
+
+#product-overview {
+    background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), 
+    url("images/freedom.jpg") left 10% bottom 20%/cover no-repeat border-box, #ff1b68;
+    /* background: url("freedom.jpg"); */
+    /* background-image: url("images/freedom.jpg");
+    background-size: cover;
+    background-position: left 10% bottom 20%;  /* default 50% significa que el contenido de la imagen si se tiene que recortar se hara mitad arriba/abajo o mitad izquierda/derecha 0% significa que no habra recorte a la izquierda o hacia arriba, 100% que no habra recorte a la derecha, hacia abajo*/
+    /* background-repeat: no-repeat;
+    background-origin: border-box; /*Similar a box sizing*/
+    /* background-clip: border-box; /* Overrides background-origin */
+    /* background-attachment: scroll; */
+    /*background: url("freedom.jpg") left 10% bottom 20%/cover no-repeat; */ /*Shorthand propertie*/
+    /* background-image: linear-gradient(180deg, red 70%, blue 40%, rgba(0,0,0,0.5)); */
+    /* background-image: radial-gradient(ellipse farthest-corner at 20% 50%, red, blue 70%, green); */
+    width: 100%;
+    height: 528px;
+    padding: 10px;  
+    margin-top: 20px; 
+    /* border: 5px dashed red; */
+    position: relative;
+}
+
+.section-title {
+    text-align: center;
+    color: #2ddf5c;
+}
+
+#product-overview h1 {
+    color: white;
+    font-family: 'Anton', sans-serif;
+    margin: 0;
+    position: absolute;
+    bottom: 5%;
+    left: 3%;
+}
+
+.plan__list{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.plan {
+    background-color: #d5ffdc;
+    text-align: center;
+    padding: 16px;
+    margin: 8px;
+    display: inline-block;
+    width: 30%; /*Limita a un maximo del 30% de ancho en el contenedor que lo contiene*/
+    vertical-align: middle;
+}
+
+.plan--highlighted {
+    background: #19b84c;
+    color: white;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.plan__annotation {
+    background-color: white;
+    color: #19b84c;
+    padding: 8px;
+    box-shadow: 2px 3px 1px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 4px 4px 4px 4px;
+}
+
+.plan__title {
+    color: #0e4f1f;
+}
+
+.plan__price {
+    color: #999;
+}
+
+.plan--highlighted .plan__title {
+    color: whitesmoke;
+}
+
+.plan--highlighted .plan__price {
+    color: #0e4f1f;
+}
+
+.plan__features {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.plan__features li {
+    margin: 8px 0;
+}
+
+
+
+#key-features {
+    background-color: #ff1b68;
+    margin-top: 80px;
+    padding: 16px;
+}
+
+#key-features .section-title {
+    color: white;
+    margin: 32px;
+}
+
+.key-feature__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.key-feature {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+}
+
+.key-feature__image {
+    background: #ffcede;
+    width: 128px;
+    height: 128px;
+    border: 2px solid #424242;
+    border-radius: 50%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.key-feature__description {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+}
+
+/* h1 {
+    font-family: sans-serif;
+} */

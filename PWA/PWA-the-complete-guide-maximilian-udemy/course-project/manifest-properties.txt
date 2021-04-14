@@ -1,0 +1,29 @@
+
+        // Manifest properties
+
+    * name = Long name of app
+    * short_name = short name of app
+    * start_url = which page to load on startup
+    * scope = Which pages are included in "PWA experience"
+    * display = Should it look like a standalone app?
+    * background_color = Background whilst loading & on Splashscreen
+    * theme_color = theme color (eg. on top bar in task switcher)
+    * description = description
+    * dir "ltr" = Read direction of your app
+    * lang "en-US" = main Language of app
+    * orientation = Set and enforce default orientation
+    * icons: configure icons
+        [{
+            "src": "icon/path",
+            "type": "image/png",
+            "sizes": 48x 48
+        },
+        {
+            ...diferent sizes
+        }]
+    * related_applications[   // related native applications
+        {
+            "platform": "play",
+            "url": "https://play.google.."
+            "id": "com.example.app1"
+        }]
