@@ -12,3 +12,17 @@
 // viewport height vh
 
 // viewport width vw
+
+
+ ** Absolute lenghts
+    - px
+
+** Viewport lenghts (adjust to current viewport)
+    - vh    
+    - vw
+** Fibt-relative lengths (adjust to default font size)
+    - rem
+    - em
+
+** the Percentages
+    - % special case

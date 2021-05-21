@@ -1,0 +1,14 @@
+** 3 Rules to Remember
+    
+    Fixed Position and %
+    - The containing element is the viewport
+    - if it has a width of 10%, it should have 10% of the containing width (in this case the viewport)
+
+    Absolute position and %
+    - The containing element is an ancestor wich is not position of static
+    - The percentage unit of our element refers to this ancestor's content plus the padding
+
+    Relative/static and %
+    - The containing is the ancestor (only the containing)
+    - Simply the closest ancestor which is a block element
+    

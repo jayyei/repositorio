@@ -1,0 +1,11 @@
+  // Estructura del comando scss
+
+        * node-sass -o [output] [input]
+
+    Ejemplo:
+
+        * node-sass -o css scss/main.scss
+
+
+    node-sass -o css scss/main.scss -w = mantiene un modo watch
+

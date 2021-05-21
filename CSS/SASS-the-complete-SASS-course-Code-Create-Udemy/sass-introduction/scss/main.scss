@@ -1,0 +1,67 @@
+@import "test";
+
+
+/* These variables are created in global scope*/
+$color-primary: orange;
+$color-secondary: gray;
+$color-tertiary: royalblue;
+
+
+$font-lg: 40px;
+$font-md: 30px;
+$font-sm: 20px;
+
+.nav {
+    background-color: mix(blue, green);
+    /*You can use special functions like darken, lighten, transparentize, mix etc*/
+    ul li {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        font-size: $font-sm;
+        color: $color-secondary;
+
+        /* Use & caracter to indicate a parent element (in this case 'a')*/
+        &:hover {
+            color: $color-tertiary;
+        }
+    }
+}
+
+// @mixin headingStyles($fontSize: 50px) {
+//     font-size: $fontSize;
+//     color: $color-secondary;
+//     text-align: center;
+// }
+
+// /* three dots parameters*/
+// @mixin transition($param...) {
+//     transition: $param;
+// }
+
+%heading {
+    color: $color-primary;
+    font-size: $font-lg;
+    background-color: $color-secondary;
+    text-align: center;
+}
+
+// @function fontSize ($size: 25px) {
+//     @return $size * 2;
+// }
+
+/* With local, it will replace the value of the global variable*/
+h1 {
+    @extend %heading;
+    &:hover {
+        background-color: green;
+    }
+}
+
+
+/* You cannot extend of multiple selectors */
+.footer h3 {
+    @extend h1;
+}
+
