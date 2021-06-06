@@ -1,0 +1,10 @@
+
+    // Notas
+
+    * incializa tu formulario con una referencia; #f=ngForm
+    * cada atrbuto del input debe de tener un nombre con su respectiva directiva ngModel
+    * puedes agregar referencias a cada elemento; email=ngModel
+    * puedes usar data binding [ngModel] = variable
+    * puedes usar two ways databinding [(ngModel)] = variable
+    * puedes agrupar elementos con ngModelGroup="groupName"
+    * puedes usar viewChild en las referencias de los formularios

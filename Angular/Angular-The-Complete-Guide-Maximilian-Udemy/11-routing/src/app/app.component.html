@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <ul class="nav nav-tabs">
+        <!-- routerLink catches the click of the event, prevents the default avoiding the reload-->
+        <!-- With a relative path, it always append the path you specify in the routerlink to the end of your current path-->
+        <!-- Con el / consigues un path absolulto, esto es, comenzar desde la raiz (root domain)-->
+        <li role="presentation" 
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: true}"
+        >
+          <a routerLink="/">
+            Home
+          </a>
+        </li>
+        <li role="presentation" 
+          routerLinkActive="active"
+        >
+          <a routerLink="servers">
+            Servers
+          </a>
+        </li>
+        <li role="presentation" 
+          routerLinkActive="active"
+        >
+          <a [routerLink]="['users']">
+            Users
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+    <!-- special directive marks the place in our document where we want the angular router to load-->
+    <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
