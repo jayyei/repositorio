@@ -1,6 +1,63 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input 
+            type="text"
+            id='name'
+            formControlName="name"
+            class="form-control"
+          >
+          <span 
+            class="help-block"
+            *ngIf="!projectForm.get('name').valid && projectForm.get('name').touched">
+            <span *ngIf="projectForm.get('name').errors['required']">
+              The name is required
+            </span>
+            <span *ngIf="projectForm.get('name').errors['test']">
+              The name cannot be 'Test'
+            </span>
+            <span *ngIf="projectForm.get('name').errors['testAsync']">
+              The name cannot be 'TestAsync'
+            </span>
+          </span>
+        </div>
+        <div class="form-group">
+          <label for="mail">Mail</label>
+          <input 
+            type="email"
+            id='email'
+            formControlName="mail"
+            class="form-control"
+          >
+          <span 
+            class="help-block"
+            *ngIf="!projectForm.get('mail').valid && projectForm.get('mail').touched"
+          >
+            <span *ngIf="projectForm.get('mail').errors['required']">
+              The mail is required
+            </span>
+          </span>
+        </div>
+        <div class="form-group">
+          <label for="status">Project status</label>
+          <select 
+            name="status" 
+            id="status" 
+            formControlName="status"
+            class="form-control">
+            <option 
+              *ngFor="let option of statusOptions; let i = index" 
+              [value]="option" 
+              [id]="index">
+              {{option}}
+            </option>
+          </select>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </form>
       <!--
           Create a Form with the following Controls and Validators
           1) Project Name (should not be empty)
