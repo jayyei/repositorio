@@ -4,13 +4,14 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { RecipesModule } from './recipes/recipes.module';
-import { ShoppingListModule } from './shopping-list/shopping-list.module';
+// import { RecipesModule } from './recipes/recipes.module';
+// import { ShoppingListModule } from './shopping-list/shopping-list.module';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core.module';
-import { AuthModule } from './auth/auth.module';
+import { LoggingService } from './logging.service';
+// import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   // Declarations is the place where you put your components, directives and pipes
@@ -29,14 +30,15 @@ import { AuthModule } from './auth/auth.module';
     // ReactiveFormsModule, // Relacionadas a los formularios reactivos
     AppRoutingModule, // Relacionado al routeo de la aplicacion
     HttpClientModule, // Servicios de HttpClient
-    RecipesModule,
-    ShoppingListModule,
+    // Quitamos RecipesModule y ShoppingListModule y AuthModule porque lo hemos cargado de forma perezosa en el routing
+    // RecipesModule,
+    // ShoppingListModule,
+    // AuthModule,
     SharedModule,
-    CoreModule,
-    AuthModule
+    CoreModule
   ],
   // We define all the services
-  providers: [],
+  // providers: [LoggingService],
   // The bootstrap is important to start the app
   bootstrap: [AppComponent],
   // use for components that we need for create without selectors or with the router configuration
