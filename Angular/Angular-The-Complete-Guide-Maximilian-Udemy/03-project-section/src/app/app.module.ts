@@ -10,8 +10,17 @@ import { AppRoutingModule } from './app-routing.module';
 // import { ShoppingListModule } from './shopping-list/shopping-list.module';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core.module';
-import { LoggingService } from './logging.service';
+// import { LoggingService } from './logging.service';
 // import { AuthModule } from './auth/auth.module';
+
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import * as fromApp from './store/app.reducer';
+import { AuthEffects } from './auth/store/auth.effects';
+import { environment } from 'src/environments/environment';
+import { RecipeEffects } from './recipes/store/recipe.effects';
 
 @NgModule({
   // Declarations is the place where you put your components, directives and pipes
@@ -35,7 +44,11 @@ import { LoggingService } from './logging.service';
     // ShoppingListModule,
     // AuthModule,
     SharedModule,
-    CoreModule
+    CoreModule,
+    StoreModule.forRoot(fromApp.appReducer),
+    EffectsModule.forRoot([AuthEffects, RecipeEffects]),
+    StoreDevtoolsModule.instrument({logOnly: environment.production}),
+    StoreRouterConnectingModule.forRoot()
   ],
   // We define all the services
   // providers: [LoggingService],
