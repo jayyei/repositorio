@@ -34,7 +34,7 @@ import { RecipeEffects } from './recipes/store/recipe.effects';
   // Todo en un modulo trabaja standalone (de forma unica)
   // Los modulos aqui declarados no pueden tener acceso a propiedades declaradas en otros modulos
   imports: [
-    BrowserModule,  // NgIf, ngFor, other features, etc. Se tiene que utilizar solo una vez en el app module (only run once)
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),  // NgIf, ngFor, other features, etc. Se tiene que utilizar solo una vez en el app module (only run once)
     // FormsModule, // Relacionadas a los formularios por template
     // ReactiveFormsModule, // Relacionadas a los formularios reactivos
     AppRoutingModule, // Relacionado al routeo de la aplicacion

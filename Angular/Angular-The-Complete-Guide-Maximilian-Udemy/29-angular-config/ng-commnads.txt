@@ -1,0 +1,7 @@
+// Use the following commands for ng
+
+-- ng help
+
+-- ng serve --help
+
+-- ng generate --help
